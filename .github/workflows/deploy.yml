@@ -1,0 +1,46 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify static page assets
+        run: node tools/check_page.js
+
+      - name: Sync deploy directory
+        run: ./tools/sync_public.sh
+
+      - name: Deploy to Netlify
+        run: npx netlify-cli deploy --prod --dir public --site b7853f9a-8551-48f2-9a10-13ba3863a854 --no-build --message "GitHub Actions deploy ${GITHUB_SHA}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+  dns:
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Attach Netlify custom domain and sync Cloudflare CNAME
+        uses: MDP-Studio/cf-dns-action@v1
+        with:
+          subdomain: meidie
+          netlify-site-id: b7853f9a-8551-48f2-9a10-13ba3863a854
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          cf-zone-id: ${{ secrets.CF_ZONE_ID }}
+          cf-api-token: ${{ secrets.CF_API_TOKEN }}
+          wait-for-cert: true
