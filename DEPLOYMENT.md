@@ -5,8 +5,11 @@
 - Project name: `meidie-security-portfolio`
 - Project ID: `b7853f9a-8551-48f2-9a10-13ba3863a854`
 - Production URL: `https://meidie-security-portfolio.netlify.app`
+- Custom domain: `https://meidie.mdpstudio.com.au`
 - Admin URL: `https://app.netlify.com/projects/meidie-security-portfolio`
 - Last deploy ID: `69f02419df6d95d374b1e36e`
+- GitHub repo: `https://github.com/MDP-Studio/meidie-security-portfolio`
+- Last successful workflow: `https://github.com/MDP-Studio/meidie-security-portfolio/actions/runs/25032629496`
 
 Deploy command from this folder:
 
@@ -14,9 +17,9 @@ Deploy command from this folder:
 cmd.exe /c netlify deploy --site meidie-security-portfolio --prod --dir public --no-build
 ```
 
-## Custom Domain Plan
+## Custom Domain
 
-Recommended recruiter-facing URL:
+Recruiter-facing URL:
 
 - `meidie.mdpstudio.com.au`
 
@@ -39,6 +42,6 @@ with:
 
 The repo workflow is in `.github/workflows/deploy.yml`. It deploys the static portfolio to Netlify, then runs the DNS action to attach `meidie.mdpstudio.com.au`.
 
-## Current Blocker
+## Notes
 
-The old local Cloudflare token in `/mnt/d/personal project/DNS add/.env` returned `401 Unauthorized` on 2026-04-28. The GitHub organization secrets now contain `CF_API_TOKEN`, `CF_ZONE_ID`, and `NETLIFY_AUTH_TOKEN`; run the GitHub workflow from a repo that can access those organization secrets.
+The GitHub organization secrets contain `CF_API_TOKEN`, `CF_ZONE_ID`, and `NETLIFY_AUTH_TOKEN`. The first successful workflow run deployed the site and attached `meidie.mdpstudio.com.au` on 2026-04-28.

@@ -2,7 +2,9 @@
 
 Standalone static portfolio showcase for recruiters.
 
-Live Netlify URL: <https://meidie-security-portfolio.netlify.app>
+Live URL: <https://meidie.mdpstudio.com.au>
+
+Fallback Netlify URL: <https://meidie-security-portfolio.netlify.app>
 
 ## Files
 
@@ -30,6 +32,7 @@ Current Netlify project:
 - Project name: `meidie-security-portfolio`
 - Project ID: `b7853f9a-8551-48f2-9a10-13ba3863a854`
 - URL: <https://meidie-security-portfolio.netlify.app>
+- Custom domain: <https://meidie.mdpstudio.com.au>
 
 Recommended Netlify settings:
 
