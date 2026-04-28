@@ -23,7 +23,7 @@ jobs:
         run: node tools/check_page.js
 
       - name: Sync deploy directory
-        run: ./tools/sync_public.sh
+        run: bash tools/sync_public.sh
 
       - name: Deploy to Netlify
         run: npx netlify-cli deploy --prod --dir public --site b7853f9a-8551-48f2-9a10-13ba3863a854 --no-build --message "GitHub Actions deploy ${GITHUB_SHA}"
