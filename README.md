@@ -9,7 +9,7 @@ Fallback Netlify URL: <https://meidie-security-portfolio.netlify.app>
 ## Files
 
 - `index.html` - complete portfolio page with inline CSS and JavaScript.
-- `assets/` - generated project visuals, favicon, and downloadable resume assets.
+- `assets/` - project screenshots, favicon, and downloadable resume assets.
 - `public/` - deployable copy used by Netlify.
 - `tools/generate_assets.py` - regenerates the bitmap project visuals.
 
@@ -67,10 +67,16 @@ Required organization secrets:
 
 The page links to:
 
-- `assets/Meidie_Fei_Resume_Agoda_Security_Analyst.pdf`
-- `assets/Meidie_Fei_Resume_Agoda_Security_Analyst.docx`
+- `assets/Meidie_Fei_Cyber_Security_Resume.pdf`
 
-Replace those files when the resume changes.
+Edit `resume/Meidie_Fei_Cyber_Security_Resume.md`, then run:
+
+```bash
+python -m pip install python-docx reportlab
+python resume/build_resume_assets.py
+```
+
+The generic public PDF is written to `assets/`. Application-specific resumes and cover letters should stay under ignored local folders such as `applications/agoda/`.
 
 ## Regenerate Visual Assets
 

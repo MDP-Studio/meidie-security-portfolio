@@ -8,10 +8,10 @@ cp "$ROOT/index.html" "$ROOT/public/index.html"
 
 for asset in \
   favicon.jpg \
-  Meidie_Fei_Resume_Agoda_Security_Analyst.docx \
-  Meidie_Fei_Resume_Agoda_Security_Analyst.pdf \
+  Meidie_Fei_Cyber_Security_Resume.pdf \
   screenshot-phishanalyze.png \
   screenshot-cryptotoolkit.png \
+  screenshot-securevote.png \
   screenshot-command-center.png
 do
   cp "$ROOT/assets/$asset" "$ROOT/public/assets/$asset"

@@ -1,3 +1,5 @@
 .netlify/
 .DS_Store
 Thumbs.db
+applications/
+resume/generated/
