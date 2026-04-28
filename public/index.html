@@ -65,6 +65,7 @@
     h3,
     h4 {
       margin: 0;
+      overflow-wrap: break-word;
     }
 
     .skip-link {
@@ -264,11 +265,15 @@
     }
 
     .screenshot-stack {
+      min-width: 0;
+      width: 100%;
       display: grid;
       gap: 12px;
     }
 
     .browser-frame {
+      min-width: 0;
+      max-width: 100%;
       display: block;
       overflow: hidden;
       border-radius: 8px;
@@ -306,6 +311,7 @@
     }
 
     .browser-dots {
+      flex: 0 0 auto;
       display: inline-flex;
       gap: 5px;
     }
@@ -969,7 +975,7 @@
       }
 
       .shell {
-        width: min(var(--max), calc(100% - 92px));
+        width: min(var(--max), calc(100% - 32px));
       }
 
       .nav {
@@ -998,7 +1004,7 @@
       }
 
       .identity-main {
-        padding: 28px 20px;
+        padding: 24px 18px;
       }
 
       .hero-layout {
@@ -1007,7 +1013,7 @@
       }
 
       h1 {
-        font-size: 32px;
+        font-size: 31px;
       }
 
       h2 {
@@ -1052,9 +1058,17 @@
         min-height: 210px;
       }
 
+      .browser-frame img {
+        height: 205px;
+      }
+
       .browser-frame.small {
         width: 100%;
         margin-top: 0;
+      }
+
+      .browser-frame.small img {
+        height: 185px;
       }
 
       main section {
