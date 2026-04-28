@@ -3,22 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meidie Fei security portfolio: secure software, phishing detection, cryptography, and cloud deployment projects.">
-  <title>Meidie Fei | Security Portfolio</title>
+  <meta name="description" content="Meidie Fei security portfolio: phishing detection, secure software, cryptography, cloud automation, and analyst-ready project evidence.">
+  <title>Meidie Fei | Security Analyst Portfolio</title>
   <link rel="icon" href="assets/favicon.jpg">
   <style>
     :root {
-      --ink: #111827;
+      --bg: #f4f6f8;
+      --paper: #ffffff;
+      --paper-2: #f8fafc;
+      --ink: #101828;
       --muted: #5b6472;
-      --soft: #f5f7fa;
-      --panel: #ffffff;
-      --line: #d8dee8;
+      --quiet: #7a8494;
+      --line: #d9e0ea;
+      --line-strong: #bcc7d6;
       --teal: #0f766e;
-      --blue: #1f5fbf;
-      --red: #b73535;
+      --teal-soft: #e7f6f3;
+      --blue: #2563b8;
+      --blue-soft: #eaf2ff;
       --amber: #9a6a00;
-      --charcoal: #202938;
-      --shadow: 0 20px 55px rgba(17, 24, 39, 0.10);
+      --amber-soft: #fff5d8;
+      --red: #b73535;
+      --red-soft: #fff0f0;
+      --charcoal: #172033;
+      --shadow: 0 18px 55px rgba(16, 24, 40, 0.11);
       --radius: 8px;
       --max: 1180px;
     }
@@ -29,19 +36,17 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
       margin: 0;
-      background: var(--soft);
       color: var(--ink);
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: #f6f7f9;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
       line-height: 1.55;
-    }
-
-    body.locked {
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     a {
@@ -54,36 +59,46 @@
       max-width: 100%;
     }
 
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+    }
+
     .skip-link {
       position: absolute;
       left: 16px;
       top: -80px;
-      z-index: 50;
+      z-index: 100;
       padding: 10px 14px;
       border-radius: 6px;
-      background: #ffffff;
-      color: var(--ink);
+      background: var(--ink);
+      color: #ffffff;
       font-weight: 800;
-      transition: top 160ms ease;
     }
 
     .skip-link:focus {
       top: 16px;
     }
 
+    .shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 30;
-      border-bottom: 1px solid rgba(216, 222, 232, 0.82);
-      background: rgba(255, 255, 255, 0.92);
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
       backdrop-filter: blur(14px);
     }
 
     .nav {
-      width: min(var(--max), calc(100% - 32px));
       min-height: 68px;
-      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -95,70 +110,68 @@
       align-items: center;
       gap: 10px;
       font-weight: 900;
-      color: var(--ink);
       white-space: nowrap;
     }
 
     .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 8px;
-      display: inline-grid;
+      width: 36px;
+      height: 36px;
+      display: grid;
       place-items: center;
-      background: var(--ink);
+      border-radius: 8px;
+      background: var(--charcoal);
       color: #ffffff;
       font-size: 13px;
-      letter-spacing: 0.04em;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
 
     .nav-links a,
-    .nav-links button,
-    .button {
+    .button,
+    .filter {
       min-height: 40px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 9px 13px;
-      border: 1px solid transparent;
+      padding: 9px 12px;
       border-radius: 6px;
-      background: transparent;
+      border: 1px solid transparent;
       color: var(--ink);
+      background: transparent;
       font: inherit;
       font-weight: 800;
       cursor: pointer;
     }
 
     .nav-links a:hover,
-    .nav-links button:hover,
-    .button:hover,
     .nav-links a:focus,
-    .nav-links button:focus,
-    .button:focus {
+    .button:hover,
+    .button:focus,
+    .filter:hover,
+    .filter:focus {
       outline: none;
-      border-color: var(--line);
+      border-color: var(--line-strong);
       background: #ffffff;
-      box-shadow: 0 8px 22px rgba(17, 24, 39, 0.08);
+      box-shadow: 0 10px 26px rgba(16, 24, 40, 0.08);
     }
 
     .button.primary {
-      background: var(--teal);
       color: #ffffff;
+      background: var(--teal);
       border-color: var(--teal);
     }
 
     .button.dark {
-      background: var(--ink);
       color: #ffffff;
-      border-color: var(--ink);
+      background: var(--charcoal);
+      border-color: var(--charcoal);
     }
 
     .button.ghost {
@@ -166,148 +179,338 @@
       border-color: var(--line);
     }
 
-    .button svg,
-    .nav-links svg {
+    .button svg {
       width: 18px;
       height: 18px;
       flex: 0 0 auto;
     }
 
-    .hero {
-      min-height: 72vh;
-      display: grid;
-      align-items: end;
-      color: #ffffff;
-      background:
-        linear-gradient(90deg, rgba(17, 24, 39, 0.96) 0%, rgba(17, 24, 39, 0.83) 42%, rgba(17, 24, 39, 0.24) 100%),
-        url("assets/hero-security-console.jpg") center / cover no-repeat;
+    .intro {
+      padding: 36px 0 28px;
     }
 
-    .hero-inner {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-      padding: 96px 0 72px;
+    .dossier {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .identity-panel,
+    .fit-panel,
+    .project-card,
+    .matrix,
+    .timeline-item,
+    .credential-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 14px 42px rgba(16, 24, 40, 0.08);
+    }
+
+    .identity-panel {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      overflow: hidden;
+    }
+
+    .identity-main {
+      padding: 34px;
+      color: var(--ink);
+      background: #ffffff;
+    }
+
+    .hero-layout {
+      min-height: 470px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(430px, 0.72fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-text {
+      min-width: 0;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      min-height: 34px;
+      min-height: 32px;
       padding: 6px 10px;
       border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.26);
-      background: rgba(255, 255, 255, 0.10);
-      color: #ccfbf1;
-      font-size: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
 
-    .hero h1 {
-      max-width: 820px;
-      margin: 22px 0 18px;
-      font-size: 68px;
+    h1 {
+      max-width: 850px;
+      margin-top: 20px;
+      font-size: 56px;
       line-height: 1.02;
       letter-spacing: 0;
     }
 
-    .hero-copy {
-      max-width: 740px;
-      color: #dbeafe;
-      font-size: 20px;
-      margin: 0 0 28px;
+    .intro-copy {
+      max-width: 760px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .screenshot-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .browser-frame {
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 18px 45px rgba(16, 24, 40, 0.14);
+    }
+
+    .browser-frame.small {
+      width: 82%;
+      margin-left: auto;
+      margin-top: -44px;
+    }
+
+    .browser-bar {
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 7px 10px;
+      border-bottom: 1px solid var(--line);
+      background: #f8fafc;
+      color: var(--quiet);
+      font-size: 12px;
+      font-weight: 800;
+      min-width: 0;
+    }
+
+    .browser-bar span:last-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .browser-dots {
+      display: inline-flex;
+      gap: 5px;
+    }
+
+    .browser-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #cbd5e1;
+    }
+
+    .browser-frame img {
+      width: 100%;
+      height: 282px;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .browser-frame.small img {
+      height: 210px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 34px;
+      margin-top: 28px;
     }
 
     .hero-actions .button {
-      min-height: 48px;
-      padding: 11px 16px;
+      min-height: 46px;
+      padding: 11px 15px;
     }
 
-    .signal-strip {
+    .identity-meta {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      max-width: 960px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      background: #ffffff;
     }
 
-    .signal {
-      min-height: 92px;
-      padding: 14px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(255, 255, 255, 0.10);
+    .metric {
+      min-height: 106px;
+      padding: 18px;
+      border-right: 1px solid var(--line);
     }
 
-    .signal strong {
+    .metric:last-child {
+      border-right: 0;
+    }
+
+    .metric strong {
       display: block;
-      font-size: 24px;
+      color: var(--ink);
+      font-size: 28px;
       line-height: 1;
-      margin-bottom: 6px;
-      color: #ffffff;
+      margin-bottom: 7px;
     }
 
-    .signal span {
-      color: #dbeafe;
+    .metric span {
+      display: block;
+      color: var(--muted);
       font-size: 13px;
       font-weight: 800;
     }
 
-    main section {
-      padding: 76px 0;
+    .fit-panel {
+      padding: 22px;
+      display: grid;
+      grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr) minmax(260px, 0.72fr);
+      align-content: start;
+      align-items: start;
+      gap: 18px;
     }
 
-    .section-inner {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
+    .panel-label {
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-right: 18px;
+      border-right: 1px solid var(--line);
+      border-bottom: 0;
+    }
+
+    .status-row strong {
+      font-size: 20px;
+      line-height: 1.18;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 9px;
+      border-radius: 999px;
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .availability::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .checklist {
+      display: grid;
+      gap: 9px;
+    }
+
+    .check {
+      display: grid;
+      grid-template-columns: 25px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--muted);
+    }
+
+    .check span:first-child {
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .quick-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .quick-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 48px;
+      padding: 11px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: var(--paper-2);
+      font-weight: 800;
+    }
+
+    .quick-links a:hover,
+    .quick-links a:focus {
+      outline: none;
+      border-color: var(--line-strong);
+      background: #ffffff;
+    }
+
+    main section {
+      padding: 58px 0;
     }
 
     .section-head {
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.6fr);
+      grid-template-columns: minmax(0, 0.85fr) minmax(300px, 0.6fr);
       gap: 28px;
       align-items: end;
-      margin-bottom: 26px;
+      margin-bottom: 22px;
     }
 
     .section-kicker {
-      margin: 0 0 8px;
+      margin-bottom: 8px;
       color: var(--teal);
+      font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 13px;
     }
 
     h2 {
-      margin: 0;
-      font-size: 42px;
+      font-size: 38px;
       line-height: 1.08;
       letter-spacing: 0;
     }
 
     h3 {
-      margin: 0;
       font-size: 22px;
       line-height: 1.2;
       letter-spacing: 0;
     }
 
-    p {
-      margin: 0;
-    }
-
     .lead {
       color: var(--muted);
-      font-size: 18px;
+      font-size: 17px;
     }
 
     .filters {
@@ -315,105 +518,187 @@
       flex-wrap: wrap;
       gap: 8px;
       justify-content: flex-end;
+      margin-top: 12px;
     }
 
     .filter {
-      min-height: 38px;
-      padding: 8px 12px;
-      border-radius: 6px;
-      border: 1px solid var(--line);
       background: #ffffff;
-      color: var(--ink);
-      font: inherit;
-      font-weight: 800;
-      cursor: pointer;
+      border-color: var(--line);
+      min-height: 38px;
+      padding: 8px 11px;
     }
 
     .filter.active {
       color: #ffffff;
-      background: var(--ink);
-      border-color: var(--ink);
+      background: var(--charcoal);
+      border-color: var(--charcoal);
     }
 
-    .project-grid {
+    .featured-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
+      margin-bottom: 16px;
     }
 
-    .project-card {
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: #ffffff;
+    .feature {
+      position: relative;
+      min-height: 310px;
+      display: grid;
+      align-content: end;
       overflow: hidden;
-      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.07);
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-    }
-
-    .project-card:hover,
-    .project-card:focus-within {
-      transform: translateY(-3px);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      background: var(--charcoal);
       box-shadow: var(--shadow);
-      border-color: #aeb9c9;
     }
 
-    .project-card[hidden] {
-      display: none;
+    .feature.no-image {
+      background:
+        linear-gradient(135deg, #172033, #0f766e);
     }
 
-    .project-card img {
+    .feature img {
+      position: absolute;
+      inset: 0;
       width: 100%;
-      aspect-ratio: 5 / 3;
+      height: 100%;
       object-fit: cover;
-      background: #e5e7eb;
-      border-bottom: 1px solid var(--line);
+      opacity: 0.62;
     }
 
-    .project-body {
+    .feature::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16, 24, 40, 0.12), rgba(16, 24, 40, 0.94));
+    }
+
+    .feature.no-image::after {
+      background:
+        linear-gradient(180deg, rgba(16, 24, 40, 0.06), rgba(16, 24, 40, 0.72));
+    }
+
+    .feature-content {
+      position: relative;
+      z-index: 1;
       padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 13px;
-      flex: 1;
+      display: grid;
+      gap: 12px;
     }
 
-    .project-meta {
+    .feature p {
+      color: #dbeafe;
+    }
+
+    .badge-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
     }
 
     .tag {
-      min-height: 26px;
       display: inline-flex;
       align-items: center;
+      min-height: 26px;
       padding: 4px 8px;
       border-radius: 5px;
       background: #eef2f7;
       color: #334155;
       font-size: 12px;
       font-weight: 900;
+      white-space: nowrap;
     }
 
     .tag.green {
-      background: #e7f7f3;
-      color: #0f766e;
+      background: var(--teal-soft);
+      color: var(--teal);
     }
 
     .tag.blue {
-      background: #e8f1ff;
-      color: #1f5fbf;
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .tag.amber {
+      background: var(--amber-soft);
+      color: var(--amber);
     }
 
     .tag.red {
-      background: #fff0f0;
-      color: #b73535;
+      background: var(--red-soft);
+      color: var(--red);
     }
 
-    .project-body p {
+    .feature .tag {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .project-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr) minmax(230px, 0.44fr);
+      gap: 0;
+      overflow: hidden;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .project-card.no-media {
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 0.44fr);
+    }
+
+    .project-card.no-media .project-copy {
+      border-left: 5px solid var(--teal);
+    }
+
+    .project-card.no-media.crypto .project-copy {
+      border-left-color: var(--blue);
+    }
+
+    .project-card.no-media.cloud .project-copy {
+      border-left-color: var(--amber);
+    }
+
+    .project-card:hover,
+    .project-card:focus-within {
+      transform: translateY(-2px);
+      border-color: var(--line-strong);
+      box-shadow: var(--shadow);
+    }
+
+    .project-card[hidden] {
+      display: none;
+    }
+
+    .project-media {
+      min-height: 100%;
+      background: var(--paper-2);
+      border-right: 1px solid var(--line);
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 230px;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .project-copy {
+      padding: 20px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .project-copy p {
       color: var(--muted);
     }
 
@@ -424,14 +709,38 @@
     }
 
     .proof-list li {
-      margin: 6px 0;
+      margin: 5px 0;
+    }
+
+    .project-side {
+      padding: 20px;
+      border-left: 1px solid var(--line);
+      background: var(--paper-2);
+      display: grid;
+      align-content: space-between;
+      gap: 18px;
+    }
+
+    .project-stat {
+      display: grid;
+      gap: 3px;
+    }
+
+    .project-stat strong {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .project-stat span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
     }
 
     .project-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: auto;
     }
 
     .project-actions .button {
@@ -440,65 +749,53 @@
       font-size: 14px;
     }
 
-    .fit-section {
-      background: #ffffff;
+    .matrix-section {
+      background: rgba(255, 255, 255, 0.78);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
-    .fit-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+    .matrix {
       overflow: hidden;
+      box-shadow: none;
     }
 
-    .fit-item {
-      padding: 22px;
-      background: #ffffff;
-      min-height: 210px;
-    }
-
-    .fit-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 8px;
+    .matrix-row {
       display: grid;
-      place-items: center;
-      margin-bottom: 16px;
+      grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr) minmax(180px, 0.45fr);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .matrix-row:last-child {
+      border-bottom: 0;
+    }
+
+    .matrix-cell {
+      padding: 16px;
+      border-right: 1px solid var(--line);
+    }
+
+    .matrix-cell:last-child {
+      border-right: 0;
+    }
+
+    .matrix-head {
+      background: var(--charcoal);
       color: #ffffff;
-      background: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    .fit-icon.blue {
-      background: var(--blue);
-    }
-
-    .fit-icon.red {
-      background: var(--red);
-    }
-
-    .fit-icon.amber {
-      background: var(--amber);
-    }
-
-    .fit-icon svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .fit-item p {
-      margin-top: 10px;
+    .matrix-cell p {
       color: var(--muted);
     }
 
-    .evidence-layout {
+    .evidence-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.65fr);
-      gap: 18px;
+      grid-template-columns: minmax(0, 0.92fr) minmax(350px, 0.62fr);
+      gap: 16px;
       align-items: start;
     }
 
@@ -508,18 +805,15 @@
     }
 
     .timeline-item,
-    .academic-panel {
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: #ffffff;
+    .credential-panel {
       padding: 20px;
-      box-shadow: 0 12px 30px rgba(17, 24, 39, 0.05);
+      box-shadow: 0 12px 34px rgba(16, 24, 40, 0.06);
     }
 
     .timeline-item p,
-    .academic-panel p {
-      color: var(--muted);
+    .credential-panel p {
       margin-top: 8px;
+      color: var(--muted);
     }
 
     .grade-table {
@@ -551,52 +845,46 @@
       min-width: 34px;
       min-height: 28px;
       border-radius: 5px;
-      background: #e7f7f3;
+      background: var(--teal-soft);
       color: var(--teal);
       font-weight: 900;
     }
 
     .grade.di {
-      background: #e8f1ff;
+      background: var(--blue-soft);
       color: var(--blue);
     }
 
     .contact-band {
-      color: #ffffff;
-      background:
-        linear-gradient(90deg, rgba(17, 24, 39, 0.98), rgba(17, 24, 39, 0.88)),
-        url("assets/hero-security-console.jpg") center / cover no-repeat;
-      padding: 72px 0;
+      padding: 0 0 58px;
     }
 
-    .contact-box {
+    .contact-panel {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 24px;
       align-items: center;
-    }
-
-    .contact-box h2 {
+      padding: 28px;
+      border-radius: var(--radius);
       color: #ffffff;
+      background: var(--charcoal);
+      box-shadow: var(--shadow);
     }
 
-    .contact-box p {
+    .contact-panel p {
+      max-width: 760px;
+      margin-top: 10px;
       color: #dbeafe;
-      max-width: 720px;
-      margin-top: 12px;
-      font-size: 18px;
     }
 
     .footer {
+      padding: 24px 0;
       border-top: 1px solid var(--line);
       background: #ffffff;
-      padding: 24px 0;
       color: var(--muted);
     }
 
     .footer-inner {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       gap: 16px;
@@ -607,15 +895,15 @@
       position: fixed;
       left: 50%;
       bottom: 22px;
+      z-index: 80;
       transform: translateX(-50%) translateY(120px);
       padding: 12px 16px;
       border-radius: 8px;
-      background: var(--ink);
+      background: var(--charcoal);
       color: #ffffff;
       font-weight: 800;
-      z-index: 60;
-      transition: transform 180ms ease;
       box-shadow: var(--shadow);
+      transition: transform 180ms ease;
     }
 
     .toast.show {
@@ -623,36 +911,67 @@
     }
 
     .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 420ms ease, transform 420ms ease;
+      opacity: 1;
+      transform: none;
+      transition: none;
     }
 
     .reveal.visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
     }
 
-    @media (max-width: 980px) {
-      .hero h1 {
-        font-size: 48px;
+    @media (max-width: 1040px) {
+      .dossier,
+      .hero-layout,
+      .section-head,
+      .featured-grid,
+      .evidence-grid,
+      .contact-panel {
+        grid-template-columns: 1fr;
       }
 
-      .signal-strip,
-      .project-grid,
-      .fit-grid,
-      .evidence-layout,
-      .contact-box,
-      .section-head {
+      .fit-panel {
         grid-template-columns: 1fr;
+      }
+
+      .status-row {
+        padding-right: 0;
+        padding-bottom: 14px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
       }
 
       .filters {
         justify-content: flex-start;
       }
+
+      .project-card {
+        grid-template-columns: 220px minmax(0, 1fr);
+      }
+
+      .project-card.no-media {
+        grid-template-columns: 1fr;
+      }
+
+      .project-side {
+        grid-column: 1 / -1;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: end;
+      }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
+      body {
+        background-image: none;
+      }
+
+      .shell {
+        width: min(var(--max), calc(100% - 92px));
+      }
+
       .nav {
         align-items: flex-start;
         flex-direction: column;
@@ -662,35 +981,89 @@
       .nav-links {
         justify-content: flex-start;
         width: 100%;
+        gap: 6px;
       }
 
       .nav-links a {
-        flex: 1 1 auto;
+        flex: 1 1 calc(50% - 6px);
+        min-width: 0;
+        padding: 8px 9px;
+        font-size: 13px;
+        text-align: center;
+        white-space: normal;
       }
 
-      .hero {
+      .identity-panel {
         min-height: auto;
       }
 
-      .hero-inner {
-        padding: 82px 0 54px;
+      .identity-main {
+        padding: 28px 20px;
       }
 
-      .hero h1 {
-        font-size: 39px;
+      .hero-layout {
+        min-height: 0;
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 32px;
       }
 
       h2 {
-        font-size: 31px;
+        font-size: 30px;
+      }
+
+      .intro-copy,
+      .lead {
+        font-size: 16px;
+      }
+
+      .identity-meta,
+      .fit-panel,
+      .project-card,
+      .project-side,
+      .matrix-row {
+        grid-template-columns: 1fr;
+      }
+
+      .metric,
+      .project-media,
+      .project-side,
+      .matrix-cell {
+        border-right: 0;
+      }
+
+      .metric,
+      .matrix-cell {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .metric:last-child,
+      .matrix-cell:last-child {
+        border-bottom: 0;
+      }
+
+      .project-media {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .project-media img {
+        min-height: 210px;
+      }
+
+      .browser-frame.small {
+        width: 100%;
+        margin-top: 0;
       }
 
       main section {
-        padding: 54px 0;
+        padding: 46px 0;
       }
 
-      .project-actions .button,
       .hero-actions .button,
-      .contact-box .button {
+      .project-actions .button,
+      .contact-panel .button {
         width: 100%;
       }
     }
@@ -701,8 +1074,8 @@
       }
 
       .reveal,
-      .project-card,
-      .toast {
+      .toast,
+      .project-card {
         transition: none;
       }
     }
@@ -712,118 +1085,151 @@
   <a class="skip-link" href="#main">Skip to portfolio</a>
 
   <header class="site-header">
-    <nav class="nav" aria-label="Primary navigation">
+    <div class="shell nav">
       <a class="brand" href="#top" aria-label="Meidie Fei portfolio home">
         <span class="brand-mark">MF</span>
         <span>Meidie Fei</span>
       </a>
-      <div class="nav-links">
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="#projects">Projects</a>
-        <a href="#fit">Fit</a>
-        <a href="#evidence">Evidence</a>
-        <a href="assets/Meidie_Fei_Resume_Agoda_Security_Analyst.pdf" download>
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Resume
-        </a>
-      </div>
-    </nav>
+        <a href="#matrix">Evidence</a>
+        <a href="#background">Background</a>
+        <a href="assets/Meidie_Fei_Resume_Agoda_Security_Analyst.pdf" download>Resume PDF</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-inner">
-        <span class="eyebrow">Security analyst portfolio</span>
-        <h1>Secure software, detection systems, and cryptography projects recruiters can verify.</h1>
-        <p class="hero-copy">I am Meidie Fei, an RMIT Master of Cyber Security student, BINUS Computer Science graduate, and MDP Studio co-founder. This portfolio highlights public, clickable evidence of my security work.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 5h16M4 12h16M4 19h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            View projects
-          </a>
-          <a class="button ghost" href="mailto:meidie@mdpstudio.com.au">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Contact
-          </a>
-          <button class="button ghost" type="button" id="copyPitch">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M9 9h10v10H9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M5 15H4V4h11v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Copy pitch
-          </button>
+    <section class="intro" id="top">
+      <div class="shell dossier">
+        <div class="identity-panel reveal">
+          <div class="identity-main">
+            <div class="hero-layout">
+              <div class="hero-text">
+                <span class="eyebrow">Security analyst portfolio</span>
+                <h1>Security projects recruiters can open, test, and review.</h1>
+                <p class="intro-copy">I am Meidie Fei, an RMIT Master of Cyber Security student and MDP Studio co-founder. This page focuses on deployed work and public repositories: phishing detection, secure software, cryptography, cloud deployment, and CI/CD automation.</p>
+                <div class="hero-actions">
+                  <a class="button primary" href="#projects">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    View work
+                  </a>
+                  <a class="button ghost" href="mailto:meidie@mdpstudio.com.au">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    Email
+                  </a>
+                  <button class="button ghost" type="button" id="copyPitch">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 9h10v10H9z" stroke="currentColor" stroke-width="2"/><path d="M5 15H4V4h11v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    Copy pitch
+                  </button>
+                </div>
+              </div>
+              <div class="screenshot-stack" aria-label="Live project screenshots">
+                <a class="browser-frame" href="https://phishanalyze.mdpstudio.com.au/" target="_blank" rel="noreferrer">
+                  <span class="browser-bar"><span class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></span><span>phishanalyze.mdpstudio.com.au</span></span>
+                  <img src="assets/screenshot-phishanalyze.png" alt="Live screenshot of PhishAnalyze email phishing detector" width="1440" height="920">
+                </a>
+                <a class="browser-frame small" href="https://ctool.mdpstudio.com.au" target="_blank" rel="noreferrer">
+                  <span class="browser-bar"><span class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></span><span>ctool.mdpstudio.com.au</span></span>
+                  <img src="assets/screenshot-cryptotoolkit.png" alt="Live screenshot of CryptoToolkit cryptography modules" width="1440" height="920">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="identity-meta" aria-label="Portfolio signals">
+            <div class="metric"><strong>6</strong><span>public security projects</span></div>
+            <div class="metric"><strong>103</strong><span>SecureVote tests</span></div>
+            <div class="metric"><strong>36</strong><span>crypto learning modules</span></div>
+            <div class="metric"><strong>3.3</strong><span>RMIT program GPA</span></div>
+          </div>
         </div>
-        <div class="signal-strip" aria-label="Portfolio signals">
-          <div class="signal"><strong>103</strong><span>SecureVote tests</span></div>
-          <div class="signal"><strong>36</strong><span>crypto modules</span></div>
-          <div class="signal"><strong>7</strong><span>phishing analyzers</span></div>
-          <div class="signal"><strong>3.3</strong><span>RMIT program GPA</span></div>
-        </div>
+
+        <aside class="fit-panel reveal" aria-label="Recruiter summary">
+          <div class="status-row">
+            <div>
+              <span class="panel-label">Recruiter view</span>
+              <strong>Entry-level security analyst, SOC, junior pentest, AppSec, and risk roles.</strong>
+            </div>
+            <span class="availability">Available</span>
+          </div>
+
+          <div class="checklist">
+            <div class="check"><span>1</span><p>Can triage findings and reason about risk using evidence, not only tool output.</p></div>
+            <div class="check"><span>2</span><p>Has built back-end services, security controls, and cloud deployment workflows.</p></div>
+            <div class="check"><span>3</span><p>Has public demos and repositories for recruiters to verify independently.</p></div>
+            <div class="check"><span>4</span><p>Comfortable explaining technical tradeoffs to non-security stakeholders.</p></div>
+          </div>
+
+          <div class="quick-links" aria-label="Quick links">
+            <a href="https://github.com/meidielo" target="_blank" rel="noreferrer"><span>GitHub profile</span><span>Open</span></a>
+            <a href="https://phishanalyze.mdpstudio.com.au/" target="_blank" rel="noreferrer"><span>Phishing demo</span><span>Open</span></a>
+            <a href="assets/Meidie_Fei_Resume_Agoda_Security_Analyst.docx" download><span>Resume DOCX</span><span>Download</span></a>
+          </div>
+        </aside>
       </div>
     </section>
 
     <section id="projects">
-      <div class="section-inner">
+      <div class="shell">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">Proof of work</p>
-            <h2>Clickable projects with security evidence.</h2>
+            <p class="section-kicker">Case studies</p>
+            <h2>Projects chosen for security evidence, not volume.</h2>
           </div>
           <div>
-            <p class="lead">Filter by what a recruiter wants to check first: application security, detection, cryptography, cloud, or build quality.</p>
+            <p class="lead">The first three are the strongest recruiter signals: detection engineering, secure software, and cryptography. Use the filters to scan by role relevance.</p>
             <div class="filters" aria-label="Project filters">
               <button class="filter active" type="button" data-filter="all">All</button>
-              <button class="filter" type="button" data-filter="appsec">AppSec</button>
               <button class="filter" type="button" data-filter="detection">Detection</button>
+              <button class="filter" type="button" data-filter="appsec">AppSec</button>
               <button class="filter" type="button" data-filter="crypto">Crypto</button>
               <button class="filter" type="button" data-filter="cloud">Cloud</button>
             </div>
           </div>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card reveal" data-tags="appsec crypto cloud">
-            <img src="assets/project-securevote.jpg" alt="SecureVote project visual showing anonymous voting protocol and security controls" width="1200" height="720">
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="tag green">Secure software</span>
-                <span class="tag blue">Vault</span>
-                <span class="tag red">WAF</span>
-              </div>
-              <h3>SecureVote</h3>
-              <p>Secure electronic voting platform built around anonymity, encrypted PII, audit integrity, WAF enforcement, and concurrency safety.</p>
-              <ul class="proof-list">
-                <li>RSA blind signatures and anonymous vote casting flow.</li>
-                <li>ChaCha20-Poly1305 PII encryption and HMAC blind indexing.</li>
-                <li>103 pytest tests including 10-thread voting race checks.</li>
-              </ul>
-              <div class="project-actions">
-                <a class="button dark" href="https://github.com/meidielo/secure-voting-platform" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-tags="detection appsec">
-            <img src="assets/project-phishing.jpg" alt="PhishAnalyze project visual showing phishing detection pipeline stages and scoring formula" width="1200" height="720">
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="tag red">Detection</span>
-                <span class="tag blue">FastAPI</span>
-                <span class="tag green">STIX 2.1</span>
-              </div>
+        <div class="featured-grid reveal" aria-label="Featured projects">
+          <a class="feature" href="https://phishanalyze.mdpstudio.com.au/" target="_blank" rel="noreferrer">
+            <img src="assets/screenshot-phishanalyze.png" alt="Live screenshot of PhishAnalyze email phishing detector" width="1440" height="920">
+            <div class="feature-content">
+              <div class="badge-row"><span class="tag">Live demo</span><span class="tag">Detection</span></div>
               <h3>PhishAnalyze</h3>
-              <p>Async phishing detection pipeline with header checks, URL and domain analysis, detonation, weighted scoring, feedback, and IOC export.</p>
+              <p>Async phishing triage pipeline with header, URL, domain, attachment, and brand impersonation signals.</p>
+            </div>
+          </a>
+          <a class="feature no-image" href="https://github.com/meidielo/secure-voting-platform" target="_blank" rel="noreferrer">
+            <div class="feature-content">
+              <div class="badge-row"><span class="tag">103 tests</span><span class="tag">Secure software</span></div>
+              <h3>SecureVote</h3>
+              <p>Anonymous voting, encrypted PII, audit integrity, WAF rules, and concurrency checks.</p>
+            </div>
+          </a>
+          <a class="feature" href="https://ctool.mdpstudio.com.au" target="_blank" rel="noreferrer">
+            <img src="assets/screenshot-cryptotoolkit.png" alt="Live screenshot of CryptoToolkit cryptography modules" width="1440" height="920">
+            <div class="feature-content">
+              <div class="badge-row"><span class="tag">36 modules</span><span class="tag">Crypto attacks</span></div>
+              <h3>CryptoToolkit</h3>
+              <p>Real attack labs for nonce reuse, padding oracles, RSA, hash extension, DH, and GCM.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card reveal" data-tags="detection appsec">
+            <div class="project-media"><img src="assets/screenshot-phishanalyze.png" alt="Live screenshot of PhishAnalyze phishing detector" width="1440" height="920"></div>
+            <div class="project-copy">
+              <div class="badge-row"><span class="tag red">Detection</span><span class="tag blue">FastAPI</span><span class="tag green">STIX 2.1</span></div>
+              <h3>PhishAnalyze</h3>
+              <p>Async phishing detection and triage system designed around evidence collection and explainable risk scoring.</p>
               <ul class="proof-list">
-                <li>7 analyzer types with confidence-weighted scoring.</li>
-                <li>SPF, DKIM, DMARC, QR, attachment, and brand signals.</li>
-                <li>90% recall, 91% precision, F1 score 0.90 on test set.</li>
+                <li>Analyzes SPF, DKIM, DMARC, URLs, domains, attachments, QR codes, and brand impersonation signals.</li>
+                <li>Exports STIX 2.1 indicators and keeps analyst feedback for tuning.</li>
+                <li>Built as a deployed FastAPI application recruiters can click and test.</li>
               </ul>
+            </div>
+            <div class="project-side">
+              <div class="project-stat"><strong>0.90</strong><span>F1 score on test set</span></div>
+              <div class="project-stat"><strong>7</strong><span>analyzer groups</span></div>
               <div class="project-actions">
                 <a class="button primary" href="https://phishanalyze.mdpstudio.com.au/" target="_blank" rel="noreferrer">Live demo</a>
                 <a class="button ghost" href="https://github.com/meidielo/Automated-Phishing-Detection" target="_blank" rel="noreferrer">GitHub</a>
@@ -831,21 +1237,41 @@
             </div>
           </article>
 
-          <article class="project-card reveal" data-tags="crypto appsec">
-            <img src="assets/project-cryptotoolkit.jpg" alt="CryptoToolkit project visual showing attack lab and cryptographic test vectors" width="1200" height="720">
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="tag blue">Cryptography</span>
-                <span class="tag green">TypeScript</span>
-                <span class="tag">95 tests</span>
-              </div>
-              <h3>CryptoToolkit</h3>
-              <p>Interactive cryptography platform where attacks run for real rather than being simulated animations.</p>
+          <article class="project-card no-media reveal" data-tags="appsec crypto cloud">
+            <div class="project-copy">
+              <div class="badge-row"><span class="tag green">Secure software</span><span class="tag blue">Vault</span><span class="tag red">WAF</span></div>
+              <h3>SecureVote</h3>
+              <p>Secure electronic voting platform focused on anonymity, encrypted PII, integrity, and defensive controls.</p>
               <ul class="proof-list">
-                <li>36 modules across attacks, protocols, number theory, and utilities.</li>
-                <li>Padding oracle, nonce reuse, hash extension, RSA, DH, and GCM attacks.</li>
-                <li>NIST and RFC test vectors for AES, AES-GCM, SHA-256, and HMAC.</li>
+                <li>RSA blind signatures, ChaCha20-Poly1305 encryption, HMAC blind indexing, and HMAC-backed audit logs.</li>
+                <li>RBAC, CSRF protection, MFA, rate limiting, ModSecurity CRS, and Vault Transit signing.</li>
+                <li>Includes race-condition checks around concurrent vote casting.</li>
               </ul>
+            </div>
+            <div class="project-side">
+              <div class="project-stat"><strong>103</strong><span>pytest tests</span></div>
+              <div class="project-stat"><strong>10</strong><span>thread race checks</span></div>
+              <div class="project-actions">
+                <a class="button dark" href="https://github.com/meidielo/secure-voting-platform" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tags="crypto appsec">
+            <div class="project-media"><img src="assets/screenshot-cryptotoolkit.png" alt="Live screenshot of CryptoToolkit modules" width="1440" height="920"></div>
+            <div class="project-copy">
+              <div class="badge-row"><span class="tag blue">Cryptography</span><span class="tag green">TypeScript</span><span class="tag amber">Learning platform</span></div>
+              <h3>CryptoToolkit</h3>
+              <p>Interactive cryptography platform where attacks run for real and modules are backed by known test vectors.</p>
+              <ul class="proof-list">
+                <li>Padding oracle, nonce reuse, hash extension, RSA, Diffie-Hellman, and GCM attack demonstrations.</li>
+                <li>NIST and RFC vectors for AES, AES-GCM, SHA-256, and HMAC.</li>
+                <li>Built for teaching, but structured around reproducible technical behavior.</li>
+              </ul>
+            </div>
+            <div class="project-side">
+              <div class="project-stat"><strong>36</strong><span>modules</span></div>
+              <div class="project-stat"><strong>95</strong><span>tests</span></div>
               <div class="project-actions">
                 <a class="button primary" href="https://ctool.mdpstudio.com.au" target="_blank" rel="noreferrer">Live demo</a>
                 <a class="button ghost" href="https://github.com/meidielo/crypto-toolkit" target="_blank" rel="noreferrer">GitHub</a>
@@ -853,21 +1279,20 @@
             </div>
           </article>
 
-          <article class="project-card reveal" data-tags="crypto appsec">
-            <img src="assets/project-vault.jpg" alt="AES Secure Vault visual showing encryption envelope and security properties" width="1200" height="720">
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="tag blue">AES-GCM</span>
-                <span class="tag green">Argon2id</span>
-                <span class="tag">PyPI</span>
-              </div>
+          <article class="project-card no-media crypto reveal" data-tags="crypto appsec">
+            <div class="project-copy">
+              <div class="badge-row"><span class="tag blue">AES-GCM</span><span class="tag green">Argon2id</span><span class="tag">PyPI</span></div>
               <h3>AES Secure Vault</h3>
-              <p>Python package and CLI for authenticated encryption with a written threat model and property-based tests.</p>
+              <p>Python package and CLI for authenticated encryption with an explicit threat model and fuzz testing.</p>
               <ul class="proof-list">
                 <li>AES-256-GCM with Argon2id and AAD-bound envelope metadata.</li>
-                <li>KDF downgrade prevention and tamper detection.</li>
-                <li>Malformed payload rejection, legacy support, and Hypothesis fuzzing.</li>
+                <li>KDF downgrade prevention, tamper detection, and malformed payload rejection.</li>
+                <li>Published as a package for repeatable use and review.</li>
               </ul>
+            </div>
+            <div class="project-side">
+              <div class="project-stat"><strong>CLI</strong><span>package interface</span></div>
+              <div class="project-stat"><strong>Fuzz</strong><span>property checks</span></div>
               <div class="project-actions">
                 <a class="button dark" href="https://github.com/meidielo/AES-256-GCM-Python-Tool" target="_blank" rel="noreferrer">GitHub</a>
                 <a class="button ghost" href="https://pypi.org/project/aes-secure-vault/" target="_blank" rel="noreferrer">PyPI</a>
@@ -875,21 +1300,20 @@
             </div>
           </article>
 
-          <article class="project-card reveal" data-tags="cloud appsec">
-            <img src="assets/project-dns.jpg" alt="Cloudflare DNS Action visual showing GitHub Actions connecting Netlify and Cloudflare" width="1200" height="720">
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="tag">GitHub Actions</span>
-                <span class="tag blue">Cloudflare</span>
-                <span class="tag green">Netlify</span>
-              </div>
+          <article class="project-card no-media cloud reveal" data-tags="cloud appsec">
+            <div class="project-copy">
+              <div class="badge-row"><span class="tag">GitHub Actions</span><span class="tag blue">Cloudflare</span><span class="tag green">Netlify</span></div>
               <h3>Cloudflare DNS Action</h3>
-              <p>Deployment automation for Netlify custom domains and Cloudflare DNS records with scoped-token thinking.</p>
+              <p>Deployment automation for connecting Netlify custom domains to Cloudflare DNS with idempotent behavior.</p>
               <ul class="proof-list">
-                <li>Idempotent DNS upsert and domain attachment behavior.</li>
-                <li>Dry-run, create-only, retry, and SSL certificate checks.</li>
-                <li>Lint, typecheck, test, and bundle drift CI validation.</li>
+                <li>Attaches custom domains, upserts CNAME records, and can wait for SSL certificates.</li>
+                <li>Uses dry-run, create-only, retry, and scoped-token patterns.</li>
+                <li>Now powers this portfolio deployment at meidie.mdpstudio.com.au.</li>
               </ul>
+            </div>
+            <div class="project-side">
+              <div class="project-stat"><strong>CI</strong><span>lint, test, bundle</span></div>
+              <div class="project-stat"><strong>DNS</strong><span>safe upsert</span></div>
               <div class="project-actions">
                 <a class="button dark" href="https://github.com/MDP-Studio/cf-dns-action" target="_blank" rel="noreferrer">GitHub</a>
               </div>
@@ -897,20 +1321,20 @@
           </article>
 
           <article class="project-card reveal" data-tags="cloud detection">
-            <img src="assets/project-command-center.jpg" alt="Cyber Command Center visual showing training progress and security tracking" width="1200" height="720">
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="tag green">Supabase RLS</span>
-                <span class="tag blue">React</span>
-                <span class="tag">Netlify</span>
-              </div>
+            <div class="project-media"><img src="assets/screenshot-command-center.png" alt="Live screenshot of Cyber Command Center login" width="1440" height="920"></div>
+            <div class="project-copy">
+              <div class="badge-row"><span class="tag green">Supabase RLS</span><span class="tag blue">React</span><span class="tag">Netlify</span></div>
               <h3>Cyber Command Center</h3>
-              <p>Cybersecurity training tracker with guest mode, synced accounts, Row Level Security, and deployment security headers.</p>
+              <p>Cybersecurity training tracker with guest mode, synced accounts, Row Level Security, and security headers.</p>
               <ul class="proof-list">
-                <li>49 tasks across 6 phases and 240+ hours of structured training.</li>
-                <li>Supabase Auth with Row Level Security for account data.</li>
-                <li>Security headers via Netlify and Docker support.</li>
+                <li>Tracks 49 tasks across 6 phases and 240+ hours of structured training.</li>
+                <li>Uses Supabase Auth and Row Level Security for account data.</li>
+                <li>Deployed with Netlify headers and Docker support.</li>
               </ul>
+            </div>
+            <div class="project-side">
+              <div class="project-stat"><strong>49</strong><span>training tasks</span></div>
+              <div class="project-stat"><strong>RLS</strong><span>data protection</span></div>
               <div class="project-actions">
                 <a class="button primary" href="https://c3.mdpstudio.com.au" target="_blank" rel="noreferrer">Live demo</a>
                 <a class="button ghost" href="https://github.com/meidielo/cyber-command-center" target="_blank" rel="noreferrer">GitHub</a>
@@ -921,84 +1345,73 @@
       </div>
     </section>
 
-    <section class="fit-section" id="fit">
-      <div class="section-inner">
+    <section class="matrix-section" id="matrix">
+      <div class="shell">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">Recruiter shortcut</p>
-            <h2>Where the portfolio maps to security analyst work.</h2>
+            <p class="section-kicker">Evidence matrix</p>
+            <h2>How the work maps to analyst responsibilities.</h2>
           </div>
-          <p class="lead">The projects are selected to show the work behind the buzzwords: triage, code review support, vulnerability assessment, risk reasoning, and security in cloud-backed systems.</p>
+          <p class="lead">This is the shortcut for hiring managers: what I can help with, where the evidence is, and what to click.</p>
         </div>
 
-        <div class="fit-grid reveal">
-          <div class="fit-item">
-            <div class="fit-icon">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Triage and tracking</h3>
-            <p>Phishing scoring, documented false positives, confidence handling, and remediation notes show disciplined finding analysis.</p>
+        <div class="matrix reveal" role="table" aria-label="Security evidence matrix">
+          <div class="matrix-row matrix-head" role="row">
+            <div class="matrix-cell" role="columnheader">Analyst task</div>
+            <div class="matrix-cell" role="columnheader">Evidence</div>
+            <div class="matrix-cell" role="columnheader">Project</div>
           </div>
-          <div class="fit-item">
-            <div class="fit-icon blue">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="m12 3 8 4v5c0 5-3.4 8.5-8 9-4.6-.5-8-4-8-9V7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Secure software</h3>
-            <p>SecureVote covers auth, RBAC, CSRF, MFA, PII encryption, audit integrity, WAF, and concurrency safety.</p>
+          <div class="matrix-row" role="row">
+            <div class="matrix-cell" role="cell"><strong>Triage findings</strong></div>
+            <div class="matrix-cell" role="cell"><p>Weighted phishing score, confidence handling, analyzer evidence, analyst feedback, and STIX export.</p></div>
+            <div class="matrix-cell" role="cell"><span class="tag red">PhishAnalyze</span></div>
           </div>
-          <div class="fit-item">
-            <div class="fit-icon red">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 19 19 5M7 5h12v12M5 8l4 4M12 15l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Attack mindset</h3>
-            <p>CryptoToolkit and ethical hacking coursework show understanding of how systems break, not only how tools report issues.</p>
+          <div class="matrix-row" role="row">
+            <div class="matrix-cell" role="cell"><strong>Review secure code</strong></div>
+            <div class="matrix-cell" role="cell"><p>Auth, RBAC, CSRF, MFA, encryption boundaries, WAF rules, audit logs, and race-condition tests.</p></div>
+            <div class="matrix-cell" role="cell"><span class="tag green">SecureVote</span></div>
           </div>
-          <div class="fit-item">
-            <div class="fit-icon amber">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M6 17a4 4 0 0 1 .7-7.94A6 6 0 0 1 18 11h.5a3.5 3.5 0 0 1 0 7H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Cloud and CI/CD</h3>
-            <p>Netlify, Cloudflare, Supabase, Docker, GitHub Actions, and Vault appear in shipped projects with operational tradeoffs.</p>
+          <div class="matrix-row" role="row">
+            <div class="matrix-cell" role="cell"><strong>Understand attack paths</strong></div>
+            <div class="matrix-cell" role="cell"><p>Hands-on implementations of padding oracles, nonce reuse, hash extension, RSA, DH, and GCM failures.</p></div>
+            <div class="matrix-cell" role="cell"><span class="tag blue">CryptoToolkit</span></div>
+          </div>
+          <div class="matrix-row" role="row">
+            <div class="matrix-cell" role="cell"><strong>Support cloud workflows</strong></div>
+            <div class="matrix-cell" role="cell"><p>GitHub Actions, Netlify deploys, Cloudflare DNS automation, SSL checks, and security headers.</p></div>
+            <div class="matrix-cell" role="cell"><span class="tag amber">DNS Action</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="evidence">
-      <div class="section-inner">
+    <section id="background">
+      <div class="shell">
         <div class="section-head reveal">
           <div>
             <p class="section-kicker">Background</p>
-            <h2>Academic and delivery evidence.</h2>
+            <h2>Builder, student, and communicator.</h2>
           </div>
-          <p class="lead">A concise view of the formal study, client delivery, and communication experience behind the portfolio.</p>
+          <p class="lead">The portfolio is the proof layer. This is the context behind it: security study, production delivery, and teaching experience.</p>
         </div>
 
-        <div class="evidence-layout">
+        <div class="evidence-grid">
           <div class="timeline">
             <div class="timeline-item reveal">
               <h3>MDP Studio - Co-Founder and Developer</h3>
-              <p>Melbourne-based web design and AI implementation studio. Built production web applications, automated lead-generation workflows, Supabase-backed admin patterns, HTTPS-backed Netlify deployments, DNS automation, and security header configurations.</p>
+              <p>Melbourne-based web design and AI implementation studio. Built production websites, automation pipelines, Supabase-backed admin patterns, HTTPS-backed Netlify deployments, DNS automation, and practical security headers.</p>
             </div>
             <div class="timeline-item reveal">
               <h3>Software Programming Instructor - KodeKiddo</h3>
-              <p>Taught programming fundamentals to students aged 6-18, including Android development and Unity game development. Built the communication habit needed to explain technical findings clearly.</p>
+              <p>Taught programming fundamentals to students aged 6-18, including Android development and Unity game development. Built the habit of explaining technical concepts clearly.</p>
             </div>
             <div class="timeline-item reveal">
               <h3>Data Assistant - BKPSDM</h3>
-              <p>Reviewed, verified, and corrected employee data records in a government HR system. Developed attention to data integrity, consistency, and structured governance processes.</p>
+              <p>Reviewed, verified, and corrected government HR data. Developed attention to integrity, consistency, and structured governance processes.</p>
             </div>
           </div>
 
-          <aside class="academic-panel reveal">
+          <aside class="credential-panel reveal">
             <h3>RMIT Master of Cyber Security</h3>
             <p>Program GPA 3.3. Transcript highlights relevant to security analyst roles:</p>
             <table class="grade-table" aria-label="Transcript highlights">
@@ -1022,10 +1435,10 @@
     </section>
 
     <section class="contact-band" id="contact">
-      <div class="section-inner contact-box">
+      <div class="shell contact-panel reveal">
         <div>
           <p class="section-kicker">Contact</p>
-          <h2>Open to security analyst, SOC, junior pentest, security engineering, and risk advisory roles.</h2>
+          <h2>Open to security analyst, SOC, junior pentest, AppSec, security engineering, and risk advisory roles.</h2>
           <p>Best fit: teams that value practical builders who can investigate findings, explain risk clearly, and work with engineers to close issues.</p>
         </div>
         <div class="hero-actions">
@@ -1037,9 +1450,9 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <span>Meidie Fei | Security Portfolio</span>
-      <span>Melbourne, Australia | mdpstudio.com.au</span>
+    <div class="shell footer-inner">
+      <span>Meidie Fei | Security Analyst Portfolio</span>
+      <span>Melbourne, Australia | meidie.mdpstudio.com.au</span>
     </div>
   </footer>
 
@@ -1064,7 +1477,7 @@
       });
     });
 
-    const pitch = "Meidie Fei is an RMIT Master of Cyber Security student and BINUS Computer Science graduate with hands-on projects in secure software, phishing detection, cryptography, cloud deployment, CI/CD, and security testing. Portfolio: https://ctool.mdpstudio.com.au, https://phishanalyze.mdpstudio.com.au, and GitHub https://github.com/meidielo";
+    const pitch = "Meidie Fei is an RMIT Master of Cyber Security student and MDP Studio co-founder with public, verifiable projects in phishing detection, secure software, cryptography, cloud deployment, and CI/CD automation. Portfolio: https://meidie.mdpstudio.com.au";
 
     function showToast() {
       toast.classList.add("show");

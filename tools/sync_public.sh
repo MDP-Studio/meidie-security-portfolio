@@ -5,6 +5,16 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 mkdir -p "$ROOT/public/assets"
 cp "$ROOT/index.html" "$ROOT/public/index.html"
-cp "$ROOT/assets/"* "$ROOT/public/assets/"
+
+for asset in \
+  favicon.jpg \
+  Meidie_Fei_Resume_Agoda_Security_Analyst.docx \
+  Meidie_Fei_Resume_Agoda_Security_Analyst.pdf \
+  screenshot-phishanalyze.png \
+  screenshot-cryptotoolkit.png \
+  screenshot-command-center.png
+do
+  cp "$ROOT/assets/$asset" "$ROOT/public/assets/$asset"
+done
 
 echo "Synced deployable site into $ROOT/public"
