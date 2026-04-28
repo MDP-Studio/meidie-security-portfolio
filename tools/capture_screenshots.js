@@ -16,6 +16,10 @@ const pages = [
   {
     name: "screenshot-command-center.png",
     url: "https://c3.mdpstudio.com.au",
+    afterLoad: async (page) => {
+      await page.getByText("Continue as guest", { exact: true }).click({ timeout: 15000 });
+      await page.getByText("SYSTEM://CYBER-COMMAND", { exact: true }).waitFor({ timeout: 15000 });
+    },
   },
 ];
 
@@ -28,6 +32,9 @@ const pages = [
 
   for (const item of pages) {
     await page.goto(item.url, { waitUntil: "networkidle", timeout: 60000 });
+    if (item.afterLoad) {
+      await item.afterLoad(page);
+    }
     await page.screenshot({
       path: path.join(assets, item.name),
       fullPage: false,

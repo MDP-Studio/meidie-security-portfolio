@@ -660,6 +660,10 @@
       grid-template-columns: minmax(0, 1fr) minmax(230px, 0.44fr);
     }
 
+    .project-card.visual-wide {
+      grid-template-columns: minmax(420px, 0.85fr) minmax(0, 1fr) minmax(210px, 0.36fr);
+    }
+
     .project-card.no-media .project-copy {
       border-left: 5px solid var(--teal);
     }
@@ -695,6 +699,10 @@
       min-height: 230px;
       object-fit: cover;
       object-position: top center;
+    }
+
+    .project-card.visual-wide .project-media img {
+      min-height: 300px;
     }
 
     .project-copy {
@@ -954,6 +962,10 @@
 
       .project-card {
         grid-template-columns: 220px minmax(0, 1fr);
+      }
+
+      .project-card.visual-wide {
+        grid-template-columns: 1fr;
       }
 
       .project-card.no-media {
@@ -1334,8 +1346,8 @@
             </div>
           </article>
 
-          <article class="project-card reveal" data-tags="cloud detection">
-            <div class="project-media"><img src="assets/screenshot-command-center.png" alt="Live screenshot of Cyber Command Center login" width="1440" height="920"></div>
+          <article class="project-card visual-wide reveal" data-tags="cloud detection">
+            <div class="project-media"><img src="assets/screenshot-command-center.png" alt="Live screenshot of Cyber Command Center dashboard in guest mode" width="1440" height="920"></div>
             <div class="project-copy">
               <div class="badge-row"><span class="tag green">Supabase RLS</span><span class="tag blue">React</span><span class="tag">Netlify</span></div>
               <h3>Cyber Command Center</h3>
