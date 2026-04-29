@@ -7,7 +7,7 @@ const assets = path.join(root, "assets");
 const pages = [
   {
     name: "screenshot-phishanalyze.png",
-    url: "https://phishanalyze.mdpstudio.com.au/",
+    url: "https://phishanalyze.mdpstudio.com.au/dashboard",
   },
   {
     name: "screenshot-cryptotoolkit.png",

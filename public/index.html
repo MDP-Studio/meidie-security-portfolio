@@ -4,6 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Meidie Fei security portfolio: phishing detection, secure software, cryptography, cloud automation, and analyst-ready project evidence.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meidie Fei | Security Analyst Portfolio">
+  <meta property="og:description" content="Public security projects recruiters can open, test, and review: PhishAnalyze, SecureVote, CryptoToolkit, AES Secure Vault, and cloud deployment work.">
+  <meta property="og:url" content="https://meidie.mdpstudio.com.au/">
+  <meta property="og:image" content="https://meidie.mdpstudio.com.au/assets/linkedin-featured-portfolio.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meidie Fei | Security Analyst Portfolio">
+  <meta name="twitter:description" content="Public security projects recruiters can open, test, and review.">
+  <meta name="twitter:image" content="https://meidie.mdpstudio.com.au/assets/linkedin-featured-portfolio.png">
   <title>Meidie Fei | Security Analyst Portfolio</title>
   <link rel="icon" href="assets/favicon.jpg">
   <style>
@@ -548,16 +559,22 @@
     }
 
     .feature {
-      position: relative;
-      min-height: 310px;
+      min-height: 100%;
       display: grid;
-      align-content: end;
+      grid-template-rows: 210px auto;
       overflow: hidden;
       border-radius: var(--radius);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: #ffffff;
-      background: var(--charcoal);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #ffffff;
       box-shadow: var(--shadow);
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .feature:hover,
+    .feature:focus {
+      transform: translateY(-2px);
+      border-color: var(--line-strong);
     }
 
     .feature.no-image {
@@ -566,19 +583,16 @@
     }
 
     .feature img {
-      position: absolute;
-      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.62;
+      object-position: top center;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper-2);
     }
 
     .feature::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(16, 24, 40, 0.12), rgba(16, 24, 40, 0.94));
+      content: none;
     }
 
     .feature.no-image::after {
@@ -587,15 +601,14 @@
     }
 
     .feature-content {
-      position: relative;
-      z-index: 1;
       padding: 18px;
       display: grid;
       gap: 12px;
+      align-content: start;
     }
 
     .feature p {
-      color: #dbeafe;
+      color: var(--muted);
     }
 
     .badge-row {
@@ -638,9 +651,9 @@
     }
 
     .feature .tag {
-      background: rgba(255, 255, 255, 0.14);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: var(--paper-2);
+      color: #334155;
+      border: 1px solid var(--line);
     }
 
     .project-list {
