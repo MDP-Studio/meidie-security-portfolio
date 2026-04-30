@@ -191,6 +191,12 @@
       border-color: var(--line);
     }
 
+    .button.coffee {
+      color: #111827;
+      background: #ffd60a;
+      border-color: #ffd60a;
+    }
+
     .button svg {
       width: 18px;
       height: 18px;
@@ -904,6 +910,52 @@
       color: #dbeafe;
     }
 
+    .support-band {
+      padding: 0 0 64px;
+    }
+
+    .support-panel {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .support-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 148px;
+      gap: 20px;
+      align-items: center;
+      padding: 22px;
+      color: #ffffff;
+      background: var(--charcoal);
+    }
+
+    .support-panel .section-kicker {
+      color: #a7f3d0;
+    }
+
+    .support-copy p {
+      margin-top: 10px;
+      color: #dbeafe;
+    }
+
+    .support-copy .button {
+      margin-top: 20px;
+    }
+
+    .support-qr {
+      padding: 8px;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .support-qr img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
     .footer {
       padding: 24px 0;
       border-top: 1px solid var(--line);
@@ -956,6 +1008,10 @@
       .evidence-grid,
       .contact-panel {
         grid-template-columns: 1fr;
+      }
+
+      .support-panel {
+        grid-template-columns: minmax(0, 1fr) 132px;
       }
 
       .fit-panel {
@@ -1102,8 +1158,17 @@
 
       .hero-actions .button,
       .project-actions .button,
-      .contact-panel .button {
+      .contact-panel .button,
+      .support-copy .button {
         width: 100%;
+      }
+
+      .support-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .support-qr {
+        width: 132px;
       }
     }
 
@@ -1133,6 +1198,7 @@
         <a href="#projects">Projects</a>
         <a href="#matrix">Evidence</a>
         <a href="#background">Background</a>
+        <a href="#support">Support</a>
         <a href="assets/Meidie_Fei_Cyber_Security_Resume.pdf" download>Resume PDF</a>
       </nav>
     </div>
@@ -1486,6 +1552,22 @@
           <a class="button primary" href="mailto:meidie@mdpstudio.com.au">Email Meidie</a>
           <a class="button ghost" href="https://github.com/meidielo" target="_blank" rel="noreferrer">GitHub</a>
         </div>
+      </div>
+    </section>
+
+    <section class="support-band" id="support" aria-label="Project support">
+      <div class="shell">
+        <aside class="support-panel reveal">
+          <div class="support-copy">
+            <p class="section-kicker">Support</p>
+            <h2>Support the lab.</h2>
+            <p>I build practical cybersecurity, AI, and automation projects. If one helped you or gave you ideas, you can support the work here.</p>
+            <a class="button coffee" href="https://buymeacoffee.com/meidie" target="_blank" rel="noreferrer">Buy me a coffee</a>
+          </div>
+          <a class="support-qr" href="https://buymeacoffee.com/meidie" target="_blank" rel="noreferrer" aria-label="Open Buy Me a Coffee support page">
+            <img src="assets/buy-me-a-coffee-qr.png" alt="QR code linking to Meidie's Buy Me a Coffee page" width="700" height="700">
+          </a>
+        </aside>
       </div>
     </section>
   </main>
