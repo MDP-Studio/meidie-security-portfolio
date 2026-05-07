@@ -9,6 +9,7 @@ cp "$ROOT/index.html" "$ROOT/public/index.html"
 for asset in \
   favicon.jpg \
   Meidie_Fei_Cyber_Security_Resume.pdf \
+  screenshot-payshield.png \
   screenshot-phishanalyze.png \
   screenshot-cryptotoolkit.png \
   screenshot-securevote.png \
