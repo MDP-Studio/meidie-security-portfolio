@@ -413,7 +413,8 @@
     }
 
     .status-row {
-      display: flex;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
@@ -422,7 +423,12 @@
       border-bottom: 0;
     }
 
+    .status-row > div {
+      min-width: 0;
+    }
+
     .status-row strong {
+      display: block;
       font-size: 20px;
       line-height: 1.18;
     }
@@ -1147,6 +1153,12 @@
         border-bottom: 1px solid var(--line);
       }
 
+      .status-row {
+        grid-template-columns: 1fr;
+        align-items: start;
+        justify-items: start;
+      }
+
       .metric:last-child,
       .matrix-cell:last-child {
         border-bottom: 0;
@@ -1270,7 +1282,7 @@
           </div>
         </div>
 
-        <aside class="fit-panel reveal" aria-label="Recruiter summary">
+        <aside class="fit-panel reveal" id="recruiter-summary" aria-label="Recruiter summary">
           <div class="status-row">
             <div>
               <span class="panel-label">Recruiter view</span>
