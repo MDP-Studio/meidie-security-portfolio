@@ -11,6 +11,7 @@ for asset in \
   Meidie_Fei_Cyber_Security_Resume.pdf \
   screenshot-payshield.png \
   screenshot-phishanalyze.png \
+  screenshot-rmm-hunter.png \
   screenshot-cryptotoolkit.png \
   screenshot-securevote.png \
   screenshot-command-center.png

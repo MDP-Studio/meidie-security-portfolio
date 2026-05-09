@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meidie Fei security portfolio: PayShield payment-scam firewall, PhishAnalyze email analysis, secure software, cryptography, cloud automation, and analyst-ready evidence.">
+  <meta name="description" content="Meidie Fei security portfolio: PayShield payment-scam firewall, PhishAnalyze email analysis, RMM Hunter endpoint triage, secure software, cryptography, cloud automation, and analyst-ready evidence.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Meidie Fei | Security Analyst Portfolio">
-  <meta property="og:description" content="Public security projects recruiters can open, test, and review: PayShield, PhishAnalyze, SecureVote, CryptoToolkit, AES Secure Vault, and cloud deployment work.">
+  <meta property="og:description" content="Public security projects recruiters can open, test, and review: PayShield, PhishAnalyze, RMM Hunter, SecureVote, CryptoToolkit, AES Secure Vault, and cloud deployment work.">
   <meta property="og:url" content="https://meidie.mdpstudio.com.au/">
   <meta property="og:image" content="https://meidie.mdpstudio.com.au/assets/linkedin-featured-portfolio.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Meidie Fei | Security Analyst Portfolio">
-  <meta name="twitter:description" content="Public security projects recruiters can open, test, and review, including PayShield and PhishAnalyze.">
+  <meta name="twitter:description" content="Public security projects recruiters can open, test, and review, including PayShield, PhishAnalyze, and RMM Hunter.">
   <meta name="twitter:image" content="https://meidie.mdpstudio.com.au/assets/linkedin-featured-portfolio.png">
   <title>Meidie Fei | Security Analyst Portfolio</title>
   <link rel="icon" href="assets/favicon.jpg">
@@ -1246,7 +1246,7 @@
               <div class="hero-text">
                 <span class="eyebrow">Security analyst portfolio</span>
                 <h1>Security projects recruiters can open, test, and review.</h1>
-                <p class="intro-copy">I am Meidie Fei, an RMIT Master of Cyber Security student and MDP Studio co-founder. This page focuses on deployed work and public repositories: payment-scam protection, phishing analysis, secure software, cryptography, cloud deployment, and CI/CD automation.</p>
+                <p class="intro-copy">I am Meidie Fei, an RMIT Master of Cyber Security student and MDP Studio co-founder. This page focuses on deployed work and public repositories: payment-scam protection, phishing analysis, Windows endpoint triage, secure software, cryptography, cloud deployment, and CI/CD automation.</p>
                 <div class="hero-actions">
                   <a class="button primary" href="#projects">
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -1275,9 +1275,9 @@
             </div>
           </div>
           <div class="identity-meta" aria-label="Portfolio signals">
-            <div class="metric"><strong>7</strong><span>public security projects</span></div>
+            <div class="metric"><strong>8</strong><span>public security projects</span></div>
             <div class="metric"><strong>103</strong><span>SecureVote tests</span></div>
-            <div class="metric"><strong>36</strong><span>crypto learning modules</span></div>
+            <div class="metric"><strong>10</strong><span>RMM tool families covered</span></div>
             <div class="metric"><strong>3.3</strong><span>RMIT program GPA</span></div>
           </div>
         </div>
@@ -1316,10 +1316,11 @@
             <h2>Projects chosen for security evidence, not volume.</h2>
           </div>
           <div>
-            <p class="lead">The strongest recruiter signals now lead with payment-scam decisioning, detection engineering, secure software, and cryptography. Use the filters to scan by role relevance.</p>
+            <p class="lead">The strongest recruiter signals now lead with payment-scam decisioning, detection engineering, endpoint triage, secure software, and cryptography. Use the filters to scan by role relevance.</p>
             <div class="filters" aria-label="Project filters">
               <button class="filter active" type="button" data-filter="all">All</button>
               <button class="filter" type="button" data-filter="detection">Detection</button>
+              <button class="filter" type="button" data-filter="endpoint">Endpoint</button>
               <button class="filter" type="button" data-filter="appsec">AppSec</button>
               <button class="filter" type="button" data-filter="crypto">Crypto</button>
               <button class="filter" type="button" data-filter="cloud">Cloud</button>
@@ -1403,6 +1404,32 @@
               <div class="project-actions">
                 <a class="button primary" href="https://phishanalyze.mdpstudio.com.au/" target="_blank" rel="noreferrer">Live demo</a>
                 <a class="button ghost" href="https://github.com/MDP-Studio/Automated-Phishing-Detection" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card visual-wide reveal" data-tags="detection endpoint appsec">
+            <div class="project-media"><img src="assets/screenshot-rmm-hunter.png" alt="RMM Hunter desktop scan dashboard showing high-risk endpoint triage findings" width="1440" height="920"></div>
+            <div class="project-copy">
+              <div class="badge-row"><span class="tag red">Endpoint triage</span><span class="tag blue">Electron</span><span class="tag amber">Unsigned beta</span></div>
+              <h3>RMM Hunter</h3>
+              <p>Windows endpoint scanner for unauthorized remote access tools, living-off-the-land traces, and local trust-health signals.</p>
+              <ul class="proof-list">
+                <li>Collects installed apps, services, scheduled tasks, startup entries, event logs, recent installers, Defender events, and system trust-health checks.</li>
+                <li>Uses deterministic verdicts: clean, needs_review, or high_risk, without deleting files, stopping services, or changing system settings.</li>
+                <li>Publishes beta Windows releases with SHA256/provenance verification while trusted code signing is still pending.</li>
+              </ul>
+              <div class="project-brief">
+                <strong>About this project</strong>
+                <p>RMM Hunter is a public beta endpoint-triage tool by Meidie Fei for reviewing suspicious RMM activity and Windows trust signals. The project is portfolio-ready, but release notes are explicit that current Windows builds are unsigned until a trusted code-signing route is approved.</p>
+              </div>
+            </div>
+            <div class="project-side">
+              <div class="project-stat"><strong>10</strong><span>RMM families</span></div>
+              <div class="project-stat"><strong>0.1.5</strong><span>beta release</span></div>
+              <div class="project-actions">
+                <a class="button dark" href="https://github.com/MDP-Studio/rmm-hunter" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="button ghost" href="https://github.com/MDP-Studio/rmm-hunter/releases" target="_blank" rel="noreferrer">Releases</a>
               </div>
             </div>
           </article>
@@ -1563,6 +1590,11 @@
             <div class="matrix-cell" role="cell"><span class="tag red">PhishAnalyze</span></div>
           </div>
           <div class="matrix-row" role="row">
+            <div class="matrix-cell" role="cell"><strong>Investigate endpoints</strong></div>
+            <div class="matrix-cell" role="cell"><p>RMM tool detection, service and scheduled-task review, PowerShell traces, Defender events, trust-health checks, and non-destructive next steps.</p></div>
+            <div class="matrix-cell" role="cell"><span class="tag red">RMM Hunter</span></div>
+          </div>
+          <div class="matrix-row" role="row">
             <div class="matrix-cell" role="cell"><strong>Review secure code</strong></div>
             <div class="matrix-cell" role="cell"><p>Auth, RBAC, CSRF, MFA, encryption boundaries, WAF rules, audit logs, and race-condition tests.</p></div>
             <div class="matrix-cell" role="cell"><span class="tag green">SecureVote</span></div>
@@ -1689,7 +1721,7 @@
       });
     });
 
-    const pitch = "Meidie Fei is an RMIT Master of Cyber Security student and MDP Studio co-founder with public, verifiable projects in PayShield payment-scam protection, PhishAnalyze email analysis, secure software, cryptography, cloud deployment, and CI/CD automation. Portfolio: https://meidie.mdpstudio.com.au";
+    const pitch = "Meidie Fei is an RMIT Master of Cyber Security student and MDP Studio co-founder with public, verifiable projects in PayShield payment-scam protection, PhishAnalyze email analysis, RMM Hunter endpoint triage, secure software, cryptography, cloud deployment, and CI/CD automation. Portfolio: https://meidie.mdpstudio.com.au";
 
     function showToast() {
       toast.classList.add("show");
