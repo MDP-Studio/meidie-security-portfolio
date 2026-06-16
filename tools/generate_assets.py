@@ -1,4 +1,5 @@
 from pathlib import Path
+import warnings
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -16,7 +17,12 @@ def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
     for candidate in candidates:
         try:
             return ImageFont.truetype(candidate, size)
-        except OSError:
+        except OSError as error:
+            warnings.warn(
+                f"Font candidate unavailable: {candidate}: {error}",
+                RuntimeWarning,
+                stacklevel=2,
+            )
             continue
     return ImageFont.load_default()
 

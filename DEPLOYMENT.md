@@ -14,8 +14,11 @@
 Deploy command from this folder:
 
 ```bash
+bash tools/sync_public.sh
 cmd.exe /c netlify deploy --site meidie-security-portfolio --prod --dir public --no-build
 ```
+
+The sync step publishes `index.html`, `security.html`, `SECURITY.md`, `_redirects`, `/.well-known/security.txt`, and the whitelisted public assets into `public/`.
 
 ## Custom Domain
 

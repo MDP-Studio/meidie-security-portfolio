@@ -9,6 +9,9 @@ concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -26,8 +29,9 @@ jobs:
         run: bash tools/sync_public.sh
 
       - name: Deploy to Netlify
-        run: npx --yes netlify-cli@latest deploy --prod --dir public --site b7853f9a-8551-48f2-9a10-13ba3863a854 --no-build --message "GitHub Actions deploy ${GITHUB_SHA}"
+        run: npx --yes netlify-cli@26.0.2 deploy --prod --dir public --site b7853f9a-8551-48f2-9a10-13ba3863a854 --no-build --message "GitHub Actions deploy ${GITHUB_SHA}"
         env:
+          NPM_CONFIG_IGNORE_SCRIPTS: "true"
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
   dns:
@@ -36,7 +40,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Attach Netlify custom domain and sync Cloudflare CNAME
-        uses: MDP-Studio/cf-dns-action@v1
+        uses: MDP-Studio/cf-dns-action@d6b847f131b48c57f716d6fc188335e630637cca # v1.0.2
         with:
           subdomain: meidie
           netlify-site-id: b7853f9a-8551-48f2-9a10-13ba3863a854

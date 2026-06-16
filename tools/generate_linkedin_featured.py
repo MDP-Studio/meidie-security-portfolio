@@ -1,4 +1,5 @@
 from pathlib import Path
+import warnings
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -15,7 +16,12 @@ def font(size, bold=False):
     for candidate in candidates:
         try:
             return ImageFont.truetype(candidate, size)
-        except OSError:
+        except OSError as error:
+            warnings.warn(
+                f"Font candidate unavailable: {candidate}: {error}",
+                RuntimeWarning,
+                stacklevel=2,
+            )
             continue
     return ImageFont.load_default()
 
@@ -86,8 +92,8 @@ def main():
     text(draw, (58, 288), "recruiters can open,", "#101828", F_H1)
     text(draw, (58, 350), "test, and review.", "#101828", F_H1)
 
-    text(draw, (58, 436), "PhishAnalyze, SecureVote, CryptoToolkit,", "#344054", F_BODY)
-    text(draw, (58, 472), "AES Secure Vault, cloud deployment, and", "#344054", F_BODY)
+    text(draw, (58, 436), "PayShield, PhishAnalyze, SecureVote,", "#344054", F_BODY)
+    text(draw, (58, 472), "CryptoToolkit, AES Secure Vault, and", "#344054", F_BODY)
     text(draw, (58, 508), "evidence-based security documentation.", "#344054", F_BODY)
 
     x = 58
@@ -100,15 +106,15 @@ def main():
         img,
         (690, 80),
         (440, 250),
-        ASSETS / "screenshot-phishanalyze.png",
-        "phishanalyze.mdpstudio.com.au",
+        ASSETS / "screenshot-payshield.png",
+        "payshield.mdpstudio.com.au",
     )
     browser_frame(
         img,
         (610, 318),
         (380, 230),
-        ASSETS / "screenshot-securevote.png",
-        "SecureVote",
+        ASSETS / "screenshot-phishanalyze.png",
+        "phishanalyze.mdpstudio.com.au",
     )
     browser_frame(
         img,

@@ -9,8 +9,13 @@ Fallback Netlify URL: <https://meidie-security-portfolio.netlify.app>
 ## Files
 
 - `index.html` - complete portfolio page with inline CSS and JavaScript.
+- `SECURITY.md` - public vulnerability-reporting policy and artifact-integrity notes.
+- `security.html` - deployable web version of the security policy.
+- `.well-known/security.txt` - machine-readable security contact surface.
+- `robots.txt` and `sitemap.xml` - crawler entry points for the public portfolio and security contact surface.
 - `assets/` - project screenshots, favicon, and downloadable resume assets.
 - `public/` - deployable copy used by Netlify.
+- `tools/sync_public.sh` - syncs the source HTML, crawler files, policy files, security contact file, redirects, and public assets into `public/`.
 - `tools/generate_assets.py` - regenerates the bitmap project visuals.
 
 ## Deployment
@@ -54,8 +59,19 @@ If the Codex Netlify plugin is available in a new session, use it from this fold
 
 The workflow at `.github/workflows/deploy.yml` does two things on `main`:
 
+- Runs the static page checks and syncs the public deploy directory.
 - Deploys `public/` to the existing Netlify project.
 - Runs `MDP-Studio/cf-dns-action@v1` to connect `meidie.mdpstudio.com.au`.
+
+## Security Reporting
+
+Vulnerability reports for the portfolio should be sent privately to <meidie@mdpstudio.com.au> with the subject `[Security] report: Meidie security portfolio`.
+
+Public discovery surfaces:
+
+- Web policy: <https://meidie.mdpstudio.com.au/security>
+- GitHub policy: [`SECURITY.md`](SECURITY.md)
+- security.txt: <https://meidie.mdpstudio.com.au/.well-known/security.txt>
 
 Required organization secrets:
 
