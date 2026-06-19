@@ -26,6 +26,7 @@ Please report suspected vulnerabilities privately by email:
 - Contact: <meidie@mdpstudio.com.au>
 - Suggested subject: `[Security] report: Meidie security portfolio`
 - Policy page: <https://meidie.mdpstudio.com.au/security>
+- Artifact manifest: <https://meidie.mdpstudio.com.au/artifact-manifest.json>
 - Machine-readable contact: <https://meidie.mdpstudio.com.au/.well-known/security.txt>
 
 Include:
@@ -56,6 +57,7 @@ The portfolio references public artifacts through their canonical source pages. 
 
 - Resume PDF: <https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf>
 - Resume PDF SHA-256: `19BEBF8AA951A5702BB9D80D0B47B63592C57D420CF525F1FD99EADAF6A48F07`
+- Artifact manifest: <https://meidie.mdpstudio.com.au/artifact-manifest.json>
 - RMM Hunter releases: <https://github.com/MDP-Studio/rmm-hunter/releases>
 - RMM Hunter signing status: current public Windows builds are explicitly treated as unsigned beta artifacts unless a release page says otherwise.
 

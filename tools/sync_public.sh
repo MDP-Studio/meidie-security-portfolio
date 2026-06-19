@@ -10,6 +10,7 @@ cp "$ROOT/robots.txt" "$ROOT/public/robots.txt"
 cp "$ROOT/sitemap.xml" "$ROOT/public/sitemap.xml"
 cp "$ROOT/security.html" "$ROOT/public/security.html"
 cp "$ROOT/SECURITY.md" "$ROOT/public/SECURITY.md"
+cp "$ROOT/artifact-manifest.json" "$ROOT/public/artifact-manifest.json"
 cp "$ROOT/_redirects" "$ROOT/public/_redirects"
 cp "$ROOT/.well-known/security.txt" "$ROOT/public/.well-known/security.txt"
 

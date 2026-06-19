@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "meidie-security-portfolio.artifact-manifest.v1",
+  "generatedAt": "2026-06-19T00:00:00Z",
+  "site": "https://meidie.mdpstudio.com.au",
+  "policy": "https://meidie.mdpstudio.com.au/security",
+  "artifacts": [
+    {
+      "id": "resume-pdf",
+      "type": "resume",
+      "name": "Meidie Fei Cyber Security Resume",
+      "path": "assets/Meidie_Fei_Cyber_Security_Resume.pdf",
+      "url": "https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf",
+      "sha256": "19BEBF8AA951A5702BB9D80D0B47B63592C57D420CF525F1FD99EADAF6A48F07",
+      "mimeType": "application/pdf",
+      "provenance": "Generated from resume/Meidie_Fei_Cyber_Security_Resume.md and published from this repository."
+    },
+    {
+      "id": "rmm-hunter-releases",
+      "type": "release-index",
+      "name": "RMM Hunter releases",
+      "url": "https://github.com/MDP-Studio/rmm-hunter/releases",
+      "verification": "Verify release assets with the release SHA256SUMS, manifest, Authenticode status, and release notes. Public Windows beta artifacts remain unsigned unless the release page states otherwise."
+    },
+    {
+      "id": "aes-secure-vault-releases",
+      "type": "release-index",
+      "name": "AES Secure Vault releases",
+      "url": "https://github.com/MDP-Studio/AES-256-GCM-Python-Tool/releases",
+      "verification": "Release artifacts can include SBOM, SHA-256 manifest, local provenance, and GitHub attestations. These are supply-chain transparency evidence, not production cryptography certification."
+    },
+    {
+      "id": "cryptotoolkit-provenance",
+      "type": "project-provenance",
+      "name": "CryptoToolkit release provenance",
+      "url": "https://github.com/MDP-Studio/crypto-toolkit/blob/master/docs/release-provenance.md",
+      "verification": "Release provenance documents SBOM and checksum generation for the educational cryptography lab. It does not certify production-safe cryptographic implementation."
+    }
+  ]
+}
