@@ -545,6 +545,37 @@ A project is done when:
 - PR is merged into the default branch
 - local checkout is synced to the merged default branch
 
+## Portfolio Evidence Freshness
+
+After a public project or release changes, update `evidence-registry.json` only
+after reviewing the new default-branch commit and the portfolio claims it affects.
+Then run:
+
+```bash
+node --test tests/evidence_freshness.test.js
+node tools/check_evidence_freshness.js
+bash tools/sync_public.sh
+node tools/check_page.js
+```
+
+The checker validates public project, repository, release, package, policy, and
+artifact links; compares reviewed commit references where determinable; identifies
+missing policy surfaces; and requires explicit disclosures for unsigned,
+checksum-only, or attested-but-not-code-signed artifacts. Treat errors as release
+blockers. Review warnings rather than changing commit references mechanically.
+Scheduled checks fail on stale commit references, broken links, missing required
+policies, expired waivers, and other unwaived warnings. A time-bounded accepted
+risk remains visible in the report and must name an owner, reason, acceptance
+date, and expiry date.
+The registry review and artifact manifest have 45-day maximum ages. Signed or
+attested states require a public verification-evidence link, while unsigned
+states require an explicit boundary disclosure. Live URLs are constrained to
+the checker's approved hostname allowlist and redirects are revalidated.
+
+Evidence reports may include only public URLs, HTTP status classes, and public
+commit prefixes. Never include response bodies, headers, cookies, credentials,
+tokens, private repository data, or URL query strings.
+
 ## Project Rollout Order
 
 Suggested order for Meidie's portfolio:

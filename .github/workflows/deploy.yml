@@ -1,4 +1,4 @@
-name: Deploy Portfolio
+name: Verify Portfolio Bundle
 
 on:
   push:
@@ -6,45 +6,59 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy-${{ github.ref }}
+  group: verify-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: read
 
 jobs:
-  deploy:
+  verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: 24
 
-      - name: Verify static page assets
-        run: node tools/check_page.js
+      - name: Test evidence freshness checker
+        run: node --test tests/evidence_freshness.test.js
+
+      - name: Check live public evidence
+        run: |
+          rm -f reports/evidence-freshness.md reports/evidence-freshness.json
+          node tools/check_evidence_freshness.js --fail-on-unwaived-warning
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Sync deploy directory
         run: bash tools/sync_public.sh
 
-      - name: Deploy to Netlify
-        run: npx --yes netlify-cli@26.0.2 deploy --prod --dir public --site b7853f9a-8551-48f2-9a10-13ba3863a854 --no-build --message "GitHub Actions deploy ${GITHUB_SHA}"
-        env:
-          NPM_CONFIG_IGNORE_SCRIPTS: "true"
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      - name: Verify static page assets and deploy copy
+        run: node tools/check_page.js
 
-  dns:
-    runs-on: ubuntu-latest
-    needs: deploy
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - name: Attach Netlify custom domain and sync Cloudflare CNAME
-        uses: MDP-Studio/cf-dns-action@d6b847f131b48c57f716d6fc188335e630637cca # v1.0.2
+      - name: Add evidence report to job summary
+        if: always()
+        run: |
+          if [ -f reports/evidence-freshness.md ]; then
+            cat reports/evidence-freshness.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload evidence report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
-          subdomain: meidie
-          netlify-site-id: b7853f9a-8551-48f2-9a10-13ba3863a854
-          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          cf-zone-id: ${{ secrets.CF_ZONE_ID }}
-          cf-api-token: ${{ secrets.CF_API_TOKEN }}
-          wait-for-cert: true
+          name: evidence-freshness-${{ github.sha }}
+          path: reports/evidence-freshness.*
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Upload verified static bundle
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: portfolio-public-${{ github.sha }}
+          path: public/
+          if-no-files-found: error
+          include-hidden-files: true
+          retention-days: 30

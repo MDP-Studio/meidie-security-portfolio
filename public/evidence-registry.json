@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "meidie-security-portfolio.evidence-registry.v1",
+  "lastReviewedAt": "2026-07-13T00:00:00Z",
+  "reviewMaxAgeDays": 45,
+  "portfolio": "https://meidie.mdpstudio.com.au",
+  "methodology": "https://meidie.mdpstudio.com.au/evidence",
+  "projects": [
+    {
+      "id": "phishanalyze-payshield",
+      "name": "PhishAnalyze and PayShield",
+      "repository": "https://github.com/MDP-Studio/Automated-Phishing-Detection",
+      "defaultBranch": "main",
+      "evidenceCommit": "5eb19ee69b54b56dccd88d6c63ff96518a79316b",
+      "surfaces": [
+        { "kind": "product", "label": "PhishAnalyze", "url": "https://phishanalyze.mdpstudio.com.au/" },
+        { "kind": "product", "label": "PayShield", "url": "https://payshield.mdpstudio.com.au/" }
+      ],
+      "securityPolicy": {
+        "expectation": "required",
+        "url": "https://github.com/MDP-Studio/Automated-Phishing-Detection/security/policy"
+      },
+      "artifactTrust": {
+        "status": "not-applicable",
+        "reason": "The portfolio links to hosted products and source evidence, not downloadable end-user binaries."
+      }
+    },
+    {
+      "id": "rmm-hunter",
+      "name": "RMM Hunter",
+      "repository": "https://github.com/MDP-Studio/rmm-hunter",
+      "defaultBranch": "main",
+      "evidenceCommit": "d371d3f637cf1027bc8192b147d8b4ee2f81e181",
+      "surfaces": [
+        { "kind": "product", "label": "RMM Hunter website", "url": "https://rmmhunter.mdpstudio.com.au/" },
+        { "kind": "release", "label": "RMM Hunter releases", "url": "https://github.com/MDP-Studio/rmm-hunter/releases" }
+      ],
+      "securityPolicy": {
+        "expectation": "required",
+        "url": "https://github.com/MDP-Studio/rmm-hunter/security/policy"
+      },
+      "artifactTrust": {
+        "status": "unsigned-disclosed",
+        "disclosureUrl": "https://meidie.mdpstudio.com.au/security",
+        "disclosureText": "Current public Windows builds are unsigned beta artifacts unless a release page says otherwise."
+      }
+    },
+    {
+      "id": "securevote",
+      "name": "SecureVote",
+      "repository": "https://github.com/MDP-Studio/secure-voting-platform",
+      "defaultBranch": "main",
+      "evidenceCommit": "123c66b6804db9b61dc6b6f071755b864afffce5",
+      "surfaces": [
+        { "kind": "repository", "label": "SecureVote source and verification evidence", "url": "https://github.com/MDP-Studio/secure-voting-platform" }
+      ],
+      "securityPolicy": {
+        "expectation": "required",
+        "url": "https://github.com/MDP-Studio/secure-voting-platform/security/policy"
+      },
+      "artifactTrust": {
+        "status": "not-applicable",
+        "reason": "SecureVote is reviewed as source, tests, and a local prototype rather than a downloadable election product."
+      }
+    },
+    {
+      "id": "cryptotoolkit",
+      "name": "CryptoToolkit",
+      "repository": "https://github.com/MDP-Studio/crypto-toolkit",
+      "defaultBranch": "master",
+      "evidenceCommit": "9261edc5ed6d9d7ded1e7ef31ba5a4b1924b01a7",
+      "surfaces": [
+        { "kind": "product", "label": "CryptoToolkit live lab", "url": "https://ctool.mdpstudio.com.au/" },
+        { "kind": "artifact", "label": "CryptoToolkit provenance guide", "url": "https://github.com/MDP-Studio/crypto-toolkit/blob/master/docs/release-provenance.md" }
+      ],
+      "securityPolicy": {
+        "expectation": "required",
+        "url": "https://github.com/MDP-Studio/crypto-toolkit/security/policy"
+      },
+      "artifactTrust": {
+        "status": "not-applicable",
+        "reason": "The portfolio links to a hosted educational lab and source provenance rather than a production cryptography binary."
+      }
+    },
+    {
+      "id": "aes-secure-vault",
+      "name": "AES Secure Vault",
+      "repository": "https://github.com/MDP-Studio/AES-256-GCM-Python-Tool",
+      "defaultBranch": "main",
+      "evidenceCommit": "4b4e2a369632bfd6ad721cbec41ed12fbce1401a",
+      "surfaces": [
+        { "kind": "release", "label": "AES Secure Vault releases", "url": "https://github.com/MDP-Studio/AES-256-GCM-Python-Tool/releases" },
+        { "kind": "package", "label": "AES Secure Vault on PyPI", "url": "https://pypi.org/project/aes-secure-vault/" }
+      ],
+      "securityPolicy": {
+        "expectation": "required",
+        "url": "https://github.com/MDP-Studio/AES-256-GCM-Python-Tool/security/policy"
+      },
+      "artifactTrust": {
+        "status": "attested-not-code-signed",
+        "disclosureUrl": "https://meidie.mdpstudio.com.au/security",
+        "disclosureText": "AES Secure Vault publishes checksums, SBOMs, and attestations; these are provenance evidence, not operating-system code signing or cryptographic certification.",
+        "verificationUrl": "https://github.com/MDP-Studio/AES-256-GCM-Python-Tool/blob/main/docs/release-provenance.md"
+      }
+    },
+    {
+      "id": "cloudflare-dns-action",
+      "name": "Cloudflare DNS Action",
+      "repository": "https://github.com/MDP-Studio/cf-dns-action",
+      "defaultBranch": "main",
+      "evidenceCommit": "b76966103580e7979082f868e1a98a344274c017",
+      "surfaces": [
+        { "kind": "repository", "label": "Cloudflare DNS Action source", "url": "https://github.com/MDP-Studio/cf-dns-action" }
+      ],
+      "securityPolicy": {
+        "expectation": "recommended",
+        "reason": "A security policy is recommended because the action handles deployment credentials through GitHub Actions.",
+        "waiver": {
+          "owner": "Portfolio maintainers",
+          "acceptedAt": "2026-07-13",
+          "expiresAt": "2026-08-31",
+          "reason": "Cloudflare DNS Action was explicitly excluded from this remediation slice. Reassess the repository policy gap before this date."
+        }
+      },
+      "artifactTrust": {
+        "status": "not-applicable",
+        "reason": "The portfolio links to pinned source action evidence, not a downloadable binary."
+      }
+    },
+    {
+      "id": "cyber-command-center",
+      "name": "Cyber Command Center",
+      "repository": "https://github.com/MDP-Studio/cyber-command-center",
+      "defaultBranch": "main",
+      "evidenceCommit": "932f8067d9fc0952af85fe5276baf72f2e5f14ea",
+      "surfaces": [
+        { "kind": "product", "label": "Cyber Command Center live site", "url": "https://c3.mdpstudio.com.au/" }
+      ],
+      "securityPolicy": {
+        "expectation": "required",
+        "url": "https://github.com/MDP-Studio/cyber-command-center/security/policy"
+      },
+      "artifactTrust": {
+        "status": "not-applicable",
+        "reason": "The portfolio links to a hosted training application and source repository, not a downloadable binary."
+      }
+    },
+    {
+      "id": "security-portfolio",
+      "name": "Meidie Security Portfolio",
+      "repository": "https://github.com/MDP-Studio/meidie-security-portfolio",
+      "defaultBranch": "main",
+      "surfaces": [
+        { "kind": "product", "label": "Portfolio live site", "url": "https://meidie.mdpstudio.com.au/", "expectedContent": "Meidie Fei security portfolio" },
+        { "kind": "security-policy", "label": "Portfolio web security policy", "url": "https://meidie.mdpstudio.com.au/security", "expectedContent": "Security Policy | Meidie Fei" },
+        { "kind": "methodology", "label": "Evidence freshness methodology", "url": "https://meidie.mdpstudio.com.au/evidence", "expectedContent": "Portfolio evidence should expire loudly." },
+        { "kind": "artifact", "label": "Portfolio artifact manifest", "url": "https://meidie.mdpstudio.com.au/artifact-manifest.json", "expectedContent": "meidie-security-portfolio.artifact-manifest.v1" },
+        { "kind": "registry", "label": "Portfolio evidence registry", "url": "https://meidie.mdpstudio.com.au/evidence-registry.json", "expectedContent": "meidie-security-portfolio.evidence-registry.v1" },
+        { "kind": "report", "label": "Evidence report JSON", "url": "https://meidie.mdpstudio.com.au/reports/evidence-freshness.json", "expectedContent": "meidie-security-portfolio.evidence-report.v1" },
+        { "kind": "report", "label": "Evidence report Markdown", "url": "https://meidie.mdpstudio.com.au/reports/evidence-freshness.md", "expectedContent": "# Portfolio Evidence Freshness Report" },
+        { "kind": "security-contact", "label": "RFC 9116 security contact", "url": "https://meidie.mdpstudio.com.au/.well-known/security.txt", "expectedContent": "Contact: mailto:meidie@mdpstudio.com.au" }
+      ],
+      "securityPolicy": {
+        "expectation": "required",
+        "url": "https://github.com/MDP-Studio/meidie-security-portfolio/security/policy"
+      },
+      "artifactTrust": {
+        "status": "checksum-only-unsigned",
+        "disclosureUrl": "https://meidie.mdpstudio.com.au/security",
+        "disclosureText": "The portfolio resume PDF is unsigned. Its published SHA-256 checksum supports byte-for-byte comparison but does not authenticate its origin or signer."
+      }
+    }
+  ]
+}

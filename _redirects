@@ -1,3 +1,5 @@
 /security /security.html 200
 /security-policy /security.html 301
 /SECURITY.md /SECURITY.md 200
+/evidence /evidence.html 200
+/evidence-health /evidence.html 301

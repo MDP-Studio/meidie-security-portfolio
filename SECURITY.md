@@ -1,6 +1,6 @@
 # Security Policy
 
-Last updated: 2026-05-22
+Last updated: 2026-07-13
 
 This policy covers Meidie Fei's public security portfolio at <https://meidie.mdpstudio.com.au>. It gives recruiters, clients, and security researchers a clear way to report issues without implying enterprise SOC, compliance, or bug bounty coverage.
 
@@ -27,6 +27,8 @@ Please report suspected vulnerabilities privately by email:
 - Suggested subject: `[Security] report: Meidie security portfolio`
 - Policy page: <https://meidie.mdpstudio.com.au/security>
 - Artifact manifest: <https://meidie.mdpstudio.com.au/artifact-manifest.json>
+- Evidence freshness methodology: <https://meidie.mdpstudio.com.au/evidence>
+- Evidence registry: <https://meidie.mdpstudio.com.au/evidence-registry.json>
 - Machine-readable contact: <https://meidie.mdpstudio.com.au/.well-known/security.txt>
 
 Include:
@@ -57,9 +59,11 @@ The portfolio references public artifacts through their canonical source pages. 
 
 - Resume PDF: <https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf>
 - Resume PDF SHA-256: `19BEBF8AA951A5702BB9D80D0B47B63592C57D420CF525F1FD99EADAF6A48F07`
+- Resume signing status: The portfolio resume PDF is unsigned. Its published SHA-256 checksum supports byte-for-byte comparison but does not authenticate its origin or signer.
 - Artifact manifest: <https://meidie.mdpstudio.com.au/artifact-manifest.json>
 - RMM Hunter releases: <https://github.com/MDP-Studio/rmm-hunter/releases>
-- RMM Hunter signing status: current public Windows builds are explicitly treated as unsigned beta artifacts unless a release page says otherwise.
+- RMM Hunter signing status: Current public Windows builds are unsigned beta artifacts unless a release page says otherwise.
+- AES Secure Vault signing status: AES Secure Vault publishes checksums, SBOMs, and attestations; these are provenance evidence, not operating-system code signing or cryptographic certification.
 
 When future artifacts are code-signed, checksum-published, or detached-signature-published, the portfolio should link to the relevant GitHub release, checksum, signing identity, and verification steps from this policy.
 

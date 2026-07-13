@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "meidie-security-portfolio.evidence-registry.v1",
+  "lastReviewedAt": "2026-07-13T00:00:00Z",
+  "reviewMaxAgeDays": 45,
+  "projects": [
+    {
+      "id": "current-project",
+      "name": "Current Project",
+      "repository": "https://github.com/example/alpha",
+      "defaultBranch": "main",
+      "evidenceCommit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "surfaces": [
+        { "kind": "product", "label": "Current product", "url": "https://alpha.example/" }
+      ],
+      "securityPolicy": {
+        "expectation": "required",
+        "url": "https://github.com/example/alpha/security/policy"
+      },
+      "artifactTrust": {
+        "status": "signed",
+        "signerIdentity": "Fixture release signer",
+        "verificationUrl": "https://github.com/example/alpha"
+      }
+    },
+    {
+      "id": "stale-project",
+      "name": "Stale Project",
+      "repository": "https://github.com/example/beta",
+      "defaultBranch": "main",
+      "evidenceCommit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "surfaces": [
+        { "kind": "product", "label": "Stale product", "url": "https://beta.example/" }
+      ],
+      "securityPolicy": {
+        "expectation": "recommended",
+        "reason": "A public policy is recommended for this fixture project."
+      },
+      "artifactTrust": {
+        "status": "unsigned-disclosed",
+        "disclosureUrl": "https://beta.example/trust",
+        "disclosureText": "Beta binaries are unsigned."
+      }
+    }
+  ]
+}

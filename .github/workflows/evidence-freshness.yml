@@ -1,0 +1,60 @@
+name: Evidence Freshness
+
+on:
+  schedule:
+    - cron: "17 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evidence-freshness
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
+        with:
+          node-version: 24
+
+      - name: Run deterministic offline tests
+        run: node --test tests/evidence_freshness.test.js
+
+      - name: Check live evidence and fail unwaived findings
+        id: evidence
+        continue-on-error: true
+        run: |
+          rm -f reports/evidence-freshness.md reports/evidence-freshness.json
+          node tools/check_evidence_freshness.js --fail-on-unwaived-warning
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Publish report in job summary
+        if: always()
+        run: |
+          if [ -f reports/evidence-freshness.md ]; then
+            cat reports/evidence-freshness.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Evidence checker did not produce a report." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload non-secret evidence report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: evidence-freshness-${{ github.run_id }}
+          path: reports/evidence-freshness.*
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Fail when unwaived evidence needs review
+        if: steps.evidence.outcome != 'success'
+        run: |
+          echo "Evidence freshness findings require review. See the job summary and uploaded report."
+          exit 1

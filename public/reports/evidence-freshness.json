@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "meidie-security-portfolio.evidence-report.v1",
+  "checkedAt": "2026-07-13T12:44:36.810Z",
+  "mode": "live",
+  "summary": {
+    "error": 0,
+    "warning": 1,
+    "info": 0,
+    "waivedWarning": 1,
+    "actionableWarning": 0
+  },
+  "projects": [
+    {
+      "id": "phishanalyze-payshield",
+      "name": "PhishAnalyze and PayShield",
+      "linksChecked": 4,
+      "linksPassed": 4,
+      "evidenceCommit": "5eb19ee69b54b56dccd88d6c63ff96518a79316b",
+      "currentCommit": "5eb19ee69b54b56dccd88d6c63ff96518a79316b",
+      "policyState": "present",
+      "artifactTrust": "not-applicable"
+    },
+    {
+      "id": "rmm-hunter",
+      "name": "RMM Hunter",
+      "linksChecked": 5,
+      "linksPassed": 5,
+      "evidenceCommit": "d371d3f637cf1027bc8192b147d8b4ee2f81e181",
+      "currentCommit": "d371d3f637cf1027bc8192b147d8b4ee2f81e181",
+      "policyState": "present",
+      "artifactTrust": "unsigned-disclosed"
+    },
+    {
+      "id": "securevote",
+      "name": "SecureVote",
+      "linksChecked": 2,
+      "linksPassed": 2,
+      "evidenceCommit": "123c66b6804db9b61dc6b6f071755b864afffce5",
+      "currentCommit": "123c66b6804db9b61dc6b6f071755b864afffce5",
+      "policyState": "present",
+      "artifactTrust": "not-applicable"
+    },
+    {
+      "id": "cryptotoolkit",
+      "name": "CryptoToolkit",
+      "linksChecked": 4,
+      "linksPassed": 4,
+      "evidenceCommit": "9261edc5ed6d9d7ded1e7ef31ba5a4b1924b01a7",
+      "currentCommit": "9261edc5ed6d9d7ded1e7ef31ba5a4b1924b01a7",
+      "policyState": "present",
+      "artifactTrust": "not-applicable"
+    },
+    {
+      "id": "aes-secure-vault",
+      "name": "AES Secure Vault",
+      "linksChecked": 6,
+      "linksPassed": 6,
+      "evidenceCommit": "4b4e2a369632bfd6ad721cbec41ed12fbce1401a",
+      "currentCommit": "4b4e2a369632bfd6ad721cbec41ed12fbce1401a",
+      "policyState": "present",
+      "artifactTrust": "attested-not-code-signed"
+    },
+    {
+      "id": "cloudflare-dns-action",
+      "name": "Cloudflare DNS Action",
+      "linksChecked": 1,
+      "linksPassed": 1,
+      "evidenceCommit": "b76966103580e7979082f868e1a98a344274c017",
+      "currentCommit": "b76966103580e7979082f868e1a98a344274c017",
+      "policyState": "missing, accepted risk until 2026-08-31",
+      "artifactTrust": "not-applicable"
+    },
+    {
+      "id": "cyber-command-center",
+      "name": "Cyber Command Center",
+      "linksChecked": 3,
+      "linksPassed": 3,
+      "evidenceCommit": "932f8067d9fc0952af85fe5276baf72f2e5f14ea",
+      "currentCommit": "932f8067d9fc0952af85fe5276baf72f2e5f14ea",
+      "policyState": "present",
+      "artifactTrust": "not-applicable"
+    },
+    {
+      "id": "security-portfolio",
+      "name": "Meidie Security Portfolio",
+      "linksChecked": 10,
+      "linksPassed": 10,
+      "evidenceCommit": null,
+      "currentCommit": "e37e81c95e47e9b911d30a76774e5737a8ed9aed",
+      "policyState": "present",
+      "artifactTrust": "checksum-only-unsigned"
+    },
+    {
+      "id": "portfolio-artifacts",
+      "name": "Portfolio artifacts",
+      "linksChecked": 6,
+      "linksPassed": 6,
+      "evidenceCommit": null,
+      "currentCommit": null,
+      "policyState": "not-applicable",
+      "artifactTrust": "manifest"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "warning",
+      "project": "cloudflare-dns-action",
+      "check": "security-policy",
+      "message": "No SECURITY.md policy was found (recommended). Accepted risk owned by Portfolio maintainers until 2026-08-31: Cloudflare DNS Action was explicitly excluded from this remediation slice. Reassess the repository policy gap before this date.",
+      "url": "https://github.com/MDP-Studio/cf-dns-action",
+      "waivedUntil": "2026-08-31"
+    }
+  ]
+}

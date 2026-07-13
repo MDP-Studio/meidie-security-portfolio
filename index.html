@@ -1287,6 +1287,7 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#projects">Projects</a>
         <a href="#matrix">Evidence</a>
+        <a href="evidence.html">Evidence health</a>
         <a href="#background">Background</a>
         <a href="security.html">Security</a>
         <a href="#support">Support</a>
@@ -1398,9 +1399,9 @@
           <a class="feature" href="https://github.com/meidielo/secure-voting-platform" target="_blank" rel="noreferrer">
             <img src="assets/screenshot-securevote.png" alt="SecureVote election management dashboard" width="1440" height="920">
             <div class="feature-content">
-              <div class="badge-row"><span class="tag">103 tests</span><span class="tag">Secure software</span></div>
+              <div class="badge-row"><span class="tag">112 tests</span><span class="tag">Secure software</span></div>
               <h3>SecureVote</h3>
-              <p>Anonymous voting, encrypted PII, audit integrity, WAF rules, and concurrency checks.</p>
+              <p>Anonymous voting, encrypted PII, audit integrity, concurrency checks, and an accessible verification rehearsal.</p>
             </div>
           </a>
           <a class="feature" href="https://ctool.mdpstudio.com.au" target="_blank" rel="noreferrer">
@@ -1408,7 +1409,7 @@
             <div class="feature-content">
               <div class="badge-row"><span class="tag">36 modules</span><span class="tag">Crypto attacks</span></div>
               <h3>CryptoToolkit</h3>
-              <p>Real attack labs for nonce reuse, padding oracles, RSA, hash extension, DH, and GCM.</p>
+              <p>Real attack labs plus a crypto-agility inventory and migration decision lab.</p>
             </div>
           </a>
         </div>
@@ -1475,7 +1476,8 @@
               <ul class="proof-list">
                 <li>Collects installed apps, services, scheduled tasks, startup entries, event logs, recent installers, Defender events, and system trust-health checks.</li>
                 <li>Uses deterministic verdicts: clean, needs_review, or high_risk, without deleting files, stopping services, or changing system settings.</li>
-                <li>Publishes beta Windows releases with SHA256/provenance verification while trusted code signing is still pending.</li>
+                <li>Publishes beta Windows releases with SHA256/provenance verification. Current public Windows builds are unsigned beta artifacts unless a release page says otherwise.</li>
+                <li>A fail-closed PowerShell ceremony cross-checks the published GitHub asset digests, checksums, tag provenance, update metadata, and actual Authenticode state.</li>
               </ul>
               <div class="project-brief">
                 <strong>About this project</strong>
@@ -1502,6 +1504,7 @@
                 <li>RSA blind signatures, ChaCha20-Poly1305 encryption, HMAC blind indexing, and HMAC-backed audit logs.</li>
                 <li>RBAC, CSRF protection, MFA, rate limiting, ModSecurity CRS, and Vault Transit signing.</li>
                 <li>Includes race-condition checks around concurrent vote casting.</li>
+                <li>Includes a data-free observer rehearsal with explicit trust assumptions, stop conditions, non-claims, keyboard controls, and screen-reader status announcements.</li>
               </ul>
               <div class="project-brief">
                 <strong>About this project</strong>
@@ -1509,7 +1512,7 @@
               </div>
             </div>
             <div class="project-side">
-              <div class="project-stat"><strong>103</strong><span>pytest tests</span></div>
+              <div class="project-stat"><strong>112</strong><span>pytest tests</span></div>
               <div class="project-stat"><strong>10</strong><span>thread race checks</span></div>
               <div class="project-actions">
                 <a class="button dark" href="https://github.com/meidielo/secure-voting-platform" target="_blank" rel="noreferrer">GitHub</a>
@@ -1520,12 +1523,13 @@
           <article class="project-card reveal" data-tags="crypto appsec">
             <div class="project-media"><img src="assets/screenshot-cryptotoolkit.png" alt="Live screenshot of CryptoToolkit modules" width="1440" height="920"></div>
             <div class="project-copy">
-              <div class="badge-row"><span class="tag blue">Cryptography</span><span class="tag green">TypeScript</span><span class="tag amber">Learning platform</span></div>
+              <div class="badge-row"><span class="tag blue">Cryptography</span><span class="tag green">TypeScript</span><span class="tag amber">Migration lab</span></div>
               <h3>CryptoToolkit</h3>
               <p>Interactive cryptography platform where attacks run for real and modules are backed by known test vectors.</p>
               <ul class="proof-list">
                 <li>Padding oracle, nonce reuse, hash extension, RSA, Diffie-Hellman, and GCM attack demonstrations.</li>
                 <li>NIST and RFC vectors for AES, AES-GCM, SHA-256, and HMAC.</li>
+                <li>Crypto-agility inventory and migration scenarios cover algorithm identifiers, versioned envelopes, post-quantum exposure, provider boundaries, downgrade rejection, and rollback.</li>
                 <li>Built for teaching, but structured around reproducible technical behavior.</li>
               </ul>
               <div class="project-brief">
@@ -1551,7 +1555,8 @@
               <ul class="proof-list">
                 <li>AES-256-GCM with Argon2id and AAD-bound envelope metadata.</li>
                 <li>KDF downgrade prevention, tamper detection, and malformed payload rejection.</li>
-                <li>Published as a package with GitHub attestations, SBOM/checksums, and PyPI Trusted Publishing gates documented.</li>
+                <li>A published-release verifier re-downloads assets and checks GitHub digests, checksums, tag and commit provenance, and attestations. These are provenance controls, not operating-system code signing or cryptographic certification.</li>
+                <li>A public security policy provides a private reporting route without exposing sensitive vulnerability details.</li>
               </ul>
               <div class="project-brief">
                 <strong>About this project</strong>
@@ -1595,17 +1600,18 @@
           <article class="project-card visual-wide reveal" data-tags="cloud detection">
             <div class="project-media"><img src="assets/screenshot-command-center.png" alt="Live screenshot of Cyber Command Center dashboard in guest mode" width="1440" height="920"></div>
             <div class="project-copy">
-              <div class="badge-row"><span class="tag green">Supabase RLS</span><span class="tag blue">React</span><span class="tag">Netlify</span></div>
+              <div class="badge-row"><span class="tag green">Supabase RLS</span><span class="tag blue">React</span><span class="tag">Outcome deltas</span></div>
               <h3>Cyber Command Center</h3>
               <p>Cybersecurity training tracker with guest mode, synced accounts, Row Level Security, and security headers.</p>
               <ul class="proof-list">
                 <li>Tracks 49 tasks across 6 phases and 240+ hours of structured training.</li>
                 <li>Uses Supabase Auth and Row Level Security for account data.</li>
+                <li>ATT&amp;CK/NIST-mapped assessment drills retain compact attempt history, evidence-quality bands, and first-to-latest score deltas without storing raw lab evidence.</li>
                 <li>Deployed with Netlify headers and Docker support.</li>
               </ul>
               <div class="project-brief">
                 <strong>About this project</strong>
-                <p>Cyber Command Center is a deployed training and operations dashboard by Meidie Fei. It shows how guest access, account data, auth boundaries, and security headers can be put together in a small production-style app.</p>
+                <p>Cyber Command Center is a deployed training and operations dashboard by Meidie Fei. It combines guest access, account data, auth boundaries, security headers, and descriptive assessment outcomes in a small production-style app.</p>
               </div>
             </div>
             <div class="project-side">
@@ -1756,7 +1762,7 @@
   <footer class="footer">
     <div class="shell footer-inner">
       <span>Meidie Fei | Security Analyst Portfolio | <a href="https://mdpstudio.com.au/">MDP Studio</a></span>
-      <span>Melbourne, Australia | <a href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">MDP project page</a> | <a href="security.html">Security policy</a> | <a href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20security%20portfolio">Report security issue</a></span>
+      <span>Melbourne, Australia | <a href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">MDP project page</a> | <a href="security.html">Security policy</a> | <a href="evidence.html">Evidence health</a> | <a href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20security%20portfolio">Report security issue</a></span>
     </div>
   </footer>
 

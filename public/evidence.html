@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence Freshness | Meidie Fei Security Portfolio</title>
+  <meta name="description" content="Public methodology and reports for checking Meidie Fei's portfolio project links, policies, commit references, and artifact trust disclosures.">
+  <link rel="canonical" href="https://meidie.mdpstudio.com.au/evidence">
+  <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --muted: #475569;
+      --line: #cbd5e1;
+      --paper: #ffffff;
+      --wash: #f1f5f9;
+      --navy: #0f172a;
+      --blue: #1d4ed8;
+      --green: #047857;
+      --amber: #92400e;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--wash);
+      color: var(--ink);
+      font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--blue); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
+    .skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 10; background: #fff; padding: .75rem 1rem; }
+    .skip-link:focus { top: 1rem; }
+    .shell { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+    .site-header { background: var(--navy); color: #fff; }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { color: #fff; font-weight: 800; text-decoration: none; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: .35rem 1rem; }
+    .nav-links a { color: #e2e8f0; min-height: 44px; display: inline-flex; align-items: center; }
+    main { padding: clamp(2rem, 6vw, 5rem) 0; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, .7fr); gap: 1.5rem; align-items: start; }
+    .kicker { color: var(--blue); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1, h2, h3 { line-height: 1.18; letter-spacing: -.025em; }
+    h1 { margin: .4rem 0 1rem; font-size: clamp(2.15rem, 6vw, 4.5rem); max-width: 14ch; }
+    h2 { margin-top: 0; font-size: clamp(1.45rem, 3vw, 2rem); }
+    h3 { font-size: 1.05rem; }
+    .lead { max-width: 70ch; color: var(--muted); font-size: 1.1rem; }
+    .card, .callout {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(1.1rem, 3vw, 1.75rem);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, .06);
+    }
+    .callout { border-left: 5px solid var(--blue); }
+    .callout strong { display: block; font-size: 1.15rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: .65rem .9rem;
+      border: 1px solid var(--navy);
+      border-radius: 9px;
+      color: var(--navy);
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .button.primary { background: var(--navy); color: #fff; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .section { margin-top: 2rem; }
+    .status-list { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+    .status-list li { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 1rem; border-bottom: 1px solid var(--line); padding-bottom: .75rem; }
+    .status-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .status-list strong { color: var(--green); }
+    code { overflow-wrap: anywhere; color: #7c2d12; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid var(--line); padding: .8rem; text-align: left; vertical-align: top; }
+    th { background: #e2e8f0; }
+    .table-wrap { overflow-x: auto; border-radius: var(--radius); }
+    .note { color: var(--muted); font-size: .92rem; }
+    .footer { border-top: 1px solid var(--line); background: #fff; }
+    .footer-inner { min-height: 84px; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .hero, .grid { grid-template-columns: 1fr; }
+      .nav { align-items: flex-start; flex-direction: column; padding: 1rem 0; }
+      .status-list li { grid-template-columns: 1fr; gap: .2rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (forced-colors: active) { .card, .callout, .button { border: 2px solid CanvasText; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to evidence methodology</a>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="Return to Meidie Fei portfolio">Meidie Fei</a>
+      <nav class="nav-links" aria-label="Evidence navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="security.html">Security policy</a>
+        <a href="artifact-manifest.json">Artifact manifest</a>
+        <a href="evidence-registry.json">Evidence registry</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <div class="hero">
+      <section aria-labelledby="page-title">
+        <p class="kicker">Public proof maintenance</p>
+        <h1 id="page-title">Portfolio evidence should expire loudly.</h1>
+        <p class="lead">
+          A scheduled audit checks whether the public projects, repositories,
+          releases, policies, commit references, and signing or provenance
+          disclosures behind this portfolio are still reviewable.
+        </p>
+      </section>
+      <aside class="callout" aria-labelledby="boundary-title">
+        <strong id="boundary-title">Evidence boundary</strong>
+        <p>
+          A clean report confirms only the configured public surfaces at the
+          recorded time. It is not a vulnerability scan, penetration test,
+          cryptographic certification, or guarantee that a project is secure.
+        </p>
+      </aside>
+    </div>
+
+    <section class="section card" aria-labelledby="current-report-title">
+      <h2 id="current-report-title">Current reports and source data</h2>
+      <p>
+        Deployments refresh the public Markdown and JSON snapshots. A weekly
+        GitHub Actions run produces a timestamped workflow artifact and job
+        summary without silently committing generated results.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="reports/evidence-freshness.md">Read latest Markdown report</a>
+        <a class="button" href="reports/evidence-freshness.json">Open machine-readable report</a>
+        <a class="button" href="evidence-registry.json">Inspect evidence registry</a>
+        <a class="button" href="https://github.com/MDP-Studio/meidie-security-portfolio/actions/workflows/evidence-freshness.yml">View scheduled runs</a>
+      </div>
+    </section>
+
+    <div class="grid section">
+      <section class="card" aria-labelledby="checks-title">
+        <h2 id="checks-title">Checks performed</h2>
+        <ul>
+          <li>Public product, repository, release, package, policy, and artifact links.</li>
+          <li>Repository default-branch commits against the portfolio's last reviewed commit, where one is recorded.</li>
+          <li>The registry review and artifact manifest remain inside their 45-day review windows.</li>
+          <li><code>SECURITY.md</code> in the repository root, <code>.github</code>, or <code>docs</code>.</li>
+          <li>Unsigned, checksum-only, or attested artifacts have an explicit public disclosure; attested or signed states must link to verification evidence.</li>
+          <li>Local artifact paths and SHA-256 values still match the manifest.</li>
+        </ul>
+      </section>
+      <section class="card" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Safe report contents</h2>
+        <ul>
+          <li>Public project identifiers and sanitized HTTPS URLs.</li>
+          <li>HTTP status classes and public Git commit prefixes.</li>
+          <li>Configured public content markers are compared in memory but never copied into reports.</li>
+          <li>Missing policy, stale reference, and artifact disclosure findings.</li>
+          <li>No response bodies, headers, tokens, credentials, query strings, fragments, cookies, or private repository data.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="section" aria-labelledby="severity-title">
+      <h2 id="severity-title">How to read findings</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Level</th><th>Meaning</th><th>Expected response</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Error</strong></td><td>A reviewed commit moved, a required link or policy failed, a review window expired, or a local hash, manifest rule, or trust disclosure failed.</td><td>Block publication or correct the evidence before treating the claim as current.</td></tr>
+            <tr><td><strong>Warning</strong></td><td>A recommended policy is missing or a service limited automated validation.</td><td>Review the project and refresh the claim or document a time-bounded accepted risk.</td></tr>
+            <tr><td><strong>Clean</strong></td><td>The configured checks passed at the recorded time.</td><td>Keep the scheduled check running and retain project-specific security review.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section card" aria-labelledby="trust-title">
+      <h2 id="trust-title">Artifact trust is explicit</h2>
+      <ul class="status-list">
+        <li><strong>Portfolio resume</strong><span>Unsigned. The published SHA-256 checksum detects a changed file but is not signer identity.</span></li>
+        <li><strong>RMM Hunter</strong><span>Current Windows beta builds are unsigned unless a release page states otherwise. The published-release ceremony checks asset digests, checksums, tag provenance, update metadata, and actual Authenticode state.</span></li>
+        <li><strong>AES Secure Vault</strong><span>Checksums, SBOMs, and attestations provide provenance evidence. They are not operating-system code signing or cryptographic certification.</span></li>
+      </ul>
+      <p class="note">
+        Detailed wording and canonical links live in the
+        <a href="security.html">security policy</a> and
+        <a href="artifact-manifest.json">artifact manifest</a>.
+      </p>
+      <p class="note">
+        Known review item: Cloudflare DNS Action does not currently publish a
+        repository <code>SECURITY.md</code>. That project is outside this
+        remediation slice. The accepted-risk warning stays visible and expires
+        on 31 August 2026; after expiry, the checker fails until the gap or waiver
+        is reviewed.
+      </p>
+    </section>
+
+    <section class="section card" aria-labelledby="reproduce-title">
+      <h2 id="reproduce-title">Reproduce the checker</h2>
+      <p>Run the deterministic offline tests and then the live public check:</p>
+      <pre><code>node --test tests/evidence_freshness.test.js
+node tools/check_evidence_freshness.js</code></pre>
+      <p class="note">
+        The offline fixtures make stale-commit, missing-policy, broken-link,
+        unsigned-disclosure, and report-redaction behaviour testable without a
+        network. The live command uses only public endpoints and may report a
+        warning when a service rate-limits automated checks. Scheduled runs fail
+        on errors and actionable warnings, while an unexpired accepted-risk
+        warning remains visible without failing the run.
+      </p>
+      <p class="note">
+        Live requests are limited to the documented GitHub, PyPI, and portfolio
+        host allowlist. Redirects are revalidated, private address ranges are
+        rejected, and the checker still relies on public DNS for those approved
+        hostnames.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span>Meidie Fei | Security Analyst Portfolio</span>
+      <span><a href="index.html">Portfolio</a> | <a href="security.html">Security policy</a> | <a href="evidence-registry.json">Evidence registry</a></span>
+    </div>
+  </footer>
+</body>
+</html>

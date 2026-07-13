@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-07-13T00:00:00.000Z",
+  "responses": {
+    "https://github.com/example/alpha": { "status": 200 },
+    "https://alpha.example/": { "status": 200 },
+    "https://github.com/example/alpha/security/policy": { "status": 200 },
+    "https://api.github.com/repos/example/alpha/commits/main": {
+      "status": 200,
+      "body": { "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }
+    },
+    "https://api.github.com/repos/example/alpha/contents/SECURITY.md": { "status": 200 },
+    "https://github.com/example/beta": { "status": 200 },
+    "https://beta.example/": { "status": 200 },
+    "https://beta.example/trust": { "status": 200 },
+    "https://api.github.com/repos/example/beta/commits/main": {
+      "status": 200,
+      "body": { "sha": "cccccccccccccccccccccccccccccccccccccccc" }
+    },
+    "https://api.github.com/repos/example/beta/contents/SECURITY.md": { "status": 404 },
+    "https://api.github.com/repos/example/beta/contents/.github/SECURITY.md": { "status": 404 },
+    "https://api.github.com/repos/example/beta/contents/docs/SECURITY.md": { "status": 404 }
+  }
+}
