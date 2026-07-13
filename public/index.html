@@ -915,6 +915,18 @@
       color: var(--muted);
     }
 
+    .timeline-item .context-link {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .timeline-item .context-link:hover,
+    .timeline-item .context-link:focus {
+      color: var(--teal);
+    }
+
     .grade-table {
       width: 100%;
       margin-top: 16px;
@@ -1673,7 +1685,7 @@
           <div class="timeline">
             <div class="timeline-item reveal">
               <h3>MDP Studio - Co-Founder and Developer</h3>
-              <p>Melbourne-based web design and AI implementation studio. Built production websites, automation pipelines, Supabase-backed admin patterns, HTTPS-backed Netlify deployments, DNS automation, and practical security headers.</p>
+              <p><a class="context-link" href="https://mdpstudio.com.au/">MDP Studio</a> is a Melbourne-based web design and AI implementation studio. My work there includes production websites, automation pipelines, Supabase-backed admin patterns, HTTPS-backed deployments, DNS automation, and practical security headers. <a class="context-link" href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">View the public MDP project page for this portfolio.</a></p>
             </div>
             <div class="timeline-item reveal">
               <h3>Software Programming Instructor - KodeKiddo</h3>
@@ -1743,8 +1755,8 @@
 
   <footer class="footer">
     <div class="shell footer-inner">
-      <span>Meidie Fei | Security Analyst Portfolio</span>
-      <span>Melbourne, Australia | <a href="security.html">Security policy</a> | <a href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20security%20portfolio">Report security issue</a></span>
+      <span>Meidie Fei | Security Analyst Portfolio | <a href="https://mdpstudio.com.au/">MDP Studio</a></span>
+      <span>Melbourne, Australia | <a href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">MDP project page</a> | <a href="security.html">Security policy</a> | <a href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20security%20portfolio">Report security issue</a></span>
     </div>
   </footer>
 

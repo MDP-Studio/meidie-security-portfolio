@@ -2,6 +2,7 @@ const fs = require("fs");
 const crypto = require("crypto");
 
 const html = fs.readFileSync("index.html", "utf8");
+const publicHtml = fs.readFileSync("public/index.html", "utf8");
 const securityHtml = fs.readFileSync("security.html", "utf8");
 const artifactManifest = JSON.parse(fs.readFileSync("artifact-manifest.json", "utf8"));
 const scripts = [...`${html}\n${securityHtml}`.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]);
@@ -24,6 +25,10 @@ const missingRequired = requiredFiles.filter((ref) => !fs.existsSync(ref));
 const requiredSnippets = [
   [html, 'href="security.html"', "index security policy link"],
   [html, "Report security issue", "index security report link"],
+  [html, '<a class="context-link" href="https://mdpstudio.com.au/">', "index visible MDP Studio link"],
+  [html, '<a class="context-link" href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">', "index visible MDP project link"],
+  [publicHtml, '<a class="context-link" href="https://mdpstudio.com.au/">', "public index visible MDP Studio link"],
+  [publicHtml, '<a class="context-link" href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">', "public index visible MDP project link"],
   [securityHtml, "Artifact integrity and signing", "security artifact section"],
   [securityHtml, "artifact-manifest.json", "security artifact manifest link"],
   [securityHtml, "mailto:meidie@mdpstudio.com.au", "security contact mailto"],
@@ -31,6 +36,7 @@ const requiredSnippets = [
 const missingSnippets = requiredSnippets
   .filter(([content, snippet]) => !content.includes(snippet))
   .map(([, , label]) => label);
+const syncErrors = html === publicHtml ? [] : ["public/index.html is not synced with index.html"];
 const resumeArtifact = artifactManifest.artifacts.find((artifact) => artifact.id === "resume-pdf");
 const resumeHash = crypto
   .createHash("sha256")
@@ -52,9 +58,10 @@ console.log(`asset refs: ${refs.length}`);
 console.log(`missing assets: ${missing.length}`);
 console.log(`missing required files: ${missingRequired.length}`);
 console.log(`missing required snippets: ${missingSnippets.length}`);
+console.log(`public sync errors: ${syncErrors.length}`);
 console.log(`manifest errors: ${manifestErrors.length}`);
 
-if (missing.length || missingRequired.length || missingSnippets.length || manifestErrors.length) {
-  console.log([...missing, ...missingRequired, ...missingSnippets, ...manifestErrors].join("\n"));
+if (missing.length || missingRequired.length || missingSnippets.length || syncErrors.length || manifestErrors.length) {
+  console.log([...missing, ...missingRequired, ...missingSnippets, ...syncErrors, ...manifestErrors].join("\n"));
   process.exit(1);
 }

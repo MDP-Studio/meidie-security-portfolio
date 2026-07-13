@@ -4,6 +4,10 @@ Standalone static portfolio showcase for recruiters.
 
 Live URL: <https://meidie.mdpstudio.com.au>
 
+MDP Studio: <https://mdpstudio.com.au/>
+
+Canonical MDP project page: <https://mdpstudio.com.au/projects/meidie-security-portfolio/>
+
 Fallback Netlify URL: <https://meidie-security-portfolio.netlify.app>
 
 ## Files
