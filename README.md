@@ -1,6 +1,6 @@
-# Meidie Security Portfolio
+# Meidie Fei Portfolio
 
-Standalone static portfolio showcase for recruiters.
+Standalone static portfolio for recruiters, hiring teams, and scoped MDP Studio client enquiries. The public positioning covers security, AI-assisted workflows, automation, data, and full-stack delivery without presenting prototypes as production services.
 
 Live URL: <https://meidie.mdpstudio.com.au>
 
@@ -12,7 +12,9 @@ Historical Netlify fallback: <https://meidie-security-portfolio.netlify.app>
 
 ## Files
 
-- `index.html` - complete portfolio page with inline CSS and JavaScript.
+- `index.html` - recruiter- and client-facing portfolio homepage.
+- `assets/site.css` - shared editorial visual system for the homepage and policy pages.
+- `assets/site.js` - progressive reading indicator, current-year text, and reduced-motion-aware reveals.
 - `SECURITY.md` - public vulnerability-reporting policy and artifact-integrity notes.
 - `security.html` - deployable web version of the security policy.
 - `artifact-manifest.json` - machine-readable artifact integrity and provenance surface.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "meidie-security-portfolio.evidence-report.v1",
-  "checkedAt": "2026-07-13T12:44:36.810Z",
+  "checkedAt": "2026-08-20T16:47:02.960Z",
   "mode": "live",
   "summary": {
     "error": 0,
@@ -15,8 +15,8 @@
       "name": "PhishAnalyze and PayShield",
       "linksChecked": 4,
       "linksPassed": 4,
-      "evidenceCommit": "5eb19ee69b54b56dccd88d6c63ff96518a79316b",
-      "currentCommit": "5eb19ee69b54b56dccd88d6c63ff96518a79316b",
+      "evidenceCommit": "be18a255d55b9ab10a78627d092872f6d8707b34",
+      "currentCommit": "be18a255d55b9ab10a78627d092872f6d8707b34",
       "policyState": "present",
       "artifactTrust": "not-applicable"
     },
@@ -25,8 +25,8 @@
       "name": "RMM Hunter",
       "linksChecked": 5,
       "linksPassed": 5,
-      "evidenceCommit": "d371d3f637cf1027bc8192b147d8b4ee2f81e181",
-      "currentCommit": "d371d3f637cf1027bc8192b147d8b4ee2f81e181",
+      "evidenceCommit": "b6a52f748bbf6fb3acc80e3c0302b892c0944fb5",
+      "currentCommit": "b6a52f748bbf6fb3acc80e3c0302b892c0944fb5",
       "policyState": "present",
       "artifactTrust": "unsigned-disclosed"
     },
@@ -35,8 +35,8 @@
       "name": "SecureVote",
       "linksChecked": 2,
       "linksPassed": 2,
-      "evidenceCommit": "123c66b6804db9b61dc6b6f071755b864afffce5",
-      "currentCommit": "123c66b6804db9b61dc6b6f071755b864afffce5",
+      "evidenceCommit": "c32ac3c9e63535b18b8dcd1de074c9cb444873e7",
+      "currentCommit": "c32ac3c9e63535b18b8dcd1de074c9cb444873e7",
       "policyState": "present",
       "artifactTrust": "not-applicable"
     },
@@ -45,8 +45,8 @@
       "name": "CryptoToolkit",
       "linksChecked": 4,
       "linksPassed": 4,
-      "evidenceCommit": "9261edc5ed6d9d7ded1e7ef31ba5a4b1924b01a7",
-      "currentCommit": "9261edc5ed6d9d7ded1e7ef31ba5a4b1924b01a7",
+      "evidenceCommit": "7dfbfde032ee4ee030299f63984e8c834ef8710d",
+      "currentCommit": "7dfbfde032ee4ee030299f63984e8c834ef8710d",
       "policyState": "present",
       "artifactTrust": "not-applicable"
     },
@@ -55,8 +55,8 @@
       "name": "AES Secure Vault",
       "linksChecked": 6,
       "linksPassed": 6,
-      "evidenceCommit": "4b4e2a369632bfd6ad721cbec41ed12fbce1401a",
-      "currentCommit": "4b4e2a369632bfd6ad721cbec41ed12fbce1401a",
+      "evidenceCommit": "fe8e37363b4e431e6e21d99f1a3906439961f005",
+      "currentCommit": "fe8e37363b4e431e6e21d99f1a3906439961f005",
       "policyState": "present",
       "artifactTrust": "attested-not-code-signed"
     },
@@ -65,8 +65,8 @@
       "name": "Cloudflare DNS Action",
       "linksChecked": 1,
       "linksPassed": 1,
-      "evidenceCommit": "b76966103580e7979082f868e1a98a344274c017",
-      "currentCommit": "b76966103580e7979082f868e1a98a344274c017",
+      "evidenceCommit": "fe80d148e9b884ae81a2bff06893199656afb73f",
+      "currentCommit": "fe80d148e9b884ae81a2bff06893199656afb73f",
       "policyState": "missing, accepted risk until 2026-08-31",
       "artifactTrust": "not-applicable"
     },
@@ -75,18 +75,18 @@
       "name": "Cyber Command Center",
       "linksChecked": 3,
       "linksPassed": 3,
-      "evidenceCommit": "932f8067d9fc0952af85fe5276baf72f2e5f14ea",
-      "currentCommit": "932f8067d9fc0952af85fe5276baf72f2e5f14ea",
+      "evidenceCommit": "ebe3b58c3a7de9bb6d4da3bcc975abfc59e4d7cf",
+      "currentCommit": "ebe3b58c3a7de9bb6d4da3bcc975abfc59e4d7cf",
       "policyState": "present",
       "artifactTrust": "not-applicable"
     },
     {
       "id": "security-portfolio",
-      "name": "Meidie Security Portfolio",
+      "name": "Meidie Fei Portfolio",
       "linksChecked": 10,
       "linksPassed": 10,
       "evidenceCommit": null,
-      "currentCommit": "e37e81c95e47e9b911d30a76774e5737a8ed9aed",
+      "currentCommit": "0329b51f34da5c4229cd4921a8237a7973687a08",
       "policyState": "present",
       "artifactTrust": "checksum-only-unsigned"
     },

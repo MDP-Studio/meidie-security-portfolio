@@ -34,15 +34,12 @@ cp "$ROOT/.well-known/security.txt" "$STAGE/.well-known/security.txt"
 
 for asset in \
   favicon.jpg \
-  buy-me-a-coffee-qr.png \
   linkedin-featured-portfolio.png \
   Meidie_Fei_Cyber_Security_Resume.pdf \
+  site.css \
+  site.js \
   screenshot-payshield.png \
-  screenshot-phishanalyze.png \
-  screenshot-rmm-hunter.png \
-  screenshot-cryptotoolkit.png \
-  screenshot-securevote.png \
-  screenshot-command-center.png
+  screenshot-securevote.png
 do
   cp "$ROOT/assets/$asset" "$STAGE/assets/$asset"
 done

@@ -1,6 +1,6 @@
 # Portfolio Evidence Freshness Report
 
-- Checked at: 2026-07-13T12:44:36.810Z
+- Checked at: 2026-08-20T16:44:28.445Z
 - Mode: live
 - Projects and artifact groups: 9
 - Findings: 0 errors, 1 warnings (1 accepted risk, 0 actionable)
@@ -11,14 +11,14 @@ Reports include only public URLs, HTTP status classes, and commit prefixes. Resp
 
 | Project | Links | Commit reference | Security policy | Artifact trust |
 | --- | ---: | --- | --- | --- |
-| PhishAnalyze and PayShield | 4/4 | current (5eb19ee69b54) | present | not-applicable |
-| RMM Hunter | 5/5 | current (d371d3f637cf) | present | unsigned-disclosed |
-| SecureVote | 2/2 | current (123c66b6804d) | present | not-applicable |
-| CryptoToolkit | 4/4 | current (9261edc5ed6d) | present | not-applicable |
-| AES Secure Vault | 6/6 | current (4b4e2a369632) | present | attested-not-code-signed |
-| Cloudflare DNS Action | 1/1 | current (b76966103580) | missing, accepted risk until 2026-08-31 | not-applicable |
-| Cyber Command Center | 3/3 | current (932f8067d9fc) | present | not-applicable |
-| Meidie Security Portfolio | 10/10 | observed e37e81c95e47 | present | checksum-only-unsigned |
+| PhishAnalyze and PayShield | 4/4 | current (be18a255d55b) | present | not-applicable |
+| RMM Hunter | 5/5 | current (b6a52f748bbf) | present | unsigned-disclosed |
+| SecureVote | 2/2 | current (c32ac3c9e635) | present | not-applicable |
+| CryptoToolkit | 4/4 | current (7dfbfde032ee) | present | not-applicable |
+| AES Secure Vault | 6/6 | current (fe8e37363b4e) | present | attested-not-code-signed |
+| Cloudflare DNS Action | 1/1 | current (fe80d148e9b8) | missing, accepted risk until 2026-08-31 | not-applicable |
+| Cyber Command Center | 3/3 | current (ebe3b58c3a7d) | present | not-applicable |
+| Meidie Fei Portfolio | 10/10 | observed 0329b51f34da | present | checksum-only-unsigned |
 | Portfolio artifacts | 6/6 | not tracked | not-applicable | manifest |
 
 ## Findings

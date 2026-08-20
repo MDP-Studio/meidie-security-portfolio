@@ -1,8 +1,8 @@
 # Security Policy
 
-Last updated: 2026-07-13
+Last updated: 2026-08-21
 
-This policy covers Meidie Fei's public security portfolio at <https://meidie.mdpstudio.com.au>. It gives recruiters, clients, and security researchers a clear way to report issues without implying enterprise SOC, compliance, or bug bounty coverage.
+This policy covers Meidie Fei's public portfolio at <https://meidie.mdpstudio.com.au>. It gives recruiters, clients, and security researchers a clear way to report issues without implying enterprise SOC, compliance, or bug bounty coverage.
 
 ## Scope
 
@@ -14,7 +14,7 @@ In scope:
 
 Out of scope:
 
-- GitHub, Netlify, Cloudflare, Buy Me a Coffee, LinkedIn, or other third-party platforms.
+- GitHub, Netlify, Cloudflare, LinkedIn, or other third-party platforms.
 - Client-private systems, private MDP Studio infrastructure, private repositories, email accounts, or payment accounts.
 - Social engineering, phishing, physical attacks, spam, denial of service, credential stuffing, or attempts to access private data.
 - Destructive testing, persistence, exfiltration, or testing that changes data outside your own account or browser session.
@@ -24,7 +24,7 @@ Out of scope:
 Please report suspected vulnerabilities privately by email:
 
 - Contact: <meidie@mdpstudio.com.au>
-- Suggested subject: `[Security] report: Meidie security portfolio`
+- Suggested subject: `[Security] report: Meidie portfolio`
 - Policy page: <https://meidie.mdpstudio.com.au/security>
 - Artifact manifest: <https://meidie.mdpstudio.com.au/artifact-manifest.json>
 - Evidence freshness methodology: <https://meidie.mdpstudio.com.au/evidence>
@@ -58,7 +58,7 @@ Public disclosure should wait until the issue is fixed or a coordinated disclosu
 The portfolio references public artifacts through their canonical source pages. Do not trust third-party mirrors.
 
 - Resume PDF: <https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf>
-- Resume PDF SHA-256: `19BEBF8AA951A5702BB9D80D0B47B63592C57D420CF525F1FD99EADAF6A48F07`
+- Resume PDF SHA-256: `6203AE1350F2B29BF26C9C6BECFA0C3731379CA22F77D6D77933488247467213`
 - Resume signing status: The portfolio resume PDF is unsigned. Its published SHA-256 checksum supports byte-for-byte comparison but does not authenticate its origin or signer.
 - Artifact manifest: <https://meidie.mdpstudio.com.au/artifact-manifest.json>
 - RMM Hunter releases: <https://github.com/MDP-Studio/rmm-hunter/releases>

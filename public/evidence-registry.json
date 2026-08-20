@@ -1,6 +1,6 @@
 {
   "schemaVersion": "meidie-security-portfolio.evidence-registry.v1",
-  "lastReviewedAt": "2026-07-13T00:00:00Z",
+  "lastReviewedAt": "2026-08-20T16:45:00Z",
   "reviewMaxAgeDays": 45,
   "portfolio": "https://meidie.mdpstudio.com.au",
   "methodology": "https://meidie.mdpstudio.com.au/evidence",
@@ -10,7 +10,7 @@
       "name": "PhishAnalyze and PayShield",
       "repository": "https://github.com/MDP-Studio/Automated-Phishing-Detection",
       "defaultBranch": "main",
-      "evidenceCommit": "5eb19ee69b54b56dccd88d6c63ff96518a79316b",
+      "evidenceCommit": "be18a255d55b9ab10a78627d092872f6d8707b34",
       "surfaces": [
         { "kind": "product", "label": "PhishAnalyze", "url": "https://phishanalyze.mdpstudio.com.au/" },
         { "kind": "product", "label": "PayShield", "url": "https://payshield.mdpstudio.com.au/" }
@@ -29,7 +29,7 @@
       "name": "RMM Hunter",
       "repository": "https://github.com/MDP-Studio/rmm-hunter",
       "defaultBranch": "main",
-      "evidenceCommit": "d371d3f637cf1027bc8192b147d8b4ee2f81e181",
+      "evidenceCommit": "b6a52f748bbf6fb3acc80e3c0302b892c0944fb5",
       "surfaces": [
         { "kind": "product", "label": "RMM Hunter website", "url": "https://rmmhunter.mdpstudio.com.au/" },
         { "kind": "release", "label": "RMM Hunter releases", "url": "https://github.com/MDP-Studio/rmm-hunter/releases" }
@@ -49,7 +49,7 @@
       "name": "SecureVote",
       "repository": "https://github.com/MDP-Studio/secure-voting-platform",
       "defaultBranch": "main",
-      "evidenceCommit": "123c66b6804db9b61dc6b6f071755b864afffce5",
+      "evidenceCommit": "c32ac3c9e63535b18b8dcd1de074c9cb444873e7",
       "surfaces": [
         { "kind": "repository", "label": "SecureVote source and verification evidence", "url": "https://github.com/MDP-Studio/secure-voting-platform" }
       ],
@@ -67,7 +67,7 @@
       "name": "CryptoToolkit",
       "repository": "https://github.com/MDP-Studio/crypto-toolkit",
       "defaultBranch": "master",
-      "evidenceCommit": "9261edc5ed6d9d7ded1e7ef31ba5a4b1924b01a7",
+      "evidenceCommit": "7dfbfde032ee4ee030299f63984e8c834ef8710d",
       "surfaces": [
         { "kind": "product", "label": "CryptoToolkit live lab", "url": "https://ctool.mdpstudio.com.au/" },
         { "kind": "artifact", "label": "CryptoToolkit provenance guide", "url": "https://github.com/MDP-Studio/crypto-toolkit/blob/master/docs/release-provenance.md" }
@@ -86,7 +86,7 @@
       "name": "AES Secure Vault",
       "repository": "https://github.com/MDP-Studio/AES-256-GCM-Python-Tool",
       "defaultBranch": "main",
-      "evidenceCommit": "4b4e2a369632bfd6ad721cbec41ed12fbce1401a",
+      "evidenceCommit": "fe8e37363b4e431e6e21d99f1a3906439961f005",
       "surfaces": [
         { "kind": "release", "label": "AES Secure Vault releases", "url": "https://github.com/MDP-Studio/AES-256-GCM-Python-Tool/releases" },
         { "kind": "package", "label": "AES Secure Vault on PyPI", "url": "https://pypi.org/project/aes-secure-vault/" }
@@ -107,7 +107,7 @@
       "name": "Cloudflare DNS Action",
       "repository": "https://github.com/MDP-Studio/cf-dns-action",
       "defaultBranch": "main",
-      "evidenceCommit": "b76966103580e7979082f868e1a98a344274c017",
+      "evidenceCommit": "fe80d148e9b884ae81a2bff06893199656afb73f",
       "surfaces": [
         { "kind": "repository", "label": "Cloudflare DNS Action source", "url": "https://github.com/MDP-Studio/cf-dns-action" }
       ],
@@ -131,7 +131,7 @@
       "name": "Cyber Command Center",
       "repository": "https://github.com/MDP-Studio/cyber-command-center",
       "defaultBranch": "main",
-      "evidenceCommit": "932f8067d9fc0952af85fe5276baf72f2e5f14ea",
+      "evidenceCommit": "ebe3b58c3a7de9bb6d4da3bcc975abfc59e4d7cf",
       "surfaces": [
         { "kind": "product", "label": "Cyber Command Center live site", "url": "https://c3.mdpstudio.com.au/" }
       ],
@@ -146,11 +146,11 @@
     },
     {
       "id": "security-portfolio",
-      "name": "Meidie Security Portfolio",
+      "name": "Meidie Fei Portfolio",
       "repository": "https://github.com/MDP-Studio/meidie-security-portfolio",
       "defaultBranch": "main",
       "surfaces": [
-        { "kind": "product", "label": "Portfolio live site", "url": "https://meidie.mdpstudio.com.au/", "expectedContent": "Meidie Fei security portfolio" },
+        { "kind": "product", "label": "Portfolio live site", "url": "https://meidie.mdpstudio.com.au/", "expectedContent": "Meidie Fei" },
         { "kind": "security-policy", "label": "Portfolio web security policy", "url": "https://meidie.mdpstudio.com.au/security", "expectedContent": "Security Policy | Meidie Fei" },
         { "kind": "methodology", "label": "Evidence freshness methodology", "url": "https://meidie.mdpstudio.com.au/evidence", "expectedContent": "Portfolio evidence should expire loudly." },
         { "kind": "artifact", "label": "Portfolio artifact manifest", "url": "https://meidie.mdpstudio.com.au/artifact-manifest.json", "expectedContent": "meidie-security-portfolio.artifact-manifest.v1" },

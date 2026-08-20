@@ -9,7 +9,10 @@ const artifactManifest = JSON.parse(fs.readFileSync("artifact-manifest.json", "u
 const evidenceRegistry = JSON.parse(fs.readFileSync("evidence-registry.json", "utf8"));
 const evidenceReport = JSON.parse(fs.readFileSync("reports/evidence-freshness.json", "utf8"));
 const publicCopy = `${html}\n${securityHtml}\n${evidenceHtml}`;
-const scripts = [...publicCopy.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]);
+const scripts = [
+  ...[...publicCopy.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]),
+  fs.readFileSync("assets/site.js", "utf8"),
+];
 
 for (const script of scripts) {
   new Function(script);
@@ -18,15 +21,12 @@ for (const script of scripts) {
 const refs = [...publicCopy.matchAll(/(?:src|href)="(assets\/[^"]+)"/g)]
   .map((match) => match[1].split("#")[0]);
 const deployAssets = [
-  "buy-me-a-coffee-qr.png",
   "favicon.jpg",
   "linkedin-featured-portfolio.png",
   "Meidie_Fei_Cyber_Security_Resume.pdf",
-  "screenshot-command-center.png",
-  "screenshot-cryptotoolkit.png",
+  "site.css",
+  "site.js",
   "screenshot-payshield.png",
-  "screenshot-phishanalyze.png",
-  "screenshot-rmm-hunter.png",
   "screenshot-securevote.png",
 ];
 const missing = [...new Set(refs)].filter((ref) => !fs.existsSync(ref));
@@ -45,11 +45,14 @@ const missingRequired = requiredFiles.filter((ref) => !fs.existsSync(ref));
 const requiredSnippets = [
   [html, 'href="security.html"', "index security policy link"],
   [html, 'href="evidence.html"', "index evidence health link"],
-  [html, "Report security issue", "index security report link"],
-  [html, '<a class="context-link" href="https://mdpstudio.com.au/">', "index visible MDP Studio link"],
-  [html, '<a class="context-link" href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">', "index visible MDP project link"],
-  [publicHtml, '<a class="context-link" href="https://mdpstudio.com.au/">', "public index visible MDP Studio link"],
-  [publicHtml, '<a class="context-link" href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">', "public index visible MDP project link"],
+  [html, "Report an issue", "index security report link"],
+  [html, 'href="https://mdpstudio.com.au/"', "index visible MDP Studio link"],
+  [html, 'href="https://mdpstudio.com.au/projects/meidie-security-portfolio/"', "index visible MDP project link"],
+  [html, "ApplyPilot is a local prototype", "index honest ApplyPilot boundary"],
+  [html, "a pre-revenue web and AI venture", "index honest MDP Studio boundary"],
+  [html, '<link rel="stylesheet" href="assets/site.css">', "index shared stylesheet"],
+  [publicHtml, 'href="https://mdpstudio.com.au/"', "public index visible MDP Studio link"],
+  [publicHtml, 'href="https://mdpstudio.com.au/projects/meidie-security-portfolio/"', "public index visible MDP project link"],
   [securityHtml, "Artifact integrity and signing", "security artifact section"],
   [securityHtml, "artifact-manifest.json", "security artifact manifest link"],
   [securityHtml, "mailto:meidie@mdpstudio.com.au", "security contact mailto"],
@@ -63,6 +66,13 @@ const requiredSnippets = [
 const missingSnippets = requiredSnippets
   .filter(([content, snippet]) => !content.includes(snippet))
   .map(([, , label]) => label);
+const staleSnippets = [
+  "Security projects recruiters can open, test, and review.",
+  "Support the lab.",
+  "Buy me a coffee",
+]
+  .filter((snippet) => html.includes(snippet))
+  .map((snippet) => `stale homepage copy remains: ${snippet}`);
 
 const manifestErrors = [];
 const resumeArtifact = artifactManifest.artifacts.find((artifact) => artifact.id === "resume-pdf");
@@ -163,10 +173,11 @@ console.log(`asset refs: ${refs.length}`);
 console.log(`missing assets: ${missing.length}`);
 console.log(`missing required files: ${missingRequired.length}`);
 console.log(`missing required snippets: ${missingSnippets.length}`);
+console.log(`stale snippets: ${staleSnippets.length}`);
 console.log(`public sync errors: ${syncErrors.length}`);
 console.log(`manifest errors: ${manifestErrors.length}`);
 
-if (missing.length || missingRequired.length || missingSnippets.length || syncErrors.length || manifestErrors.length) {
-  console.log([...missing, ...missingRequired, ...missingSnippets, ...syncErrors, ...manifestErrors].join("\n"));
+if (missing.length || missingRequired.length || missingSnippets.length || staleSnippets.length || syncErrors.length || manifestErrors.length) {
+  console.log([...missing, ...missingRequired, ...missingSnippets, ...staleSnippets, ...syncErrors, ...manifestErrors].join("\n"));
   process.exit(1);
 }

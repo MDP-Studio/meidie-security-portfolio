@@ -1,1824 +1,448 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meidie Fei security portfolio: PayShield payment-scam firewall, PhishAnalyze email analysis, RMM Hunter endpoint triage, secure software, cryptography, cloud automation, and analyst-ready evidence.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#122019">
+  <meta name="description" content="Meidie Fei is a Melbourne-based security and software builder working across detection engineering, secure applications, practical AI workflows, automation, data, and full-stack delivery.">
+  <meta name="author" content="Meidie Fei">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://meidie.mdpstudio.com.au/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Meidie Fei | Security Analyst Portfolio">
-  <meta property="og:description" content="Public security projects recruiters can open, test, and review: PayShield, PhishAnalyze, RMM Hunter, SecureVote, CryptoToolkit, AES Secure Vault, and cloud deployment work.">
+  <meta property="og:site_name" content="Meidie Fei Portfolio">
+  <meta property="og:title" content="Meidie Fei | Security, Software &amp; Automation">
+  <meta property="og:description" content="Selected work in security engineering, review-gated AI, automation, data, and full-stack delivery. Built in Melbourne, with public evidence where available.">
   <meta property="og:url" content="https://meidie.mdpstudio.com.au/">
   <meta property="og:image" content="https://meidie.mdpstudio.com.au/assets/linkedin-featured-portfolio.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Meidie Fei portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Meidie Fei | Security Analyst Portfolio">
-  <meta name="twitter:description" content="Public security projects recruiters can open, test, and review, including PayShield, PhishAnalyze, and RMM Hunter.">
+  <meta name="twitter:title" content="Meidie Fei | Security, Software &amp; Automation">
+  <meta name="twitter:description" content="Security-aware software, practical automation, AI workflow controls, and public project evidence.">
   <meta name="twitter:image" content="https://meidie.mdpstudio.com.au/assets/linkedin-featured-portfolio.png">
-  <title>Meidie Fei | Security Analyst Portfolio</title>
+  <title>Meidie Fei | Security, Software &amp; Automation</title>
+  <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="assets/site.css">
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Meidie Fei",
-      "url": "https://meidie.mdpstudio.com.au/",
-      "email": "mailto:meidie@mdpstudio.com.au",
-      "jobTitle": "Cybersecurity student and MDP Studio co-founder",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Melbourne",
-        "addressCountry": "AU"
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Meidie Fei",
+    "url": "https://meidie.mdpstudio.com.au/",
+    "email": "mailto:meidie@mdpstudio.com.au",
+    "image": "https://meidie.mdpstudio.com.au/assets/linkedin-featured-portfolio.png",
+    "description": "Melbourne-based security and software builder working across detection engineering, secure applications, AI workflow controls, automation, data, and full-stack delivery.",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Melbourne, Australia"
+    },
+    "affiliation": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "RMIT University"
       },
-      "affiliation": [
-        {
-          "@type": "EducationalOrganization",
-          "name": "RMIT University"
-        },
-        {
-          "@type": "Organization",
-          "name": "MDP Studio",
-          "url": "https://mdpstudio.com.au"
-        }
-      ],
-      "knowsAbout": [
-        "phishing analysis",
-        "payment scam detection",
-        "Windows endpoint triage",
-        "cryptography education",
-        "cloud deployment",
-        "security automation"
-      ],
-      "sameAs": [
-        "https://github.com/meidielo",
-        "https://mdpstudio.com.au/projects/meidie-security-portfolio/"
-      ]
-    }
+      {
+        "@type": "Organization",
+        "name": "MDP Studio",
+        "url": "https://mdpstudio.com.au/"
+      }
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "BINUS University"
+    },
+    "knowsAbout": [
+      "Cyber security",
+      "Detection engineering",
+      "Secure software",
+      "AI workflow evaluation",
+      "Automation",
+      "Full-stack development",
+      "Data science"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/meidie-fei/",
+      "https://github.com/meidielo",
+      "https://github.com/MDP-Studio",
+      "https://mdpstudio.com.au/"
+    ]
+  }
   </script>
-  <link rel="icon" href="assets/favicon.jpg">
-  <style>
-    :root {
-      --bg: #f4f6f8;
-      --paper: #ffffff;
-      --paper-2: #f8fafc;
-      --ink: #101828;
-      --muted: #5b6472;
-      --quiet: #7a8494;
-      --line: #d9e0ea;
-      --line-strong: #bcc7d6;
-      --teal: #0f766e;
-      --teal-soft: #e7f6f3;
-      --blue: #2563b8;
-      --blue-soft: #eaf2ff;
-      --amber: #9a6a00;
-      --amber-soft: #fff5d8;
-      --red: #b73535;
-      --red-soft: #fff0f0;
-      --charcoal: #172033;
-      --shadow: 0 18px 55px rgba(16, 24, 40, 0.11);
-      --radius: 8px;
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: #f6f7f9;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      line-height: 1.55;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    p,
-    h1,
-    h2,
-    h3,
-    h4 {
-      margin: 0;
-      overflow-wrap: break-word;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: 16px;
-      top: -80px;
-      z-index: 100;
-      padding: 10px 14px;
-      border-radius: 6px;
-      background: var(--ink);
-      color: #ffffff;
-      font-weight: 800;
-    }
-
-    .skip-link:focus {
-      top: 16px;
-    }
-
-    .shell {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: rgba(255, 255, 255, 0.94);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav {
-      min-height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .brand-mark {
-      width: 36px;
-      height: 36px;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: var(--charcoal);
-      color: #ffffff;
-      font-size: 13px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav-links a,
-    .button,
-    .filter {
-      min-height: 40px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 6px;
-      border: 1px solid transparent;
-      color: var(--ink);
-      background: transparent;
-      font: inherit;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus,
-    .button:hover,
-    .button:focus,
-    .filter:hover,
-    .filter:focus {
-      outline: none;
-      border-color: var(--line-strong);
-      background: #ffffff;
-      box-shadow: 0 10px 26px rgba(16, 24, 40, 0.08);
-    }
-
-    .button.primary {
-      color: #ffffff;
-      background: var(--teal);
-      border-color: var(--teal);
-    }
-
-    .button.dark {
-      color: #ffffff;
-      background: var(--charcoal);
-      border-color: var(--charcoal);
-    }
-
-    .button.ghost {
-      background: #ffffff;
-      border-color: var(--line);
-    }
-
-    .button.coffee {
-      color: #111827;
-      background: #ffd60a;
-      border-color: #ffd60a;
-    }
-
-    .button svg {
-      width: 18px;
-      height: 18px;
-      flex: 0 0 auto;
-    }
-
-    .intro {
-      padding: 36px 0 28px;
-    }
-
-    .dossier {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      align-items: stretch;
-    }
-
-    .identity-panel,
-    .fit-panel,
-    .project-card,
-    .matrix,
-    .timeline-item,
-    .credential-panel {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.96);
-      box-shadow: 0 14px 42px rgba(16, 24, 40, 0.08);
-    }
-
-    .identity-panel {
-      min-height: 0;
-      display: grid;
-      grid-template-rows: 1fr auto;
-      overflow: hidden;
-    }
-
-    .identity-main {
-      padding: 34px;
-      color: var(--ink);
-      background: #ffffff;
-    }
-
-    .hero-layout {
-      min-height: 470px;
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(430px, 0.72fr);
-      gap: 28px;
-      align-items: center;
-    }
-
-    .hero-text {
-      min-width: 0;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      min-height: 32px;
-      padding: 6px 10px;
-      border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      background: var(--teal-soft);
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    h1 {
-      max-width: 850px;
-      margin-top: 20px;
-      font-size: 56px;
-      line-height: 1.02;
-      letter-spacing: 0;
-    }
-
-    .intro-copy {
-      max-width: 760px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 19px;
-    }
-
-    .screenshot-stack {
-      min-width: 0;
-      width: 100%;
-      display: grid;
-      gap: 12px;
-    }
-
-    .browser-frame {
-      min-width: 0;
-      max-width: 100%;
-      display: block;
-      overflow: hidden;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      box-shadow: 0 18px 45px rgba(16, 24, 40, 0.14);
-    }
-
-    .browser-frame.small {
-      width: 82%;
-      margin-left: auto;
-      margin-top: -44px;
-    }
-
-    .browser-bar {
-      min-height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 7px 10px;
-      border-bottom: 1px solid var(--line);
-      background: #f8fafc;
-      color: var(--quiet);
-      font-size: 12px;
-      font-weight: 800;
-      min-width: 0;
-    }
-
-    .browser-bar span:last-child {
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .browser-dots {
-      flex: 0 0 auto;
-      display: inline-flex;
-      gap: 5px;
-    }
-
-    .browser-dots span {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #cbd5e1;
-    }
-
-    .browser-frame img {
-      width: 100%;
-      height: 282px;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .browser-frame.small img {
-      height: 210px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 28px;
-    }
-
-    .hero-actions .button {
-      min-height: 46px;
-      padding: 11px 15px;
-    }
-
-    .identity-meta {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      border-top: 1px solid rgba(255, 255, 255, 0.18);
-      background: #ffffff;
-    }
-
-    .metric {
-      min-height: 106px;
-      padding: 18px;
-      border-right: 1px solid var(--line);
-    }
-
-    .metric:last-child {
-      border-right: 0;
-    }
-
-    .metric strong {
-      display: block;
-      color: var(--ink);
-      font-size: 28px;
-      line-height: 1;
-      margin-bottom: 7px;
-    }
-
-    .metric span {
-      display: block;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .fit-panel {
-      padding: 22px;
-      display: grid;
-      grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr) minmax(260px, 0.72fr);
-      align-content: start;
-      align-items: start;
-      gap: 18px;
-    }
-
-    .panel-label {
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .status-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding-right: 18px;
-      border-right: 1px solid var(--line);
-      border-bottom: 0;
-    }
-
-    .status-row > div {
-      min-width: 0;
-    }
-
-    .status-row strong {
-      display: block;
-      font-size: 20px;
-      line-height: 1.18;
-    }
-
-    .availability {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 9px;
-      border-radius: 999px;
-      background: var(--teal-soft);
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .availability::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-
-    .checklist {
-      display: grid;
-      gap: 9px;
-    }
-
-    .check {
-      display: grid;
-      grid-template-columns: 25px 1fr;
-      gap: 10px;
-      align-items: start;
-      color: var(--muted);
-    }
-
-    .check span:first-child {
-      width: 25px;
-      height: 25px;
-      display: grid;
-      place-items: center;
-      border-radius: 6px;
-      background: var(--blue-soft);
-      color: var(--blue);
-      font-weight: 900;
-      line-height: 1;
-    }
-
-    .quick-links {
-      display: grid;
-      gap: 8px;
-    }
-
-    .quick-links a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      min-height: 48px;
-      padding: 11px 12px;
-      border-radius: 6px;
-      border: 1px solid var(--line);
-      background: var(--paper-2);
-      font-weight: 800;
-    }
-
-    .quick-links a:hover,
-    .quick-links a:focus {
-      outline: none;
-      border-color: var(--line-strong);
-      background: #ffffff;
-    }
-
-    main section {
-      padding: 58px 0;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 0.85fr) minmax(300px, 0.6fr);
-      gap: 28px;
-      align-items: end;
-      margin-bottom: 22px;
-    }
-
-    .section-kicker {
-      margin-bottom: 8px;
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    h2 {
-      font-size: 38px;
-      line-height: 1.08;
-      letter-spacing: 0;
-    }
-
-    h3 {
-      font-size: 22px;
-      line-height: 1.2;
-      letter-spacing: 0;
-    }
-
-    .lead {
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
-      margin-top: 12px;
-    }
-
-    .filter {
-      background: #ffffff;
-      border-color: var(--line);
-      min-height: 38px;
-      padding: 8px 11px;
-    }
-
-    .filter.active {
-      color: #ffffff;
-      background: var(--charcoal);
-      border-color: var(--charcoal);
-    }
-
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-
-    .feature {
-      min-height: 100%;
-      display: grid;
-      grid-template-rows: 210px auto;
-      overflow: hidden;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      color: var(--ink);
-      background: #ffffff;
-      box-shadow: var(--shadow);
-      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-    }
-
-    .feature:hover,
-    .feature:focus {
-      transform: translateY(-2px);
-      border-color: var(--line-strong);
-    }
-
-    .feature.no-image {
-      background:
-        linear-gradient(135deg, #172033, #0f766e);
-    }
-
-    .feature img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      border-bottom: 1px solid var(--line);
-      background: var(--paper-2);
-    }
-
-    .feature::after {
-      content: none;
-    }
-
-    .feature.no-image::after {
-      background:
-        linear-gradient(180deg, rgba(16, 24, 40, 0.06), rgba(16, 24, 40, 0.72));
-    }
-
-    .feature-content {
-      padding: 18px;
-      display: grid;
-      gap: 12px;
-      align-content: start;
-    }
-
-    .feature p {
-      color: var(--muted);
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      min-height: 26px;
-      padding: 4px 8px;
-      border-radius: 5px;
-      background: #eef2f7;
-      color: #334155;
-      font-size: 12px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .tag.green {
-      background: var(--teal-soft);
-      color: var(--teal);
-    }
-
-    .tag.blue {
-      background: var(--blue-soft);
-      color: var(--blue);
-    }
-
-    .tag.amber {
-      background: var(--amber-soft);
-      color: var(--amber);
-    }
-
-    .tag.red {
-      background: var(--red-soft);
-      color: var(--red);
-    }
-
-    .feature .tag {
-      background: var(--paper-2);
-      color: #334155;
-      border: 1px solid var(--line);
-    }
-
-    .project-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .project-card {
-      display: grid;
-      grid-template-columns: 270px minmax(0, 1fr) minmax(230px, 0.44fr);
-      gap: 0;
-      overflow: hidden;
-      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-    }
-
-    .project-card.no-media {
-      grid-template-columns: minmax(0, 1fr) minmax(230px, 0.44fr);
-    }
-
-    .project-card.visual-wide {
-      grid-template-columns: minmax(420px, 0.85fr) minmax(0, 1fr) minmax(210px, 0.36fr);
-    }
-
-    .project-card.no-media .project-copy {
-      border-left: 5px solid var(--teal);
-    }
-
-    .project-card.no-media.crypto .project-copy {
-      border-left-color: var(--blue);
-    }
-
-    .project-card.no-media.cloud .project-copy {
-      border-left-color: var(--amber);
-    }
-
-    .project-card:hover,
-    .project-card:focus-within {
-      transform: translateY(-2px);
-      border-color: var(--line-strong);
-      box-shadow: var(--shadow);
-    }
-
-    .project-card[hidden] {
-      display: none;
-    }
-
-    .project-media {
-      min-height: 100%;
-      background: var(--paper-2);
-      border-right: 1px solid var(--line);
-    }
-
-    .project-media img {
-      width: 100%;
-      height: 100%;
-      min-height: 230px;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .project-card.visual-wide .project-media img {
-      min-height: 300px;
-    }
-
-    .project-copy {
-      padding: 20px;
-      display: grid;
-      gap: 12px;
-      align-content: start;
-    }
-
-    .project-copy p {
-      color: var(--muted);
-    }
-
-    .proof-list {
-      margin: 0;
-      padding-left: 18px;
-      color: #334155;
-    }
-
-    .proof-list li {
-      margin: 5px 0;
-    }
-
-    .project-brief {
-      display: grid;
-      gap: 6px;
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-      font-size: 14px;
-      line-height: 1.55;
-      color: #334155;
-    }
-
-    .project-brief strong {
-      color: var(--ink);
-      font-size: 12px;
-      letter-spacing: 0;
-      text-transform: uppercase;
-    }
-
-    .project-brief p {
-      color: #334155;
-    }
-
-    .project-side {
-      padding: 20px;
-      border-left: 1px solid var(--line);
-      background: var(--paper-2);
-      display: grid;
-      align-content: space-between;
-      gap: 18px;
-    }
-
-    .project-stat {
-      display: grid;
-      gap: 3px;
-    }
-
-    .project-stat strong {
-      font-size: 28px;
-      line-height: 1;
-    }
-
-    .project-stat span {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .project-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .project-actions .button {
-      min-height: 38px;
-      padding: 8px 11px;
-      font-size: 14px;
-    }
-
-    .matrix-section {
-      background: rgba(255, 255, 255, 0.78);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .matrix {
-      overflow: hidden;
-      box-shadow: none;
-    }
-
-    .matrix-row {
-      display: grid;
-      grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr) minmax(180px, 0.45fr);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .matrix-row:last-child {
-      border-bottom: 0;
-    }
-
-    .matrix-cell {
-      padding: 16px;
-      border-right: 1px solid var(--line);
-    }
-
-    .matrix-cell:last-child {
-      border-right: 0;
-    }
-
-    .matrix-head {
-      background: var(--charcoal);
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .matrix-cell p {
-      color: var(--muted);
-    }
-
-    .evidence-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 0.92fr) minmax(350px, 0.62fr);
-      gap: 16px;
-      align-items: start;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 12px;
-    }
-
-    .timeline-item,
-    .credential-panel {
-      padding: 20px;
-      box-shadow: 0 12px 34px rgba(16, 24, 40, 0.06);
-    }
-
-    .timeline-item p,
-    .credential-panel p {
-      margin-top: 8px;
-      color: var(--muted);
-    }
-
-    .timeline-item .context-link {
-      color: var(--blue);
-      font-weight: 800;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .timeline-item .context-link:hover,
-    .timeline-item .context-link:focus {
-      color: var(--teal);
-    }
-
-    .grade-table {
-      width: 100%;
-      margin-top: 16px;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-
-    .grade-table th,
-    .grade-table td {
-      padding: 10px 8px;
-      border-bottom: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-
-    .grade-table th {
-      color: #334155;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .grade {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 34px;
-      min-height: 28px;
-      border-radius: 5px;
-      background: var(--teal-soft);
-      color: var(--teal);
-      font-weight: 900;
-    }
-
-    .grade.di {
-      background: var(--blue-soft);
-      color: var(--blue);
-    }
-
-    .contact-band {
-      padding: 0 0 58px;
-    }
-
-    .contact-panel {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 24px;
-      align-items: center;
-      padding: 28px;
-      border-radius: var(--radius);
-      color: #ffffff;
-      background: var(--charcoal);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-panel p {
-      max-width: 760px;
-      margin-top: 10px;
-      color: #dbeafe;
-    }
-
-    .support-band {
-      padding: 0 0 64px;
-    }
-
-    .support-panel {
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .support-panel {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 148px;
-      gap: 20px;
-      align-items: center;
-      padding: 22px;
-      color: #ffffff;
-      background: var(--charcoal);
-    }
-
-    .support-panel .section-kicker {
-      color: #a7f3d0;
-    }
-
-    .support-copy p {
-      margin-top: 10px;
-      color: #dbeafe;
-    }
-
-    .support-copy .button {
-      margin-top: 20px;
-    }
-
-    .support-qr {
-      padding: 8px;
-      border-radius: 8px;
-      background: #ffffff;
-    }
-
-    .support-qr img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1 / 1;
-      object-fit: contain;
-      border-radius: 6px;
-    }
-
-    .footer {
-      padding: 24px 0;
-      border-top: 1px solid var(--line);
-      background: #ffffff;
-      color: var(--muted);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer a {
-      color: var(--ink);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: 22px;
-      z-index: 80;
-      transform: translateX(-50%) translateY(120px);
-      padding: 12px 16px;
-      border-radius: 8px;
-      background: var(--charcoal);
-      color: #ffffff;
-      font-weight: 800;
-      box-shadow: var(--shadow);
-      transition: transform 180ms ease;
-    }
-
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
-    }
-
-    .reveal {
-      opacity: 1;
-      transform: none;
-      transition: none;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    @media (max-width: 1040px) {
-      .dossier,
-      .hero-layout,
-      .section-head,
-      .featured-grid,
-      .evidence-grid,
-      .contact-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .support-panel {
-        grid-template-columns: minmax(0, 1fr) 132px;
-      }
-
-      .fit-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .status-row {
-        padding-right: 0;
-        padding-bottom: 14px;
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .filters {
-        justify-content: flex-start;
-      }
-
-      .project-card {
-        grid-template-columns: 220px minmax(0, 1fr);
-      }
-
-      .project-card.visual-wide {
-        grid-template-columns: 1fr;
-      }
-
-      .project-card.no-media {
-        grid-template-columns: 1fr;
-      }
-
-      .project-side {
-        grid-column: 1 / -1;
-        border-left: 0;
-        border-top: 1px solid var(--line);
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        align-items: end;
-      }
-    }
-
-    @media (max-width: 760px) {
-      body {
-        background-image: none;
-      }
-
-      .shell {
-        width: min(var(--max), calc(100% - 32px));
-      }
-
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 12px 0;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-        width: 100%;
-        gap: 6px;
-      }
-
-      .nav-links a {
-        flex: 1 1 calc(50% - 6px);
-        min-width: 0;
-        padding: 8px 9px;
-        font-size: 13px;
-        text-align: center;
-        white-space: normal;
-      }
-
-      .identity-panel {
-        min-height: auto;
-      }
-
-      .identity-main {
-        padding: 24px 18px;
-      }
-
-      .hero-layout {
-        min-height: 0;
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 31px;
-      }
-
-      h2 {
-        font-size: 30px;
-      }
-
-      .intro-copy,
-      .lead {
-        font-size: 16px;
-      }
-
-      .identity-meta,
-      .fit-panel,
-      .project-card,
-      .project-side,
-      .matrix-row {
-        grid-template-columns: 1fr;
-      }
-
-      .metric,
-      .project-media,
-      .project-side,
-      .matrix-cell {
-        border-right: 0;
-      }
-
-      .metric,
-      .matrix-cell {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .status-row {
-        grid-template-columns: 1fr;
-        align-items: start;
-        justify-items: start;
-      }
-
-      .metric:last-child,
-      .matrix-cell:last-child {
-        border-bottom: 0;
-      }
-
-      .project-media {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .project-media img {
-        min-height: 210px;
-      }
-
-      .browser-frame img {
-        height: 205px;
-      }
-
-      .browser-frame.small {
-        width: 100%;
-        margin-top: 0;
-      }
-
-      .browser-frame.small img {
-        height: 185px;
-      }
-
-      main section {
-        padding: 46px 0;
-      }
-
-      .hero-actions .button,
-      .project-actions .button,
-      .contact-panel .button,
-      .support-copy .button {
-        width: 100%;
-      }
-
-      .support-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .support-qr {
-        width: 132px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .reveal,
-      .toast,
-      .project-card {
-        transition: none;
-      }
-    }
-  </style>
+  <script src="assets/site.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to portfolio</a>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
 
   <header class="site-header">
-    <div class="shell nav">
-      <a class="brand" href="#top" aria-label="Meidie Fei portfolio home">
-        <span class="brand-mark">MF</span>
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Meidie Fei portfolio home">
+        <span class="wordmark-mark" aria-hidden="true">MF</span>
         <span>Meidie Fei</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#matrix">Evidence</a>
-        <a href="evidence.html">Evidence health</a>
-        <a href="#background">Background</a>
-        <a href="security.html">Security</a>
-        <a href="#support">Support</a>
-        <a href="assets/Meidie_Fei_Cyber_Security_Resume.pdf" download>Resume PDF</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#practice">Practice</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
+      <a class="header-resume" href="assets/Meidie_Fei_Cyber_Security_Resume.pdf">Résumé PDF</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="intro" id="top">
-      <div class="shell dossier">
-        <div class="identity-panel reveal">
-          <div class="identity-main">
-            <div class="hero-layout">
-              <div class="hero-text">
-                <span class="eyebrow">Security analyst portfolio</span>
-                <h1>Security projects recruiters can open, test, and review.</h1>
-                <p class="intro-copy">I am Meidie Fei, an RMIT Master of Cyber Security student and MDP Studio co-founder. This page focuses on deployed work and public repositories: payment-scam protection, phishing analysis, Windows endpoint triage, secure software, cryptography, cloud deployment, and CI/CD automation.</p>
-                <div class="hero-actions">
-                  <a class="button primary" href="#projects">
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    View work
-                  </a>
-                  <a class="button ghost" href="mailto:meidie@mdpstudio.com.au">
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    Email
-                  </a>
-                  <button class="button ghost" type="button" id="copyPitch">
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 9h10v10H9z" stroke="currentColor" stroke-width="2"/><path d="M5 15H4V4h11v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    Copy pitch
-                  </button>
-                </div>
-              </div>
-              <div class="screenshot-stack" aria-label="Live project screenshots">
-                <a class="browser-frame" href="https://payshield.mdpstudio.com.au/" target="_blank" rel="noreferrer">
-                  <span class="browser-bar"><span class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></span><span>payshield.mdpstudio.com.au</span></span>
-                  <img src="assets/screenshot-payshield.png" alt="Live screenshot of PayShield payment scam firewall dashboard" width="1256" height="650">
-                </a>
-                <a class="browser-frame small" href="https://ctool.mdpstudio.com.au" target="_blank" rel="noreferrer">
-                  <span class="browser-bar"><span class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></span><span>ctool.mdpstudio.com.au</span></span>
-                  <img src="assets/screenshot-cryptotoolkit.png" alt="Live screenshot of CryptoToolkit cryptography modules" width="1440" height="920">
-                </a>
-              </div>
-            </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="reveal">
+            <p class="eyebrow">Melbourne · Security + software</p>
+            <h1 id="hero-title">I build secure software for <em>messy, real-world</em> work.</h1>
           </div>
-          <div class="identity-meta" aria-label="Portfolio signals">
-            <div class="metric"><strong>8</strong><span>public security projects</span></div>
-            <div class="metric"><strong>103</strong><span>SecureVote tests</span></div>
-            <div class="metric"><strong>10</strong><span>RMM tool families covered</span></div>
-            <div class="metric"><strong>3.3</strong><span>RMIT program GPA</span></div>
+          <div class="hero-intro reveal">
+            <p>I’m Meidie Fei, a security and software builder finishing a Master of Cyber Security at RMIT. I turn ambiguous workflows into tested tools, explainable decisions, and automation with the guardrails left visible.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#work">Selected work <span aria-hidden="true">↓</span></a>
+              <a class="button" href="mailto:meidie@mdpstudio.com.au?subject=Portfolio%20enquiry">Start a conversation <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
 
-        <aside class="fit-panel reveal" id="recruiter-summary" aria-label="Recruiter summary">
-          <div class="status-row">
-            <div>
-              <span class="panel-label">Recruiter view</span>
-              <strong>Entry-level security analyst, SOC, junior pentest, AppSec, and risk roles.</strong>
-            </div>
-            <span class="availability">Available</span>
-          </div>
-
-          <div class="checklist">
-            <div class="check"><span>1</span><p>Can triage findings and reason about risk using evidence, not only tool output.</p></div>
-            <div class="check"><span>2</span><p>Has built back-end services, security controls, and cloud deployment workflows.</p></div>
-            <div class="check"><span>3</span><p>Has public demos and repositories for recruiters to verify independently.</p></div>
-            <div class="check"><span>4</span><p>Comfortable explaining technical tradeoffs to non-security stakeholders.</p></div>
-          </div>
-
-          <div class="quick-links" aria-label="Quick links">
-            <a href="https://github.com/meidielo" target="_blank" rel="noreferrer"><span>GitHub profile</span><span>Open</span></a>
-            <a href="https://payshield.mdpstudio.com.au/" target="_blank" rel="noreferrer"><span>Payment firewall</span><span>Open</span></a>
-            <a href="https://phishanalyze.mdpstudio.com.au/" target="_blank" rel="noreferrer"><span>Email analysis</span><span>Open</span></a>
-            <a href="assets/Meidie_Fei_Cyber_Security_Resume.pdf" download><span>Resume PDF</span><span>Download</span></a>
+        <aside class="hero-aside" aria-label="Current focus">
+          <div class="hero-note reveal">
+            <div class="status-line"><span class="status-dot" aria-hidden="true"></span>Open to the right work</div>
+            <h2>Evidence over theatre.</h2>
+            <p>Public demos and repositories where they help. Clear labels when work is a prototype, a course project, or a private system.</p>
+            <ol class="hero-index">
+              <li><span>01</span>Security engineering and detection</li>
+              <li><span>02</span>Review-gated AI and automation</li>
+              <li><span>03</span>Full-stack tools and data workflows</li>
+            </ol>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="projects">
+    <section class="credential-strip" aria-label="Professional context">
+      <div class="shell credential-grid">
+        <div class="credential reveal">
+          <small>Now</small>
+          <strong>Final-semester Master of Cyber Security student at RMIT</strong>
+        </div>
+        <div class="credential reveal">
+          <small>Practice</small>
+          <strong>Co-founder and technical lead at MDP Studio</strong>
+        </div>
+        <div class="credential reveal">
+          <small>Foundation</small>
+          <strong>Bachelor of Computer Science from BINUS University</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
       <div class="shell">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">Case studies</p>
-            <h2>Projects chosen for security evidence, not volume.</h2>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title">A short list worth opening.</h2>
           </div>
-          <div>
-            <p class="lead">The strongest recruiter signals now lead with payment-scam decisioning, detection engineering, endpoint triage, secure software, and cryptography. Use the filters to scan by role relevance.</p>
-            <div class="filters" aria-label="Project filters">
-              <button class="filter active" type="button" data-filter="all">All</button>
-              <button class="filter" type="button" data-filter="detection">Detection</button>
-              <button class="filter" type="button" data-filter="endpoint">Endpoint</button>
-              <button class="filter" type="button" data-filter="appsec">AppSec</button>
-              <button class="filter" type="button" data-filter="crypto">Crypto</button>
-              <button class="filter" type="button" data-filter="cloud">Cloud</button>
-            </div>
-          </div>
+          <p>Four projects show how I think across security, automation, and data. The detail is intentional: what was built, where the boundaries are, and which claims can be checked.</p>
         </div>
 
-        <div class="featured-grid reveal" aria-label="Featured projects">
-          <a class="feature" href="https://payshield.mdpstudio.com.au/" target="_blank" rel="noreferrer">
-            <img src="assets/screenshot-payshield.png" alt="Live screenshot of PayShield payment scam firewall dashboard" width="1256" height="650">
-            <div class="feature-content">
-              <div class="badge-row"><span class="tag">Live demo</span><span class="tag">Payment risk</span></div>
-              <h3>PayShield</h3>
-              <p>Payment-scam firewall for invoice-heavy teams, returning SAFE, VERIFY, or do-not-pay-until-verified decisions with evidence.</p>
+        <div class="work-list">
+          <article class="case-study reveal">
+            <div class="case-number">01</div>
+            <div class="case-copy">
+              <div>
+                <p class="case-kicker">Detection + decision systems</p>
+                <h3>From a suspicious email to a defensible next step.</h3>
+                <p>PhishAnalyze collects evidence across email authentication, URLs, domains, attachments, QR codes, language, and brand signals. PayShield translates the payment-specific evidence into plain actions before money moves.</p>
+                <dl class="case-meta">
+                  <div>
+                    <dt>Built</dt>
+                    <dd>Five-stage async analysis pipeline with concurrent analysers</dd>
+                  </div>
+                  <div>
+                    <dt>Outputs</dt>
+                    <dd>Explainable verdicts, STIX IOCs, ATT&amp;CK mapping, and payment decisions</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="case-links">
+                <a class="text-link" href="https://payshield.mdpstudio.com.au/" target="_blank" rel="noreferrer">PayShield live <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://phishanalyze.mdpstudio.com.au/" target="_blank" rel="noreferrer">PhishAnalyze live <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://github.com/MDP-Studio/Automated-Phishing-Detection" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
+              </div>
             </div>
-          </a>
-          <a class="feature" href="https://github.com/meidielo/secure-voting-platform" target="_blank" rel="noreferrer">
-            <img src="assets/screenshot-securevote.png" alt="SecureVote election management dashboard" width="1440" height="920">
-            <div class="feature-content">
-              <div class="badge-row"><span class="tag">112 tests</span><span class="tag">Secure software</span></div>
-              <h3>SecureVote</h3>
-              <p>Anonymous voting, encrypted PII, audit integrity, concurrency checks, and an accessible verification rehearsal.</p>
+            <div class="case-visual">
+              <img src="assets/screenshot-payshield.png" alt="PayShield dashboard showing payment-risk decisions and recent detection trends" width="1304" height="650" loading="lazy">
+              <span class="visual-label">Deployed prototype · live interface</span>
             </div>
-          </a>
-          <a class="feature" href="https://ctool.mdpstudio.com.au" target="_blank" rel="noreferrer">
-            <img src="assets/screenshot-cryptotoolkit.png" alt="Live screenshot of CryptoToolkit cryptography modules" width="1440" height="920">
-            <div class="feature-content">
-              <div class="badge-row"><span class="tag">36 modules</span><span class="tag">Crypto attacks</span></div>
-              <h3>CryptoToolkit</h3>
-              <p>Real attack labs plus a crypto-agility inventory and migration decision lab.</p>
+          </article>
+
+          <article class="case-study reveal">
+            <div class="case-number">02</div>
+            <div class="case-copy">
+              <div>
+                <p class="case-kicker">Review-gated AI workflow</p>
+                <h3>Automation with the handbrake left within reach.</h3>
+                <p>ApplyPilot is a local prototype for evidence-bound drafting and browser-assisted workflow. Its useful idea is not “one-click AI”. It is a control model that separates source facts, generated output, human approval, credentials, and external action.</p>
+                <dl class="case-meta">
+                  <div>
+                    <dt>Boundary</dt>
+                    <dd>Evidence → draft → review → action</dd>
+                  </div>
+                  <div>
+                    <dt>Status</dt>
+                    <dd>Private prototype, not a hands-off application service</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="case-links">
+                <span class="status-badge">Prototype documented honestly</span>
+              </div>
             </div>
-          </a>
+            <div class="case-diagram" role="img" aria-label="ApplyPilot review flow from source evidence through drafting and human approval to a scoped external action">
+              <div class="flow-step"><span>01</span><strong>Source evidence</strong><em>fixed inputs</em></div>
+              <div class="flow-step"><span>02</span><strong>Structured draft</strong><em>bounded output</em></div>
+              <div class="flow-step"><span>03</span><strong>Human review</strong><em>truth check</em></div>
+              <div class="flow-step"><span>04</span><strong>Scoped action</strong><em>explicit approval</em></div>
+            </div>
+          </article>
+
+          <article class="case-study reveal">
+            <div class="case-number">03</div>
+            <div class="case-copy">
+              <div>
+                <p class="case-kicker">Data science + evaluation</p>
+                <h3>Forecasting that respects what the model could actually know.</h3>
+                <p>For the Novartis Datathon, our team forecast post-generic-entry medicine volume. I focused on leakage-aware features, brand-level train and validation splits, benchmark comparisons, and error analysis rather than chasing a flattering metric.</p>
+                <dl class="case-meta">
+                  <div>
+                    <dt>Result</dt>
+                    <dd>7th place and a Top 10 finish</dd>
+                  </div>
+                  <div>
+                    <dt>Method</dt>
+                    <dd>Multi-output Ridge regression with log-transformed targets</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="case-links">
+                <a class="text-link" href="https://github.com/meidielo/Datathon" target="_blank" rel="noreferrer">Review the repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="case-chart" role="img" aria-label="Abstract comparison chart representing model validation across medicine brands">
+              <div class="chart-caption"><strong>07 / Top 10</strong><span>Brand-level validation</span></div>
+              <span class="chart-bar" data-label="B01" style="height: 32%"></span>
+              <span class="chart-bar" data-label="B02" style="height: 58%"></span>
+              <span class="chart-bar" data-label="B03" style="height: 45%"></span>
+              <span class="chart-bar" data-label="B04" style="height: 78%"></span>
+              <span class="chart-bar" data-label="B05" style="height: 66%"></span>
+              <span class="chart-bar" data-label="B06" style="height: 91%"></span>
+              <span class="chart-bar" data-label="B07" style="height: 73%"></span>
+            </div>
+          </article>
+
+          <article class="case-study reveal">
+            <div class="case-number">04</div>
+            <div class="case-copy">
+              <div>
+                <p class="case-kicker">Secure software</p>
+                <h3>Security controls tested where the workflow is most fragile.</h3>
+                <p>SecureVote is an RMIT team project that I later extended independently. The case study explores anonymous voting, encrypted personal data, access controls, audit integrity, defensive middleware, and concurrency around vote casting.</p>
+                <dl class="case-meta">
+                  <div>
+                    <dt>Controls</dt>
+                    <dd>RBAC, CSRF, MFA, WAF, rate limits, encryption, and audit logs</dd>
+                  </div>
+                  <div>
+                    <dt>Validation</dt>
+                    <dd>100+ pytest checks, including 10-thread concurrency scenarios</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="case-links">
+                <a class="text-link" href="https://github.com/MDP-Studio/secure-voting-platform" target="_blank" rel="noreferrer">Review the repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="case-visual">
+              <img src="assets/screenshot-securevote.png" alt="SecureVote election administration interface" width="1440" height="920" loading="lazy">
+              <span class="visual-label">Course origin · independently extended</span>
+            </div>
+          </article>
         </div>
 
-        <div class="project-list">
-          <article class="project-card visual-wide reveal" data-tags="detection appsec cloud">
-            <div class="project-media"><img src="assets/screenshot-payshield.png" alt="Live screenshot of PayShield payment scam dashboard" width="1256" height="650"></div>
-            <div class="project-copy">
-              <div class="badge-row"><span class="tag red">BEC defense</span><span class="tag blue">MCP tool</span><span class="tag green">SaaS</span></div>
-              <h3>PayShield</h3>
-              <p>Payment-scam firewall for invoice fraud, supplier impersonation, and BEC-style payment redirection.</p>
-              <ul class="proof-list">
-                <li>Maps email evidence to payment actions: SAFE, VERIFY, or DO_NOT_PAY_UNTIL_VERIFIED.</li>
-                <li>Uses real payment-email evidence with plan-gated checks and safety boundaries around mailbox access, API use, and payment release.</li>
-                <li>Exposes a CLI and MCP tool so an accounts-payable agent can request a grounded payment decision before release.</li>
-              </ul>
-              <div class="project-brief">
-                <strong>About this project</strong>
-                <p>PayShield is an early product prototype for payment-scam protection. Built by Meidie Fei, it turns payment-related email evidence into a business decision a finance team or accounts-payable agent can act on before money moves.</p>
-              </div>
-            </div>
-            <div class="project-side">
-              <div class="project-stat"><strong>3</strong><span>payment decisions</span></div>
-              <div class="project-stat"><strong>MCP</strong><span>agent boundary</span></div>
-              <div class="project-actions">
-                <a class="button primary" href="https://payshield.mdpstudio.com.au/" target="_blank" rel="noreferrer">Live demo</a>
-                <a class="button ghost" href="https://github.com/MDP-Studio/Automated-Phishing-Detection" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
+        <div class="more-work reveal">
+          <div class="more-work-head">
+            <h3>More proof, less preamble.</h3>
+            <a class="text-link" href="https://github.com/meidielo" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="more-work-grid">
+            <a class="more-item" href="https://github.com/MDP-Studio/rmm-hunter" target="_blank" rel="noreferrer">
+              <div><small>Endpoint triage</small><h4>RMM Hunter</h4><p>Non-destructive Windows review for remote-access tools, suspicious persistence, and trust-health signals.</p></div>
+              <span class="more-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="more-item" href="https://ctool.mdpstudio.com.au" target="_blank" rel="noreferrer">
+              <div><small>Cryptography lab</small><h4>CryptoToolkit</h4><p>Interactive attack demonstrations, known-answer tests, and crypto-agility decision exercises.</p></div>
+              <span class="more-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="more-item" href="https://github.com/MDP-Studio/AES-256-GCM-Python-Tool" target="_blank" rel="noreferrer">
+              <div><small>Defensive crypto API</small><h4>AES Secure Vault</h4><p>A Python package and CLI for authenticated encryption, explicit failure behaviour, and tamper checks.</p></div>
+              <span class="more-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="more-item" href="https://c3.mdpstudio.com.au" target="_blank" rel="noreferrer">
+              <div><small>Full-stack dashboard</small><h4>Cyber Command Center</h4><p>Security learning workflow with guest access, authentication, PostgreSQL, and Row Level Security.</p></div>
+              <span class="more-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="project-card reveal" data-tags="detection appsec">
-            <div class="project-media"><img src="assets/screenshot-phishanalyze.png" alt="Live screenshot of PhishAnalyze phishing detector" width="1440" height="920"></div>
-            <div class="project-copy">
-              <div class="badge-row"><span class="tag red">Detection</span><span class="tag blue">FastAPI</span><span class="tag green">MITRE</span></div>
-              <h3>PhishAnalyze</h3>
-              <p>Email-risk analysis platform designed around evidence collection, explainable verdicts, and analyst workflow.</p>
-              <ul class="proof-list">
-                <li>Analyzes SPF, DKIM, DMARC, URLs, domains, attachments, QR codes, and brand impersonation signals.</li>
-                <li>Maps phishing evidence to MITRE ATT&CK T1566 coverage, STIX 2.1 IOCs, and Sigma-style outputs.</li>
-                <li>Shares a deployed SaaS backend with PayShield while keeping the scanner and payment product separated.</li>
-              </ul>
-              <div class="project-brief">
-                <strong>About this project</strong>
-                <p>PhishAnalyze is the broader email-analysis workflow behind the phishing side of the platform. Built by Meidie Fei, it works with real suspicious-email evidence and turns headers, URLs, attachments, and content signals into an explainable analyst verdict.</p>
-              </div>
-            </div>
-            <div class="project-side">
-              <div class="project-stat"><strong>0.95</strong><span>sample corpus F1</span></div>
-              <div class="project-stat"><strong>12</strong><span>MITRE mappings</span></div>
-              <div class="project-actions">
-                <a class="button primary" href="https://phishanalyze.mdpstudio.com.au/" target="_blank" rel="noreferrer">Live demo</a>
-                <a class="button ghost" href="https://github.com/MDP-Studio/Automated-Phishing-Detection" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
+    <section class="section principles" id="practice" aria-labelledby="practice-title">
+      <div class="shell principles-grid">
+        <div class="reveal">
+          <p class="eyebrow">How I work</p>
+          <h2 id="practice-title">Good systems make their <em>boundaries</em> visible.</h2>
+        </div>
+        <div class="principle-list">
+          <article class="principle reveal">
+            <span>01</span>
+            <h3>Evidence before output</h3>
+            <p>Start with the source, define what can be claimed, and keep important decisions traceable to real inputs.</p>
           </article>
-
-          <article class="project-card visual-wide reveal" data-tags="detection endpoint appsec">
-            <div class="project-media"><img src="assets/screenshot-rmm-hunter.png" alt="RMM Hunter desktop scan dashboard showing high-risk endpoint triage findings" width="1440" height="920"></div>
-            <div class="project-copy">
-              <div class="badge-row"><span class="tag red">Endpoint triage</span><span class="tag blue">Electron</span><span class="tag amber">Unsigned beta</span></div>
-              <h3>RMM Hunter</h3>
-              <p>Windows endpoint scanner for unauthorized remote access tools, living-off-the-land traces, and local trust-health signals.</p>
-              <ul class="proof-list">
-                <li>Collects installed apps, services, scheduled tasks, startup entries, event logs, recent installers, Defender events, and system trust-health checks.</li>
-                <li>Uses deterministic verdicts: clean, needs_review, or high_risk, without deleting files, stopping services, or changing system settings.</li>
-                <li>Publishes beta Windows releases with SHA256/provenance verification. Current public Windows builds are unsigned beta artifacts unless a release page says otherwise.</li>
-                <li>A fail-closed PowerShell ceremony cross-checks the published GitHub asset digests, checksums, tag provenance, update metadata, and actual Authenticode state.</li>
-              </ul>
-              <div class="project-brief">
-                <strong>About this project</strong>
-                <p>RMM Hunter is a public beta endpoint-triage tool by Meidie Fei for reviewing suspicious RMM activity and Windows trust signals. The project is portfolio-ready, but release notes are explicit that current Windows builds are unsigned until a trusted code-signing route is approved.</p>
-              </div>
-            </div>
-            <div class="project-side">
-              <div class="project-stat"><strong>10</strong><span>RMM families</span></div>
-              <div class="project-stat"><strong>0.1.5</strong><span>beta release</span></div>
-              <div class="project-actions">
-                <a class="button dark" href="https://github.com/MDP-Studio/rmm-hunter" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="button ghost" href="https://github.com/MDP-Studio/rmm-hunter/releases" target="_blank" rel="noreferrer">Releases</a>
-              </div>
-            </div>
+          <article class="principle reveal">
+            <span>02</span>
+            <h3>Human control where risk rises</h3>
+            <p>Approval gates are part of the design for messages, submissions, payments, permissions, and other consequential actions.</p>
           </article>
-
-          <article class="project-card visual-wide reveal" data-tags="appsec crypto cloud">
-            <div class="project-media"><img src="assets/screenshot-securevote.png" alt="SecureVote election management dashboard showing admin controls" width="1440" height="920"></div>
-            <div class="project-copy">
-              <div class="badge-row"><span class="tag green">Secure software</span><span class="tag blue">Vault</span><span class="tag red">WAF</span></div>
-              <h3>SecureVote</h3>
-              <p>Secure electronic voting platform focused on anonymity, encrypted PII, integrity, and defensive controls.</p>
-              <ul class="proof-list">
-                <li>RSA blind signatures, ChaCha20-Poly1305 encryption, HMAC blind indexing, and HMAC-backed audit logs.</li>
-                <li>RBAC, CSRF protection, MFA, rate limiting, ModSecurity CRS, and Vault Transit signing.</li>
-                <li>Includes race-condition checks around concurrent vote casting.</li>
-                <li>Includes a data-free observer rehearsal with explicit trust assumptions, stop conditions, non-claims, keyboard controls, and screen-reader status announcements.</li>
-              </ul>
-              <div class="project-brief">
-                <strong>About this project</strong>
-                <p>SecureVote is a secure-software case study rather than a public voting service. Completed and hardened by Meidie Fei, the value is in the threat model, cryptographic design, defensive controls, and tests around a high-risk workflow.</p>
-              </div>
-            </div>
-            <div class="project-side">
-              <div class="project-stat"><strong>112</strong><span>pytest tests</span></div>
-              <div class="project-stat"><strong>10</strong><span>thread race checks</span></div>
-              <div class="project-actions">
-                <a class="button dark" href="https://github.com/meidielo/secure-voting-platform" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-tags="crypto appsec">
-            <div class="project-media"><img src="assets/screenshot-cryptotoolkit.png" alt="Live screenshot of CryptoToolkit modules" width="1440" height="920"></div>
-            <div class="project-copy">
-              <div class="badge-row"><span class="tag blue">Cryptography</span><span class="tag green">TypeScript</span><span class="tag amber">Migration lab</span></div>
-              <h3>CryptoToolkit</h3>
-              <p>Interactive cryptography platform where attacks run for real and modules are backed by known test vectors.</p>
-              <ul class="proof-list">
-                <li>Padding oracle, nonce reuse, hash extension, RSA, Diffie-Hellman, and GCM attack demonstrations.</li>
-                <li>NIST and RFC vectors for AES, AES-GCM, SHA-256, and HMAC.</li>
-                <li>Crypto-agility inventory and migration scenarios cover algorithm identifiers, versioned envelopes, post-quantum exposure, provider boundaries, downgrade rejection, and rollback.</li>
-                <li>Built for teaching, but structured around reproducible technical behavior.</li>
-              </ul>
-              <div class="project-brief">
-                <strong>About this project</strong>
-                <p>CryptoToolkit is a deployed learning lab by Meidie Fei for security concepts that are hard to understand from static notes. Each module is built to make the failure mode visible, reproducible, and testable in the browser.</p>
-              </div>
-            </div>
-            <div class="project-side">
-              <div class="project-stat"><strong>36</strong><span>modules</span></div>
-              <div class="project-stat"><strong>95</strong><span>tests</span></div>
-              <div class="project-actions">
-                <a class="button primary" href="https://ctool.mdpstudio.com.au" target="_blank" rel="noreferrer">Live demo</a>
-                <a class="button ghost" href="https://github.com/meidielo/crypto-toolkit" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card no-media crypto reveal" data-tags="crypto appsec">
-            <div class="project-copy">
-              <div class="badge-row"><span class="tag blue">AES-GCM</span><span class="tag green">Argon2id</span><span class="tag">PyPI</span></div>
-              <h3>AES Secure Vault</h3>
-              <p>Python package and CLI for authenticated encryption with an explicit threat model and fuzz testing.</p>
-              <ul class="proof-list">
-                <li>AES-256-GCM with Argon2id and AAD-bound envelope metadata.</li>
-                <li>KDF downgrade prevention, tamper detection, and malformed payload rejection.</li>
-                <li>A published-release verifier re-downloads assets and checks GitHub digests, checksums, tag and commit provenance, and attestations. These are provenance controls, not operating-system code signing or cryptographic certification.</li>
-                <li>A public security policy provides a private reporting route without exposing sensitive vulnerability details.</li>
-              </ul>
-              <div class="project-brief">
-                <strong>About this project</strong>
-                <p>AES Secure Vault is a published package by Meidie Fei for practicing defensive crypto API design. It focuses on authenticated encryption, metadata binding, and clear failure behavior for corrupted or tampered payloads.</p>
-              </div>
-            </div>
-            <div class="project-side">
-              <div class="project-stat"><strong>CLI</strong><span>package interface</span></div>
-              <div class="project-stat"><strong>Fuzz</strong><span>property checks</span></div>
-              <div class="project-actions">
-                <a class="button dark" href="https://github.com/meidielo/AES-256-GCM-Python-Tool" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="button ghost" href="https://pypi.org/project/aes-secure-vault/" target="_blank" rel="noreferrer">PyPI</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card no-media cloud reveal" data-tags="cloud appsec">
-            <div class="project-copy">
-              <div class="badge-row"><span class="tag">GitHub Actions</span><span class="tag blue">Cloudflare</span><span class="tag green">Netlify</span></div>
-              <h3>Cloudflare DNS Action</h3>
-              <p>Deployment automation for connecting Netlify custom domains to Cloudflare DNS with idempotent behavior.</p>
-              <ul class="proof-list">
-                <li>Attaches custom domains, upserts CNAME records, and can wait for SSL certificates.</li>
-                <li>Uses dry-run, create-only, retry, and scoped-token patterns.</li>
-                <li>Now powers this portfolio deployment at meidie.mdpstudio.com.au.</li>
-              </ul>
-              <div class="project-brief">
-                <strong>About this project</strong>
-                <p>This action packages a repeated MDP Studio deployment task by Meidie Fei into a reusable CI tool. It is designed for small sites where custom-domain setup should be repeatable, scoped, and safe to rerun.</p>
-              </div>
-            </div>
-            <div class="project-side">
-              <div class="project-stat"><strong>CI</strong><span>lint, test, bundle</span></div>
-              <div class="project-stat"><strong>DNS</strong><span>safe upsert</span></div>
-              <div class="project-actions">
-                <a class="button dark" href="https://github.com/MDP-Studio/cf-dns-action" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card visual-wide reveal" data-tags="cloud detection">
-            <div class="project-media"><img src="assets/screenshot-command-center.png" alt="Live screenshot of Cyber Command Center dashboard in guest mode" width="1440" height="920"></div>
-            <div class="project-copy">
-              <div class="badge-row"><span class="tag green">Supabase RLS</span><span class="tag blue">React</span><span class="tag">Outcome deltas</span></div>
-              <h3>Cyber Command Center</h3>
-              <p>Cybersecurity training tracker with guest mode, synced accounts, Row Level Security, and security headers.</p>
-              <ul class="proof-list">
-                <li>Tracks 49 tasks across 6 phases and 240+ hours of structured training.</li>
-                <li>Uses Supabase Auth and Row Level Security for account data.</li>
-                <li>ATT&amp;CK/NIST-mapped assessment drills retain compact attempt history, evidence-quality bands, and first-to-latest score deltas without storing raw lab evidence.</li>
-                <li>Deployed with Netlify headers and Docker support.</li>
-              </ul>
-              <div class="project-brief">
-                <strong>About this project</strong>
-                <p>Cyber Command Center is a deployed training and operations dashboard by Meidie Fei. It combines guest access, account data, auth boundaries, security headers, and descriptive assessment outcomes in a small production-style app.</p>
-              </div>
-            </div>
-            <div class="project-side">
-              <div class="project-stat"><strong>49</strong><span>training tasks</span></div>
-              <div class="project-stat"><strong>RLS</strong><span>data protection</span></div>
-              <div class="project-actions">
-                <a class="button primary" href="https://c3.mdpstudio.com.au" target="_blank" rel="noreferrer">Live demo</a>
-                <a class="button ghost" href="https://github.com/meidielo/cyber-command-center" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
+          <article class="principle reveal">
+            <span>03</span>
+            <h3>Build for the next operator</h3>
+            <p>Tests, clear failure states, deployment notes, and handover are how a useful prototype becomes maintainable work.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="matrix-section" id="matrix">
+    <section class="section" aria-labelledby="capability-title">
       <div class="shell">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">Evidence matrix</p>
-            <h2>How the work maps to analyst responsibilities.</h2>
+            <p class="eyebrow">Capabilities</p>
+            <h2 id="capability-title">Technical range with a consistent point of view.</h2>
           </div>
-          <p class="lead">This is the shortcut for hiring managers: what I can help with, where the evidence is, and what to click.</p>
+          <p>I am strongest where software, security, data, and operations overlap. The technology changes. The discipline around evidence, failure, and handover does not.</p>
         </div>
-
-        <div class="matrix reveal" role="table" aria-label="Security evidence matrix">
-          <div class="matrix-row matrix-head" role="row">
-            <div class="matrix-cell" role="columnheader">Analyst task</div>
-            <div class="matrix-cell" role="columnheader">Evidence</div>
-            <div class="matrix-cell" role="columnheader">Project</div>
-          </div>
-          <div class="matrix-row" role="row">
-            <div class="matrix-cell" role="cell"><strong>Block payment scams</strong></div>
-            <div class="matrix-cell" role="cell"><p>Invoice-fraud and supplier-change evidence mapped to SAFE, VERIFY, or DO_NOT_PAY_UNTIL_VERIFIED before money moves.</p></div>
-            <div class="matrix-cell" role="cell"><span class="tag red">PayShield</span></div>
-          </div>
-          <div class="matrix-row" role="row">
-            <div class="matrix-cell" role="cell"><strong>Triage findings</strong></div>
-            <div class="matrix-cell" role="cell"><p>Weighted phishing score, confidence handling, analyzer evidence, MITRE T1566 mapping, and STIX export.</p></div>
-            <div class="matrix-cell" role="cell"><span class="tag red">PhishAnalyze</span></div>
-          </div>
-          <div class="matrix-row" role="row">
-            <div class="matrix-cell" role="cell"><strong>Investigate endpoints</strong></div>
-            <div class="matrix-cell" role="cell"><p>RMM tool detection, service and scheduled-task review, PowerShell traces, Defender events, trust-health checks, and non-destructive next steps.</p></div>
-            <div class="matrix-cell" role="cell"><span class="tag red">RMM Hunter</span></div>
-          </div>
-          <div class="matrix-row" role="row">
-            <div class="matrix-cell" role="cell"><strong>Review secure code</strong></div>
-            <div class="matrix-cell" role="cell"><p>Auth, RBAC, CSRF, MFA, encryption boundaries, WAF rules, audit logs, and race-condition tests.</p></div>
-            <div class="matrix-cell" role="cell"><span class="tag green">SecureVote</span></div>
-          </div>
-          <div class="matrix-row" role="row">
-            <div class="matrix-cell" role="cell"><strong>Understand attack paths</strong></div>
-            <div class="matrix-cell" role="cell"><p>Hands-on implementations of padding oracles, nonce reuse, hash extension, RSA, DH, and GCM failures.</p></div>
-            <div class="matrix-cell" role="cell"><span class="tag blue">CryptoToolkit</span></div>
-          </div>
-          <div class="matrix-row" role="row">
-            <div class="matrix-cell" role="cell"><strong>Support cloud workflows</strong></div>
-            <div class="matrix-cell" role="cell"><p>GitHub Actions, Netlify deploys, Cloudflare DNS automation, SSL checks, and security headers.</p></div>
-            <div class="matrix-cell" role="cell"><span class="tag amber">DNS Action</span></div>
-          </div>
+        <div class="capability-grid">
+          <article class="capability reveal">
+            <span class="capability-number">01 / Security</span>
+            <h3>Investigate and harden</h3>
+            <p>Detection workflows, suspicious-signal review, threat modelling, application controls, cryptography, and practical remediation.</p>
+            <ul><li>Python</li><li>FastAPI</li><li>OWASP</li><li>STIX</li><li>ATT&amp;CK</li><li>pytest</li></ul>
+          </article>
+          <article class="capability reveal">
+            <span class="capability-number">02 / AI + automation</span>
+            <h3>Automate with review</h3>
+            <p>Structured outputs, prompt and data boundaries, hallucination checks, source validation, approval gates, and redacted records.</p>
+            <ul><li>LLM workflows</li><li>Evaluation</li><li>Playwright</li><li>APIs</li><li>PowerShell</li></ul>
+          </article>
+          <article class="capability reveal">
+            <span class="capability-number">03 / Product delivery</span>
+            <h3>Ship the working thing</h3>
+            <p>Responsive interfaces, Python services, SQL data models, authentication, dashboards, container builds, DNS, and deployment checks.</p>
+            <ul><li>React</li><li>TypeScript</li><li>SQL</li><li>Supabase</li><li>Docker</li><li>Cloudflare</li></ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="background">
-      <div class="shell">
-        <div class="section-head reveal">
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Technical, but never only technical.</h2>
+          <p class="lead">I grew up in Indonesia and now call Melbourne home. My route into security includes software, teaching, government data work, operational jobs, and building a small studio from the ground up.</p>
+          <p>That mix made me practical. I enjoy deep technical work, but I care just as much about whether a person can understand the result, operate the system, and know when it should stop.</p>
+          <p>Outside a role, I build through <a class="context-link" href="https://mdpstudio.com.au/" target="_blank" rel="noreferrer">MDP Studio</a>, a pre-revenue web and AI venture I co-founded in Melbourne. It is a place to test useful delivery patterns, not a substitute for claims we have not earned.</p>
+        </div>
+        <div class="timeline reveal" aria-label="Experience and education timeline">
+          <article class="timeline-item">
+            <time datetime="2025">2025 → late 2026</time>
+            <div><h3>Master of Cyber Security, RMIT</h3><p>Final semester. Program GPA 3.3, with High Distinctions across ethical hacking, secure software, data science, and data communications.</p></div>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2026">2026 → now</time>
+            <div><h3>Co-founder and technical lead, MDP Studio</h3><p>Web applications, internal tools, automation, AI-assisted workflows, deployments, and technical handover for SME-oriented work.</p></div>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2024">2024 → 2026</time>
+            <div><h3>Warehouse and inventory operations</h3><p>High-volume order accuracy, inventory discrepancy escalation, and reliable execution under time pressure.</p></div>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2021">2021 → 2022</time>
+            <div><h3>Programming instructor, KodeKiddo</h3><p>Taught learners aged 6–18 and debugged Android, Java, Unity, and programming fundamentals in real time.</p></div>
+          </article>
+          <article class="timeline-item">
+            <time>Foundation</time>
+            <div><h3>BSc Computer Science, BINUS University</h3><p>Mobile Application and Technology program, completed in 2023 with High Merit.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="audiences" aria-label="Ways to work together">
+      <div class="shell audience-grid">
+        <article class="audience reveal">
           <div>
-            <p class="section-kicker">Background</p>
-            <h2>Builder, student, and communicator.</h2>
+            <span class="audience-label">For hiring teams</span>
+            <h2>Looking for someone who can build and question the brief?</h2>
+            <p>I am open to graduate and junior roles across cyber security, AI evaluation, automation, full-stack engineering, and technical operations. My best environment has clear review, a technical mentor, and room to improve the system rather than only operate it.</p>
           </div>
-          <p class="lead">The portfolio is the proof layer. This is the context behind it: security study, production delivery, and teaching experience.</p>
-        </div>
-
-        <div class="evidence-grid">
-          <div class="timeline">
-            <div class="timeline-item reveal">
-              <h3>MDP Studio - Co-Founder and Developer</h3>
-              <p><a class="context-link" href="https://mdpstudio.com.au/">MDP Studio</a> is a Melbourne-based web design and AI implementation studio. My work there includes production websites, automation pipelines, Supabase-backed admin patterns, HTTPS-backed deployments, DNS automation, and practical security headers. <a class="context-link" href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">View the public MDP project page for this portfolio.</a></p>
-            </div>
-            <div class="timeline-item reveal">
-              <h3>Software Programming Instructor - KodeKiddo</h3>
-              <p>Taught programming fundamentals to students aged 6-18, including Android development and Unity game development. Built the habit of explaining technical concepts clearly.</p>
-            </div>
-            <div class="timeline-item reveal">
-              <h3>Data Assistant - BKPSDM</h3>
-              <p>Reviewed, verified, and corrected government HR data. Developed attention to integrity, consistency, and structured governance processes.</p>
-            </div>
+          <div class="audience-actions">
+            <a class="button light" href="assets/Meidie_Fei_Cyber_Security_Resume.pdf">Download résumé <span aria-hidden="true">↓</span></a>
+            <a class="button light" href="https://www.linkedin.com/in/meidie-fei/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
-
-          <aside class="credential-panel reveal">
-            <h3>RMIT Master of Cyber Security</h3>
-            <p>Program GPA 3.3. Transcript highlights relevant to security analyst roles:</p>
-            <table class="grade-table" aria-label="Transcript highlights">
-              <thead>
-                <tr>
-                  <th>Subject</th>
-                  <th>Grade</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Ethical Hacking and Security Testing</td><td><span class="grade">HD</span></td></tr>
-                <tr><td>Secure Software Systems</td><td><span class="grade">HD</span></td></tr>
-                <tr><td>Practical Data Science with Python</td><td><span class="grade">HD</span></td></tr>
-                <tr><td>Digital Risk Management in Information Security</td><td><span class="grade di">DI</span></td></tr>
-                <tr><td>Security in Computing and IT</td><td><span class="grade di">DI</span></td></tr>
-              </tbody>
-            </table>
-          </aside>
-        </div>
+        </article>
+        <article class="audience reveal">
+          <div>
+            <span class="audience-label">For businesses</span>
+            <h2>Have a workflow that still lives in tabs, inboxes, or spreadsheets?</h2>
+            <p>Through MDP Studio, I take on scoped websites, dashboards, workflow automation, and AI-assisted internal tools for Australian SMEs. The best starting point is a concrete problem that can be mapped, tested, and handed over.</p>
+          </div>
+          <div class="audience-actions">
+            <a class="button dark" href="https://mdpstudio.com.au/" target="_blank" rel="noreferrer">Visit MDP Studio <span aria-hidden="true">↗</span></a>
+            <a class="button" href="mailto:meidie@mdpstudio.com.au?subject=Project%20enquiry">Discuss a project <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="contact-band" id="contact">
-      <div class="shell contact-panel reveal">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Open to security analyst, SOC, junior pentest, AppSec, security engineering, and risk advisory roles.</h2>
-          <p>Best fit: teams that value practical builders who can investigate findings, explain risk clearly, and work with engineers to close issues. Vulnerability reports for this portfolio should use the security policy so reports stay private and scoped.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="button primary" href="mailto:meidie@mdpstudio.com.au">Email Meidie</a>
-          <a class="button dark" href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20security%20portfolio">Report security issue</a>
-          <a class="button ghost" href="security.html">Security policy</a>
-          <a class="button ghost" href="https://github.com/meidielo" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="support-band" id="support" aria-label="Project support">
-      <div class="shell">
-        <aside class="support-panel reveal">
-          <div class="support-copy">
-            <p class="section-kicker">Support</p>
-            <h2>Support the lab.</h2>
-            <p>I build practical cybersecurity, AI, and automation projects. If one helped you or gave you ideas, you can support the work here.</p>
-            <a class="button coffee" href="https://buymeacoffee.com/meidie" target="_blank" rel="noreferrer">Buy me a coffee</a>
-          </div>
-          <a class="support-qr" href="https://buymeacoffee.com/meidie" target="_blank" rel="noreferrer" aria-label="Open Buy Me a Coffee support page">
-            <img src="assets/buy-me-a-coffee-qr.png" alt="QR code linking to Meidie's Buy Me a Coffee page" width="700" height="700">
-          </a>
-        </aside>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">A role, a risk, or a broken workflow?</h2>
+        <p>Send the context, the constraint, and what a good outcome looks like. I’ll reply with a direct answer about whether I can help.</p>
+        <a class="contact-email" href="mailto:meidie@mdpstudio.com.au">meidie@mdpstudio.com.au</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="shell footer-inner">
-      <span>Meidie Fei | Security Analyst Portfolio | <a href="https://mdpstudio.com.au/">MDP Studio</a></span>
-      <span>Melbourne, Australia | <a href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">MDP project page</a> | <a href="security.html">Security policy</a> | <a href="evidence.html">Evidence health</a> | <a href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20security%20portfolio">Report security issue</a></span>
+      <span>© <span data-current-year>2026</span> Meidie Fei · Melbourne, Australia</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://github.com/meidielo" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://mdpstudio.com.au/" target="_blank" rel="noreferrer">MDP Studio</a>
+        <a href="https://mdpstudio.com.au/projects/meidie-security-portfolio/">MDP project page</a>
+        <a href="evidence.html">Evidence health</a>
+        <a href="security.html">Security policy</a>
+        <a href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20portfolio">Report an issue</a>
+      </nav>
     </div>
   </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite">Portfolio pitch copied</div>
-
-  <script>
-    const filters = document.querySelectorAll(".filter");
-    const cards = document.querySelectorAll(".project-card");
-    const toast = document.getElementById("toast");
-    const pitchButton = document.getElementById("copyPitch");
-
-    filters.forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
-        filters.forEach((item) => item.classList.remove("active"));
-        button.classList.add("active");
-
-        cards.forEach((card) => {
-          const tags = card.dataset.tags.split(" ");
-          card.hidden = filter !== "all" && !tags.includes(filter);
-        });
-      });
-    });
-
-    const pitch = "Meidie Fei is an RMIT Master of Cyber Security student and MDP Studio co-founder with public, verifiable projects in PayShield payment-scam protection, PhishAnalyze email analysis, RMM Hunter endpoint triage, secure software, cryptography, cloud deployment, and CI/CD automation. Portfolio: https://meidie.mdpstudio.com.au";
-
-    function showToast() {
-      toast.classList.add("show");
-      window.setTimeout(() => toast.classList.remove("show"), 1800);
-    }
-
-    pitchButton.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(pitch);
-        showToast();
-      } catch (error) {
-        const textArea = document.createElement("textarea");
-        textArea.value = pitch;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        textArea.remove();
-        showToast();
-      }
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
-  </script>
 </body>
 </html>

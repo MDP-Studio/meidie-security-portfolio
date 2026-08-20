@@ -1,320 +1,150 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Security policy and vulnerability reporting contact for Meidie Fei's security portfolio.">
+  <meta name="theme-color" content="#122019">
+  <meta name="description" content="Private vulnerability reporting scope, safe testing rules, and artifact integrity references for Meidie Fei's public portfolio.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Security Policy | Meidie Fei">
-  <meta property="og:description" content="Private vulnerability reporting scope, safe testing rules, and artifact integrity references for the security portfolio.">
+  <meta property="og:description" content="A clear private reporting path, safe-testing boundary, and artifact trust disclosures for Meidie Fei's portfolio.">
   <meta property="og:url" content="https://meidie.mdpstudio.com.au/security">
+  <link rel="canonical" href="https://meidie.mdpstudio.com.au/security">
   <title>Security Policy | Meidie Fei</title>
-  <link rel="icon" href="assets/favicon.jpg">
-  <style>
-    :root {
-      --bg: #f4f6f8;
-      --paper: #ffffff;
-      --ink: #101828;
-      --muted: #5b6472;
-      --line: #d9e0ea;
-      --teal: #0f766e;
-      --blue: #2563b8;
-      --amber: #9a6a00;
-      --charcoal: #172033;
-      --max: 980px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--bg);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .shell {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .site-header,
-    .footer {
-      background: #ffffff;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav,
-    .footer-inner {
-      min-height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--ink);
-      font-weight: 900;
-      text-decoration: none;
-    }
-
-    .brand-mark {
-      width: 36px;
-      height: 36px;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: var(--charcoal);
-      color: #ffffff;
-      font-size: 13px;
-    }
-
-    .nav-links,
-    .actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .nav-links a,
-    .button {
-      min-height: 40px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 12px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: #ffffff;
-      color: var(--ink);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .button.primary {
-      color: #ffffff;
-      background: var(--teal);
-      border-color: var(--teal);
-    }
-
-    main {
-      padding: 42px 0 56px;
-    }
-
-    .policy {
-      padding: 34px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-      box-shadow: 0 14px 42px rgba(16, 24, 40, 0.08);
-    }
-
-    .kicker {
-      margin: 0 0 12px;
-      color: var(--teal);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    p,
-    li {
-      margin-top: 0;
-      overflow-wrap: break-word;
-    }
-
-    a,
-    code {
-      overflow-wrap: anywhere;
-    }
-
-    h1 {
-      margin-bottom: 14px;
-      font-size: clamp(34px, 6vw, 58px);
-      line-height: 0.98;
-    }
-
-    h2 {
-      margin: 34px 0 10px;
-      font-size: 24px;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    li {
-      margin: 8px 0;
-    }
-
-    code {
-      padding: 2px 5px;
-      border-radius: 5px;
-      background: #eef3f7;
-      font-family: Consolas, Monaco, monospace;
-      font-size: 0.95em;
-      overflow-wrap: anywhere;
-    }
-
-    .lead {
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .callout {
-      margin: 24px 0;
-      padding: 18px;
-      border-left: 4px solid var(--teal);
-      border-radius: 6px;
-      background: #eef9f7;
-    }
-
-    .artifact {
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #f8fafc;
-    }
-
-    .artifact + .artifact {
-      margin-top: 12px;
-    }
-
-    .footer {
-      border-top: 1px solid var(--line);
-      border-bottom: 0;
-      color: var(--muted);
-    }
-
-    .footer a {
-      color: var(--ink);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    @media (max-width: 720px) {
-      .policy {
-        padding: 24px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      .actions .button {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  </style>
+  <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
 </head>
-<body>
+<body id="top" class="policy-body">
+  <a class="skip-link" href="#main">Skip to security policy</a>
+  <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
+
   <header class="site-header">
-    <div class="shell nav">
-      <a class="brand" href="index.html" aria-label="Return to Meidie Fei portfolio">
-        <span class="brand-mark">MF</span>
+    <div class="shell header-inner">
+      <a class="wordmark" href="index.html" aria-label="Return to Meidie Fei portfolio">
+        <span class="wordmark-mark" aria-hidden="true">MF</span>
         <span>Meidie Fei</span>
       </a>
-      <nav class="nav-links" aria-label="Security policy navigation">
-        <a href="index.html#projects">Projects</a>
+      <nav class="primary-nav" aria-label="Security policy navigation">
+        <a href="index.html#work">Work</a>
+        <a href="evidence.html">Evidence</a>
+        <a href="SECURITY.md">Markdown</a>
         <a href="index.html#contact">Contact</a>
-        <a href="evidence.html">Evidence health</a>
-        <a href="SECURITY.md">SECURITY.md</a>
       </nav>
+      <a class="header-resume" href="index.html">Portfolio</a>
     </div>
   </header>
 
-  <main>
-    <article class="shell policy">
-      <p class="kicker">Security policy</p>
-      <h1>Report security issues privately.</h1>
-      <p class="lead">This page gives recruiters, clients, and security researchers a clear vulnerability-reporting path for Meidie's public portfolio without implying enterprise SOC, compliance, or bug bounty coverage.</p>
-
-      <div class="callout">
-        <p><strong>Contact:</strong> <a href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20security%20portfolio">meidie@mdpstudio.com.au</a></p>
-        <p><strong>Suggested subject:</strong> <code>[Security] report: Meidie security portfolio</code></p>
-        <div class="actions">
-          <a class="button primary" href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20security%20portfolio">Report security issue</a>
-          <a class="button" href=".well-known/security.txt">security.txt</a>
-          <a class="button" href="artifact-manifest.json">Artifact manifest</a>
-          <a class="button" href="evidence.html">Evidence freshness</a>
-          <a class="button" href="SECURITY.md">Read Markdown policy</a>
+  <main id="main" class="policy-main">
+    <section class="policy-hero" aria-labelledby="page-title">
+      <div class="shell policy-hero-inner">
+        <div class="policy-hero-copy reveal">
+          <p class="eyebrow">Security policy</p>
+          <h1 id="page-title">Report security issues privately.</h1>
+          <p>This policy gives recruiters, clients, and security researchers a clear reporting path without implying enterprise SOC, compliance, or bug-bounty coverage.</p>
         </div>
+        <aside class="policy-aside reveal">
+          <small>Preferred channel</small>
+          <strong>One private email with the smallest useful proof.</strong>
+        </aside>
       </div>
+    </section>
 
-      <h2>Scope</h2>
-      <p><strong>In scope:</strong></p>
-      <ul>
-        <li>The static portfolio site at <a href="https://meidie.mdpstudio.com.au">meidie.mdpstudio.com.au</a>.</li>
-        <li>Public assets published from this repository, including the downloadable resume PDF.</li>
-        <li>Public project links shown from the portfolio when the linked project is owned by Meidie Fei or MDP Studio.</li>
-      </ul>
-      <p><strong>Out of scope:</strong></p>
-      <ul>
-        <li>Third-party platforms such as GitHub, Netlify, Cloudflare, Buy Me a Coffee, and LinkedIn.</li>
-        <li>Client-private systems, private MDP Studio infrastructure, private repositories, email accounts, or payment accounts.</li>
-        <li>Social engineering, phishing, physical attacks, spam, denial of service, credential stuffing, or attempts to access private data.</li>
-      </ul>
+    <div class="shell policy-content">
+      <div class="policy-layout">
+        <nav class="policy-toc" aria-label="On this page">
+          <a href="#contact-channel">Contact</a>
+          <a href="#scope">Scope</a>
+          <a href="#include">What to include</a>
+          <a href="#testing">Safe testing</a>
+          <a href="#integrity">Artifact integrity</a>
+          <a href="#claims">Claims boundary</a>
+        </nav>
 
-      <h2>What to include</h2>
-      <ul>
-        <li>Affected URL, repository, or artifact.</li>
-        <li>Minimal reproduction steps and expected impact.</li>
-        <li>Relevant screenshots or logs with secrets removed.</li>
-        <li>Whether you believe any data was accessed or changed.</li>
-      </ul>
+        <article>
+          <section class="prose-section reveal" id="contact-channel">
+            <h2>Private reporting channel</h2>
+            <div class="policy-callout">
+              <p><strong>Contact:</strong> <a href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20portfolio">meidie@mdpstudio.com.au</a></p>
+              <p><strong>Suggested subject:</strong> <code>[Security] report: Meidie portfolio</code></p>
+            </div>
+            <div class="resource-list">
+              <a class="resource-link" href="mailto:meidie@mdpstudio.com.au?subject=%5BSecurity%5D%20report%3A%20Meidie%20portfolio"><strong>Report a security issue</strong><span>Email privately ↗</span></a>
+              <a class="resource-link" href=".well-known/security.txt"><strong>security.txt</strong><span>Machine-readable contact ↗</span></a>
+              <a class="resource-link" href="artifact-manifest.json"><strong>Artifact manifest</strong><span>Hashes and trust state ↗</span></a>
+              <a class="resource-link" href="evidence.html"><strong>Evidence health</strong><span>Freshness methodology ↗</span></a>
+            </div>
+          </section>
 
-      <h2>Safe testing</h2>
-      <ul>
-        <li>Use your own browser session and test data.</li>
-        <li>Keep proof of concept steps minimal and reversible.</li>
-        <li>Stop and report immediately if you encounter private data, credentials, or account boundaries.</li>
-        <li>Do not run high-volume automated scans against the portfolio or linked demos.</li>
-      </ul>
+          <section class="prose-section reveal" id="scope">
+            <h2>Scope</h2>
+            <h3>In scope</h3>
+            <ul>
+              <li>The static portfolio site at <a href="https://meidie.mdpstudio.com.au">meidie.mdpstudio.com.au</a>.</li>
+              <li>Public assets published from this repository, including the downloadable resume PDF.</li>
+              <li>Public project links shown from the portfolio when the linked project is owned by Meidie Fei or MDP Studio.</li>
+            </ul>
+            <h3>Out of scope</h3>
+            <ul>
+              <li>Third-party platforms such as GitHub, Cloudflare, Netlify, LinkedIn, and other external services.</li>
+              <li>Client-private systems, private MDP Studio infrastructure, private repositories, email accounts, or payment accounts.</li>
+              <li>Social engineering, phishing, physical attacks, spam, denial of service, credential stuffing, or attempts to access private data.</li>
+            </ul>
+          </section>
 
-      <h2>Artifact integrity and signing</h2>
-      <div class="artifact">
-        <p><strong>Resume PDF:</strong> <a href="assets/Meidie_Fei_Cyber_Security_Resume.pdf">assets/Meidie_Fei_Cyber_Security_Resume.pdf</a></p>
-        <p><strong>SHA-256:</strong> <code>19BEBF8AA951A5702BB9D80D0B47B63592C57D420CF525F1FD99EADAF6A48F07</code></p>
-        <p><strong>Machine-readable manifest:</strong> <a href="artifact-manifest.json">artifact-manifest.json</a></p>
-        <p>The portfolio resume PDF is unsigned. Its published SHA-256 checksum supports byte-for-byte comparison but does not authenticate its origin or signer.</p>
+          <section class="prose-section reveal" id="include">
+            <h2>What to include</h2>
+            <ul>
+              <li>The affected URL, repository, or artifact.</li>
+              <li>Minimal reproduction steps and the expected impact.</li>
+              <li>Relevant screenshots or logs with secrets removed.</li>
+              <li>Whether you believe any data was accessed or changed.</li>
+            </ul>
+          </section>
+
+          <section class="prose-section reveal" id="testing">
+            <h2>Safe testing</h2>
+            <ul>
+              <li>Use your own browser session and test data.</li>
+              <li>Keep proof-of-concept steps minimal and reversible.</li>
+              <li>Stop and report immediately if you encounter private data, credentials, or an account boundary.</li>
+              <li>Do not run high-volume automated scans against the portfolio or linked demos.</li>
+            </ul>
+          </section>
+
+          <section class="prose-section reveal" id="integrity">
+            <h2>Artifact integrity and signing</h2>
+            <h3>Portfolio résumé</h3>
+            <p><a href="assets/Meidie_Fei_Cyber_Security_Resume.pdf">Download the published PDF</a> or inspect the machine-readable <a href="artifact-manifest.json">artifact-manifest.json</a>.</p>
+            <p><strong>SHA-256:</strong> <code data-resume-sha>6203AE1350F2B29BF26C9C6BECFA0C3731379CA22F77D6D77933488247467213</code></p>
+            <div class="policy-callout"><p>The portfolio resume PDF is unsigned. Its published SHA-256 checksum supports byte-for-byte comparison but does not authenticate its origin or signer.</p></div>
+
+            <h3>RMM Hunter releases</h3>
+            <p><a href="https://github.com/MDP-Studio/rmm-hunter/releases">Review the public release page</a>. Current public Windows builds are unsigned beta artifacts unless a release page says otherwise.</p>
+
+            <h3>AES Secure Vault releases</h3>
+            <p><a href="https://github.com/MDP-Studio/AES-256-GCM-Python-Tool/releases">Review the public release page</a>. AES Secure Vault publishes checksums, SBOMs, and attestations; these are provenance evidence, not operating-system code signing or cryptographic certification.</p>
+
+            <p>When future artifacts are code-signed, checksum-published, or detached-signature-published, this policy should link to the release, checksum, signing identity, and verification steps.</p>
+          </section>
+
+          <section class="prose-section reveal" id="claims">
+            <h2>Security claims boundary</h2>
+            <p>The portfolio demonstrates practical security engineering, documentation, and deployment habits. It does not claim SOC 2, ISO 27001, PCI DSS, formal penetration-test attestation, or continuous monitoring coverage unless a separate project page provides verified evidence.</p>
+          </section>
+        </article>
       </div>
-      <div class="artifact">
-        <p><strong>RMM Hunter releases:</strong> <a href="https://github.com/MDP-Studio/rmm-hunter/releases">github.com/MDP-Studio/rmm-hunter/releases</a></p>
-        <p>Current public Windows builds are unsigned beta artifacts unless a release page says otherwise.</p>
-      </div>
-      <div class="artifact">
-        <p><strong>AES Secure Vault releases:</strong> <a href="https://github.com/MDP-Studio/AES-256-GCM-Python-Tool/releases">github.com/MDP-Studio/AES-256-GCM-Python-Tool/releases</a></p>
-        <p>AES Secure Vault publishes checksums, SBOMs, and attestations; these are provenance evidence, not operating-system code signing or cryptographic certification.</p>
-      </div>
-      <p>When future artifacts are code-signed, checksum-published, or detached-signature-published, the portfolio should link to the relevant GitHub release, checksum, signing identity, and verification steps from this policy.</p>
-
-      <h2>Security claims boundary</h2>
-      <p>The portfolio demonstrates practical security engineering, documentation, and deployment habits. It does not claim SOC 2, ISO 27001, PCI DSS, formal penetration-test attestation, or continuous monitoring coverage unless a separate project page provides verified evidence.</p>
-    </article>
+    </div>
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="shell footer-inner">
-      <span>Meidie Fei | Security Analyst Portfolio</span>
-      <span><a href="index.html">Portfolio</a> | <a href="evidence.html">Evidence health</a> | <a href="SECURITY.md">SECURITY.md</a></span>
+      <span>© <span data-current-year>2026</span> Meidie Fei · Security policy</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Portfolio</a>
+        <a href="evidence.html">Evidence health</a>
+        <a href="SECURITY.md">Markdown policy</a>
+      </nav>
     </div>
   </footer>
 </body>
