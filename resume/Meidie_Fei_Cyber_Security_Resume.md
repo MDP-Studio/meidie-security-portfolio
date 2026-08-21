@@ -22,7 +22,7 @@ Computer Science graduate completing the final semester of RMIT's Master of Cybe
 
 ## Paid Experience
 
-**Shadow Play by Peppers - Housekeeping Attendant, Southbank | March 2026 - Present**
+**Housekeeping Attendant, Shadow Play by Peppers | March 2026 - Present**
 
 - Apply shift discipline, teamwork, service recovery, and clear escalation in live operations while completing the final university semester.
 
