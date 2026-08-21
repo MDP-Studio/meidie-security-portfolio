@@ -12,7 +12,7 @@ Availability | Targeting full-time graduate roles from 1 December 2026; currentl
 
 ## Profile
 
-Computer Science graduate completing the final semester of RMIT's Master of Cyber Security. Seeking a Graduate Security Engineer role focused on detection, security automation, or secure software, with technical mentoring, regular review, and clear escalation support.
+Computer Science graduate completing the final semester of RMIT's Master of Cyber Security. Seeking a Graduate Security Engineer role focused on detection, security automation, or secure software, with structured technical mentorship, regular review, and clear escalation.
 
 ## Security Skills
 
@@ -39,7 +39,7 @@ Computer Science graduate completing the final semester of RMIT's Master of Cybe
 **PhishAnalyze / PayShield - Detection Engineering** | [Source](https://github.com/MDP-Studio/Automated-Phishing-Detection)
 
 - Built the async analyser pipeline, normalised result contract, product verdict mapping, and evidence-to-decision workflow across phishing and payment-risk use cases.
-- Validation: 1,384 tests in the current collected suite, live prototypes, and signed STIX/Sigma export checks. Boundary: development prototype, not a production detection guarantee.
+- Validation: regression coverage for async analyser orchestration, verdict mapping, failure paths, and signed STIX/Sigma export integrity, plus live prototype checks. Boundary: development prototype, not a production detection guarantee.
 
 **RMM Hunter - Endpoint Triage** | [Source](https://github.com/MDP-Studio/rmm-hunter)
 
@@ -49,7 +49,7 @@ Computer Science graduate completing the final semester of RMIT's Master of Cybe
 **SecureVote - Secure Software** | [Source](https://github.com/MDP-Studio/secure-voting-platform)
 
 - Extended an RMIT team project independently with identity separation, encrypted personal data, audit integrity, access controls, deployment hardening, and race-condition defence.
-- Validation: 243-test collection, with 239 passing locally and four opt-in MySQL checks skipped. Boundary: portfolio prototype, not a production election service.
+- Validation: regression coverage for access control, concurrent voting, audit integrity, race-condition defence, and fail-closed deployment behaviour. Boundary: portfolio prototype, not a production election service.
 
 ## Education
 

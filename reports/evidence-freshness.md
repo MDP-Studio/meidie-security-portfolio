@@ -1,6 +1,6 @@
 # Portfolio Evidence Freshness Report
 
-- Checked at: 2026-08-21T11:21:47.083Z
+- Checked at: 2026-08-21T12:50:42.719Z
 - Mode: live
 - Projects and artifact groups: 9
 - Findings: 0 errors, 1 warnings (1 accepted risk, 0 actionable)
@@ -18,7 +18,7 @@ Reports include only public URLs, HTTP status classes, and commit prefixes. Resp
 | AES Secure Vault | 6/6 | current (fe8e37363b4e) | present | attested-not-code-signed |
 | Cloudflare DNS Action | 1/1 | current (fe80d148e9b8) | missing, accepted risk until 2026-08-31 | not-applicable |
 | Cyber Command Center | 3/3 | current (ebe3b58c3a7d) | present | not-applicable |
-| Meidie Fei Portfolio | 10/10 | observed 59c3ec68a351 | present | checksum-only-unsigned |
+| Meidie Fei Portfolio | 10/10 | observed 5d338687a43a | present | checksum-only-unsigned |
 | Portfolio artifacts | 6/6 | not tracked | not-applicable | manifest |
 
 ## Findings

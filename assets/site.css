@@ -1698,13 +1698,14 @@ select {
   }
 
   .primary-nav {
-    gap: 12px;
-    overflow-x: auto;
+    gap: 24px;
+    overflow: visible;
     justify-content: flex-start;
-    scrollbar-width: none;
   }
 
-  .primary-nav::-webkit-scrollbar {
+  .primary-nav a[href="#profile"],
+  .primary-nav a[href="#experience"],
+  .primary-nav a[href="#fit"] {
     display: none;
   }
 
@@ -2334,7 +2335,9 @@ select {
 }
 
 .project-brief__visual img {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
