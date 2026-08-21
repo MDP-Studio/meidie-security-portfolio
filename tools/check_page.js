@@ -19,7 +19,7 @@ for (const script of scripts) {
 }
 
 const refs = [...publicCopy.matchAll(/(?:src|href)="(assets\/[^"]+)"/g)]
-  .map((match) => match[1].split("#")[0]);
+  .map((match) => match[1].split(/[?#]/)[0]);
 const deployAssets = [
   "favicon.jpg",
   "linkedin-featured-portfolio.png",
@@ -56,7 +56,9 @@ const requiredSnippets = [
   [html, "Current v0.3.4 public build is an unsigned historical beta", "index RMM trust boundary"],
   [html, "243-test collection", "index SecureVote validation"],
   [html, "A graduate team, not a solo-expert title.", "index entry-level role calibration"],
-  [html, '<link rel="stylesheet" href="assets/site.css">', "index shared stylesheet"],
+  [html, '<link rel="stylesheet" href="assets/site.css?v=c3e1c6490714">', "index versioned stylesheet"],
+  [html, '<script src="assets/site.js?v=47d602a8acaf" defer></script>', "index versioned script"],
+  [html, 'Meidie_Fei_Cyber_Security_Resume.pdf?v=2002e30dd143', "index versioned resume"],
   [publicHtml, "Graduate Security Engineer", "public index single target role"],
   [publicHtml, "Student visa subclass 500", "public index work-right status"],
   [securityHtml, "Artifact integrity and signing", "security artifact section"],

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "meidie-security-portfolio.evidence-report.v1",
-  "checkedAt": "2026-08-21T10:41:07.955Z",
+  "checkedAt": "2026-08-21T11:21:47.083Z",
   "mode": "live",
   "summary": {
     "error": 0,
@@ -86,7 +86,7 @@
       "linksChecked": 10,
       "linksPassed": 10,
       "evidenceCommit": null,
-      "currentCommit": "dd2c9b9f8fc2746cd84166fe388e538d9f0085fe",
+      "currentCommit": "59c3ec68a35143e969cba459485fed5fcfc52c74",
       "policyState": "present",
       "artifactTrust": "checksum-only-unsigned"
     },

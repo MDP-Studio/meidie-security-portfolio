@@ -65,7 +65,9 @@ and the following response controls:
 - X-Permitted-Cross-Domain-Policies.
 
 The CSP permits first-party scripts and styles plus the small inline JSON-LD
-used by the static portfolio. It blocks third-party
+used by the static portfolio. HTML and other non-asset routes revalidate on
+each request, while stylesheet, script, and resume URLs carry content-version
+query strings so a release cannot reuse a stale browser asset. It blocks third-party
 scripts and styles, plugins, frames, and network connections. `netlify.toml`
 mirrors these headers only for the dormant fallback host.
 

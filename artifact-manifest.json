@@ -1,6 +1,6 @@
 {
   "schemaVersion": "meidie-security-portfolio.artifact-manifest.v1",
-  "generatedAt": "2026-08-21T10:28:10Z",
+  "generatedAt": "2026-08-21T11:21:05Z",
   "maxAgeDays": 45,
   "site": "https://meidie.mdpstudio.com.au",
   "policy": "https://meidie.mdpstudio.com.au/security",
@@ -10,7 +10,7 @@
       "type": "resume",
       "name": "Meidie Fei Graduate Security Engineer Resume",
       "path": "assets/Meidie_Fei_Cyber_Security_Resume.pdf",
-      "url": "https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf",
+      "url": "https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf?v=2002e30dd143",
       "sha256": "2002E30DD14345CBCADA82D1B65C47C01BF64B24E0C15D1D4BE84F0154A1F72F",
       "mimeType": "application/pdf",
       "signingStatus": "checksum-only-unsigned",
