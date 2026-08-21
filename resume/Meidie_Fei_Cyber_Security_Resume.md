@@ -1,89 +1,62 @@
 # Meidie Fei
 
-Cyber Security | AI Automation | Full-Stack Engineering
+Graduate Security Engineer | Detection Engineering and Security Automation
 
 Melbourne, Australia
+
 Email: meidie@mdpstudio.com.au | [Portfolio](https://meidie.mdpstudio.com.au) | [LinkedIn](https://www.linkedin.com/in/meidie-fei/) | [GitHub](https://github.com/meidielo)
+
+Work rights | Student visa subclass 500, valid until 15 March 2027; current visa conditions apply
+
+Availability | Targeting full-time graduate roles from 1 December 2026; currently available Thursday to Sunday, approximately 15-25 hours per week
 
 ## Profile
 
-Computer Science graduate and final-semester RMIT Master of Cyber Security student building practical systems across security, AI-assisted workflows, automation, data, and full-stack delivery. Strongest fit for graduate and junior roles where evidence, reliability, technical range, and clear communication matter.
+Computer Science graduate completing the final semester of RMIT's Master of Cyber Security. Seeking a Graduate Security Engineer role focused on detection, security automation, or secure software, with technical mentoring, regular review, and clear escalation support.
 
-## Core Strengths
+## Security Skills
 
-- Security-aware engineering: secure coding, OWASP concepts, authentication, RBAC, CSRF, rate limiting, threat modelling, cryptography, security headers, and privacy-aware delivery.
-- Detection and investigation: phishing analysis, suspicious-signal review, IOC extraction, evidence summaries, false-positive discipline, ATT&CK mapping, and STIX/Sigma-style detection thinking.
-- AI and automation: structured outputs, source boundaries, model-output review, approval gates, prompt-injection awareness, hallucination checks, browser automation, and redacted records.
-- Full-stack delivery: React, TypeScript, Python APIs, SQL/PostgreSQL/Supabase, dashboards, authentication flows, tests, Docker, Cloudflare, Netlify, and technical handover.
-- Data and evaluation: pandas, NumPy, scikit-learn, forecasting, leakage avoidance, validation design, metrics, error analysis, and reproducible experiment notes.
+- **Detection and triage:** phishing analysis, email authentication, IOC extraction, suspicious-signal review, endpoint evidence, ATT&CK mapping, STIX/Sigma-style workflows.
+- **Secure engineering:** threat modelling, authentication, RBAC, CSRF, rate limiting, tamper checks, cryptography, privacy-aware logging, and fail-closed behavior.
+- **Tools:** Python, FastAPI, PowerShell, SQL, Docker, GitHub Actions, pytest, Playwright, React/TypeScript, Linux, Cloudflare, and technical documentation.
 
-## Experience
+## Paid Experience
 
-**MDP Studio - Co-Founder and Technical Lead**
-Melbourne, Australia | January 2026 - Present
+**Hospitality Houseperson - Southbank, Melbourne | Current**
 
-- Co-founded a pre-revenue web and AI venture building websites, dashboards, internal tools, automation, and review-gated AI workflows for SME-oriented problems.
-- Build and review Python and TypeScript systems using React/Vite, APIs, SQL/PostgreSQL/Supabase, Docker, Cloudflare, Netlify, GitHub, Ubuntu, and deployment workflows.
-- Designed AI-assisted processes where evidence is checked before higher-risk external actions, with source boundaries, privacy controls, approval checkpoints, and clear failure states.
-- Built an internal lead and landing-page workflow that processed 146 prospects and supported 123+ deployed landing pages through review queues and deployment automation.
-- Manage DNS, deployment checks, issue triage, documentation, and handover across internal product work.
+- Apply shift discipline, teamwork, service recovery, and clear escalation in live operations while completing the final university semester.
 
-**Hotel Products Direct - Warehouse and Inventory Assistant**
-Melbourne, Australia | July 2024 - March 2026
+**Hotel Products Direct - Warehouse and Inventory Assistant | July 2024 - March 2026**
 
-- Maintained 99%+ accuracy across 80-120 orders per shift in a high-volume environment where process discipline and escalation mattered.
-- Identified inventory database discrepancies and worked with IT to resolve data and process issues.
+- Maintained 99%+ accuracy across 80-120 orders per shift and worked with IT to resolve inventory database discrepancies.
 
-**KodeKiddo - Software Programming Instructor / Mobile Programmer Intern**
-Indonesia | February 2021 - February 2022
+**KodeKiddo - Programming Instructor | February 2021 - February 2022**
 
-- Taught programming fundamentals to students aged 6-18 using Android Studio, Unity, Java/mobile concepts, and structured debugging.
-- Debugged code in real time and explained technical issues clearly to non-technical learners.
+- Taught programming fundamentals to students aged 6-18 and debugged code live for non-technical learners.
 
-**BKPSDM - Data Assistant**
-Indonesia | Earlier experience
+## Selected Security Projects
 
-- Reviewed, verified, and corrected employee records in a government HR system with confidentiality-aware data-quality practices.
+**PhishAnalyze / PayShield - Detection Engineering** | [Source](https://github.com/MDP-Studio/Automated-Phishing-Detection)
 
-## Selected Projects
+- Built the async analyser pipeline, normalised result contract, product verdict mapping, and evidence-to-decision workflow across phishing and payment-risk use cases.
+- Validation: 1,384 tests in the current collected suite, live prototypes, and signed STIX/Sigma export checks. Boundary: development prototype, not a production detection guarantee.
 
-**PhishAnalyze / PayShield - Detection and Decision Workflows** | [Repository](https://github.com/MDP-Studio/Automated-Phishing-Detection)
+**RMM Hunter - Endpoint Triage** | [Source](https://github.com/MDP-Studio/rmm-hunter)
 
-- Built a five-stage async pipeline for suspicious-email ingestion, feature extraction, concurrent analysis, weighted scoring, evidence summaries, analyst feedback, and decision output.
-- Covered SPF/DKIM/DMARC, URLs and domains, brand impersonation, attachments, QR decoding, language and intent, supplier mismatch, BEC language, and payment-risk indicators.
-- Turned evidence into explainable phishing verdicts and payment outcomes, with STIX 2.1 IOC export, Sigma-style detection content, and ATT&CK T1566-oriented mapping.
+- Built a Windows-first scanner and desktop evidence workflow for remote-access tools, persistence, living-off-the-land traces, and trust-health signals.
+- Validation: public release, seeded-corpus evaluation, checksums, manifest, and artifact verifier. Boundary: current v0.3.4 build is an unsigned historical beta and is not EDR.
 
-**ApplyPilot - Review-Gated AI Workflow Prototype**
+**SecureVote - Secure Software** | [Source](https://github.com/MDP-Studio/secure-voting-platform)
 
-- Designed a local prototype around truthful generation, evidence checks, structured output contracts, source boundaries, approval gates, redacted logs, and separated credentials.
-- Kept external submission explicitly human-controlled and documented the system as a prototype rather than a hands-off application service.
-
-**SecureVote - Secure Application Controls** | [Repository](https://github.com/MDP-Studio/secure-voting-platform)
-
-- Extended an RMIT team project with anonymous voting, encrypted personal data, HMAC-backed audit logs, RBAC, CSRF protection, MFA, rate limiting, WAF controls, and Vault Transit signing.
-- Validated access, cryptographic flows, malformed data, pagination, and vote-casting concurrency with 100+ pytest checks.
-
-**Novartis Datathon 2025 - Forecasting and Evaluation** | [Repository](https://github.com/meidielo/Datathon)
-
-- Ranked 7th and Top 10 in a pharmaceutical sales-forecasting challenge predicting 24 months of post-generic-entry drug volume.
-- Built leakage-aware features, brand-level train/validation splits, multi-output Ridge regression, benchmark comparisons, and error analysis.
-
-**CryptoToolkit / AES Secure Vault - Cryptography and Key Handling** | [CryptoToolkit](https://github.com/MDP-Studio/crypto-toolkit) | [AES Vault](https://github.com/MDP-Studio/AES-256-GCM-Python-Tool)
-
-- Built interactive cryptography and attack demonstrations backed by known-answer tests, plus a Python AES-256-GCM package with Argon2id, AAD binding, tamper detection, and explicit failure behaviour.
+- Extended an RMIT team project independently with identity separation, encrypted personal data, audit integrity, access controls, deployment hardening, and race-condition defence.
+- Validation: 243-test collection, with 239 passing locally and four opt-in MySQL checks skipped. Boundary: portfolio prototype, not a production election service.
 
 ## Education
 
-**RMIT University - Master of Cyber Security**
-Melbourne, Australia | March 2025 - Expected late 2026 | GPA 3.3
+**RMIT University - Master of Cyber Security** | March 2025 - Expected late 2026 | GPA 3.3
 
 High Distinctions include Ethical Hacking and Security Testing, Secure Software Systems, Practical Data Science with Python, and Data Communications.
 
-**BINUS University - Bachelor of Computer Science**
-Indonesia | Completed October 2023 | GPA 3.20 | High Merit
+**BINUS University - Bachelor of Computer Science** | Completed October 2023 | GPA 3.20 | High Merit
 
-Mobile Application and Technology program. Thesis: Development of Pekalongan City Guide Application with Firebase Realtime Database.
-
-## Availability
-
-Based in Melbourne. Open to graduate and junior roles across cyber security, AI evaluation, automation, full-stack engineering, and technical operations. Languages: English and Indonesian.
+Languages: English and Indonesian.

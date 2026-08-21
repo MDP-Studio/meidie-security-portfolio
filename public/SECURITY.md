@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-21
 
-This policy covers Meidie Fei's public portfolio at <https://meidie.mdpstudio.com.au>. It gives recruiters, clients, and security researchers a clear way to report issues without implying enterprise SOC, compliance, or bug bounty coverage.
+This policy covers Meidie Fei's public portfolio at <https://meidie.mdpstudio.com.au>. It gives visitors and security researchers a clear way to report issues without implying enterprise SOC, compliance, or bug bounty coverage.
 
 ## Scope
 
@@ -10,12 +10,12 @@ In scope:
 
 - The static portfolio site at <https://meidie.mdpstudio.com.au>.
 - Public assets published from this repository, including the downloadable resume PDF.
-- Public project links presented from the portfolio when the linked project is owned by Meidie Fei or MDP Studio.
+- Public project links presented from the portfolio when the linked project is owned by Meidie Fei or a named collaborator.
 
 Out of scope:
 
 - GitHub, Netlify, Cloudflare, LinkedIn, or other third-party platforms.
-- Client-private systems, private MDP Studio infrastructure, private repositories, email accounts, or payment accounts.
+- Private infrastructure, private repositories, email accounts, personal records, or payment accounts.
 - Social engineering, phishing, physical attacks, spam, denial of service, credential stuffing, or attempts to access private data.
 - Destructive testing, persistence, exfiltration, or testing that changes data outside your own account or browser session.
 
@@ -38,7 +38,7 @@ Include:
 - Expected impact and any relevant screenshots or logs.
 - Whether you believe any data was accessed or changed.
 
-Do not include passwords, API keys, session tokens, private client data, or unrelated personal data in the report.
+Do not include passwords, API keys, session tokens, private organisational data, or unrelated personal data in the report.
 
 ## Response Expectations
 
@@ -58,7 +58,7 @@ Public disclosure should wait until the issue is fixed or a coordinated disclosu
 The portfolio references public artifacts through their canonical source pages. Do not trust third-party mirrors.
 
 - Resume PDF: <https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf>
-- Resume PDF SHA-256: `6203AE1350F2B29BF26C9C6BECFA0C3731379CA22F77D6D77933488247467213`
+- Resume PDF SHA-256: `2002E30DD14345CBCADA82D1B65C47C01BF64B24E0C15D1D4BE84F0154A1F72F`
 - Resume signing status: The portfolio resume PDF is unsigned. Its published SHA-256 checksum supports byte-for-byte comparison but does not authenticate its origin or signer.
 - Artifact manifest: <https://meidie.mdpstudio.com.au/artifact-manifest.json>
 - RMM Hunter releases: <https://github.com/MDP-Studio/rmm-hunter/releases>

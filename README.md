@@ -1,19 +1,15 @@
 # Meidie Fei Portfolio
 
-Standalone static portfolio for recruiters, hiring teams, and scoped MDP Studio client enquiries. The public positioning covers security, AI-assisted workflows, automation, data, and full-stack delivery without presenting prototypes as production services.
+Standalone recruiter-focused portfolio for Graduate Security Engineer opportunities. The public positioning is deliberately narrow: detection engineering, security automation, secure software, paid-work evidence, current work rights, availability, and directly reviewable project boundaries.
 
 Live URL: <https://meidie.mdpstudio.com.au>
-
-MDP Studio: <https://mdpstudio.com.au/>
-
-Canonical MDP project page: <https://mdpstudio.com.au/projects/meidie-security-portfolio/>
 
 Historical Netlify fallback: <https://meidie-security-portfolio.netlify.app>
 
 ## Files
 
-- `index.html` - recruiter- and client-facing portfolio homepage.
-- `assets/site.css` - shared editorial visual system for the homepage and policy pages.
+- `index.html` - recruiter-only Graduate Security Engineer portfolio homepage.
+- `assets/site.css` - shared candidate-dossier visual system for the homepage and policy pages.
 - `assets/site.js` - progressive reading indicator, current-year text, and reduced-motion-aware reveals.
 - `SECURITY.md` - public vulnerability-reporting policy and artifact-integrity notes.
 - `security.html` - deployable web version of the security policy.
@@ -123,7 +119,7 @@ python -m pip install python-docx reportlab
 python resume/build_resume_assets.py
 ```
 
-The generic public PDF is written to `assets/`. Application-specific resumes and cover letters should stay under ignored local folders such as `applications/agoda/`.
+The targeted public PDF is written to `assets/`. Application-specific resumes and cover letters should stay under ignored local folders such as `applications/agoda/`.
 
 ## Regenerate Visual Assets
 

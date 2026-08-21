@@ -22,6 +22,16 @@ PDF_TARGET = ROOT / "assets" / "Meidie_Fei_Cyber_Security_Resume.pdf"
 DOCX_TARGET = BASE / "generated" / "Meidie_Fei_Cyber_Security_Resume.docx"
 
 
+def should_center(text: str) -> bool:
+    return (
+        text == "Melbourne, Australia"
+        or text.startswith("Graduate Security Engineer |")
+        or text.startswith("Email:")
+        or text.startswith("Work rights |")
+        or text.startswith("Availability |")
+    )
+
+
 def clean_inline(text: str) -> str:
     text = text.replace("`", "")
     text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
@@ -132,7 +142,7 @@ def build_docx() -> None:
                 else:
                     add_inline_content(p, stripped)
             else:
-                if " | " in stripped or stripped.startswith("Email:") or stripped == "Melbourne, Australia":
+                if should_center(stripped):
                     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
                 add_inline_content(p, stripped)
 
@@ -174,8 +184,8 @@ def styles():
             "Normal",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=8.15,
-            leading=9.4,
+            fontSize=8.7,
+            leading=10.2,
             spaceAfter=2.2,
             textColor=colors.HexColor("#111827"),
         ),
@@ -183,8 +193,8 @@ def styles():
             "Center",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=8.15,
-            leading=9.4,
+            fontSize=8.7,
+            leading=10.2,
             alignment=1,
             spaceAfter=2.2,
             textColor=colors.HexColor("#111827"),
@@ -203,8 +213,8 @@ def styles():
             "Bullet",
             parent=base["BodyText"],
             fontName="Helvetica",
-            fontSize=8.15,
-            leading=9.4,
+            fontSize=8.7,
+            leading=10.2,
             leftIndent=14,
             firstLineIndent=-8,
             bulletIndent=2,
@@ -239,7 +249,7 @@ def build_pdf() -> None:
         elif raw.startswith("- "):
             story.append(Paragraph(inline_markup(raw[2:]), style_map["bullet"], bulletText="-"))
         else:
-            style = style_map["center"] if (" | " in raw or raw.startswith("Email:") or raw == "Melbourne, Australia") else style_map["normal"]
+            style = style_map["center"] if should_center(raw) else style_map["normal"]
             story.append(Paragraph(inline_markup(raw), style))
 
     doc.build(story)

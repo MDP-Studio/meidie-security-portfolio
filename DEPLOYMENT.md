@@ -64,8 +64,8 @@ and the following response controls:
 - Cross-Origin-Opener-Policy and Cross-Origin-Resource-Policy;
 - X-Permitted-Cross-Domain-Policies.
 
-The CSP permits first-party scripts and styles plus the small inline JSON-LD and
-chart-height declarations used by the static portfolio. It blocks third-party
+The CSP permits first-party scripts and styles plus the small inline JSON-LD
+used by the static portfolio. It blocks third-party
 scripts and styles, plugins, frames, and network connections. `netlify.toml`
 mirrors these headers only for the dormant fallback host.
 
