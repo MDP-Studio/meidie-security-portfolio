@@ -5,6 +5,7 @@ const html = fs.readFileSync("index.html", "utf8");
 const securityHtml = fs.readFileSync("security.html", "utf8");
 const evidenceHtml = fs.readFileSync("evidence.html", "utf8");
 const publicHtml = fs.readFileSync("public/index.html", "utf8");
+const resumeSource = fs.readFileSync("resume/Meidie_Fei_Cyber_Security_Resume.md", "utf8");
 const artifactManifest = JSON.parse(fs.readFileSync("artifact-manifest.json", "utf8"));
 const evidenceRegistry = JSON.parse(fs.readFileSync("evidence-registry.json", "utf8"));
 const evidenceReport = JSON.parse(fs.readFileSync("reports/evidence-freshness.json", "utf8"));
@@ -51,6 +52,8 @@ const requiredSnippets = [
   [html, "Available for graduate roles from December 2026", "index graduate availability"],
   [html, "15-25 hours per week", "index current availability"],
   [html, "99%+ accuracy", "index paid-work outcome"],
+  [html, "Housekeeping attendant, Shadow Play by Peppers", "index current employer and role"],
+  [html, "Mar 2026 - present", "index current role start month"],
   [html, "async analyser orchestration", "index phishing validation"],
   [html, "signed STIX/Sigma export integrity", "index phishing export validation"],
   [html, "Current v0.3.4 public build is an unsigned historical beta", "index RMM trust boundary"],
@@ -59,9 +62,12 @@ const requiredSnippets = [
   [html, "A graduate team, not a solo-expert title.", "index entry-level role calibration"],
   [html, '<link rel="stylesheet" href="assets/site.css?v=9fba616b02a8">', "index versioned stylesheet"],
   [html, '<script src="assets/site.js?v=47d602a8acaf" defer></script>', "index versioned script"],
-  [html, 'Meidie_Fei_Cyber_Security_Resume.pdf?v=7b612ea1cafc', "index versioned resume"],
+  [html, 'Meidie_Fei_Cyber_Security_Resume.pdf?v=fb75ed117a84', "index versioned resume"],
   [publicHtml, "Graduate Security Engineer", "public index single target role"],
   [publicHtml, "Current Australian work rights under Student visa conditions", "public index work-right status"],
+  [resumeSource, "Shadow Play by Peppers - Housekeeping Attendant, Southbank | March 2026 - Present", "resume current employer, role, and dates"],
+  [resumeSource, "regression coverage for async analyser orchestration", "resume phishing validation wording"],
+  [resumeSource, "regression coverage for access control, concurrent voting", "resume SecureVote validation wording"],
   [securityHtml, "Artifact integrity and signing", "security artifact section"],
   [securityHtml, "artifact-manifest.json", "security artifact manifest link"],
   [securityHtml, "mailto:meidie@mdpstudio.com.au", "security contact mailto"],
@@ -96,6 +102,17 @@ const staleSnippets = [
 ]
   .filter((snippet) => html.includes(snippet))
   .map((snippet) => `stale homepage copy remains: ${snippet}`);
+
+staleSnippets.push(
+  ...[
+    "Hospitality Houseperson - Southbank, Melbourne | Current",
+    "1,384 tests",
+    "243-test collection",
+    "239 passing locally",
+  ]
+    .filter((snippet) => resumeSource.includes(snippet))
+    .map((snippet) => `stale resume copy remains: ${snippet}`),
+);
 
 const manifestErrors = [];
 const resumeArtifact = artifactManifest.artifacts.find((artifact) => artifact.id === "resume-pdf");

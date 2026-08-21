@@ -58,7 +58,7 @@ Public disclosure should wait until the issue is fixed or a coordinated disclosu
 The portfolio references public artifacts through their canonical source pages. Do not trust third-party mirrors.
 
 - Resume PDF: <https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf>
-- Resume PDF SHA-256: `7B612EA1CAFC278542C3FEADCA52651FCBA6FB8A9F5EF5D9F19F65D821413E58`
+- Resume PDF SHA-256: `FB75ED117A84A11A426998DBFD10800E4E60EC6D560AC3087F5F5F7C7A4DAA35`
 - Resume signing status: The portfolio resume PDF is unsigned. Its published SHA-256 checksum supports byte-for-byte comparison but does not authenticate its origin or signer.
 - Artifact manifest: <https://meidie.mdpstudio.com.au/artifact-manifest.json>
 - RMM Hunter releases: <https://github.com/MDP-Studio/rmm-hunter/releases>

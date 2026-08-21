@@ -1,6 +1,6 @@
 {
   "schemaVersion": "meidie-security-portfolio.artifact-manifest.v1",
-  "generatedAt": "2026-08-21T12:49:27Z",
+  "generatedAt": "2026-08-21T13:31:10Z",
   "maxAgeDays": 45,
   "site": "https://meidie.mdpstudio.com.au",
   "policy": "https://meidie.mdpstudio.com.au/security",
@@ -10,8 +10,8 @@
       "type": "resume",
       "name": "Meidie Fei Graduate Security Engineer Resume",
       "path": "assets/Meidie_Fei_Cyber_Security_Resume.pdf",
-      "url": "https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf?v=7b612ea1cafc",
-      "sha256": "7B612EA1CAFC278542C3FEADCA52651FCBA6FB8A9F5EF5D9F19F65D821413E58",
+      "url": "https://meidie.mdpstudio.com.au/assets/Meidie_Fei_Cyber_Security_Resume.pdf?v=fb75ed117a84",
+      "sha256": "FB75ED117A84A11A426998DBFD10800E4E60EC6D560AC3087F5F5F7C7A4DAA35",
       "mimeType": "application/pdf",
       "signingStatus": "checksum-only-unsigned",
       "disclosure": "The portfolio resume PDF is unsigned. Its published SHA-256 checksum supports byte-for-byte comparison but does not authenticate its origin or signer.",
