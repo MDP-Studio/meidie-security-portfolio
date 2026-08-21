@@ -24,6 +24,7 @@ const refs = [...publicCopy.matchAll(/(?:src|href)="(assets\/[^"]+)"/g)]
 const deployAssets = [
   "favicon.jpg",
   "linkedin-featured-portfolio.png",
+  "Meidie_Fei_Cyber_Security_Resume-db71f281ed7b.pdf",
   "Meidie_Fei_Cyber_Security_Resume.pdf",
   "site.css",
   "site.js",
@@ -62,7 +63,7 @@ const requiredSnippets = [
   [html, "A graduate team, not a solo-expert title.", "index entry-level role calibration"],
   [html, '<link rel="stylesheet" href="assets/site.css?v=9fba616b02a8">', "index versioned stylesheet"],
   [html, '<script src="assets/site.js?v=47d602a8acaf" defer></script>', "index versioned script"],
-  [html, 'Meidie_Fei_Cyber_Security_Resume.pdf?v=db71f281ed7b', "index versioned resume"],
+  [html, 'Meidie_Fei_Cyber_Security_Resume-db71f281ed7b.pdf', "index content-addressed resume"],
   [publicHtml, "Graduate Security Engineer", "public index single target role"],
   [publicHtml, "Current Australian work rights under Student visa conditions", "public index work-right status"],
   [resumeSource, "Housekeeping Attendant, Shadow Play by Peppers | March 2026 - Present", "resume current employer, role, and dates"],
@@ -70,6 +71,7 @@ const requiredSnippets = [
   [resumeSource, "regression coverage for access control, concurrent voting", "resume SecureVote validation wording"],
   [securityHtml, "Artifact integrity and signing", "security artifact section"],
   [securityHtml, "artifact-manifest.json", "security artifact manifest link"],
+  [securityHtml, "Meidie_Fei_Cyber_Security_Resume-db71f281ed7b.pdf", "security content-addressed resume"],
   [securityHtml, "mailto:meidie@mdpstudio.com.au", "security contact mailto"],
   [securityHtml, "The portfolio resume PDF is unsigned", "resume unsigned disclosure"],
   [securityHtml, "Current public Windows builds are unsigned beta artifacts", "RMM unsigned disclosure"],
@@ -101,6 +103,7 @@ const staleSnippets = [
   "named technical mentor",
   "Housekeeping attendant, Shadow Play by Peppers",
   "Mar 2026 - present",
+  "Meidie_Fei_Cyber_Security_Resume.pdf?v=",
 ]
   .filter((snippet) => html.includes(snippet))
   .map((snippet) => `stale homepage copy remains: ${snippet}`);
@@ -119,15 +122,26 @@ staleSnippets.push(
 
 const manifestErrors = [];
 const resumeArtifact = artifactManifest.artifacts.find((artifact) => artifact.id === "resume-pdf");
-const resumeHash = crypto
-  .createHash("sha256")
-  .update(fs.readFileSync("assets/Meidie_Fei_Cyber_Security_Resume.pdf"))
-  .digest("hex")
-  .toUpperCase();
 if (!resumeArtifact) {
   manifestErrors.push("artifact manifest missing resume-pdf");
-} else if (resumeArtifact.sha256 !== resumeHash) {
-  manifestErrors.push("artifact manifest resume-pdf sha256 mismatch");
+} else if (!resumeArtifact.path || !fs.existsSync(resumeArtifact.path)) {
+  manifestErrors.push("artifact manifest resume-pdf path is missing");
+} else {
+  const resumeHash = crypto
+    .createHash("sha256")
+    .update(fs.readFileSync(resumeArtifact.path))
+    .digest("hex")
+    .toUpperCase();
+  if (resumeArtifact.sha256 !== resumeHash) {
+    manifestErrors.push("artifact manifest resume-pdf sha256 mismatch");
+  }
+  const expectedResumeSuffix = `-${resumeArtifact.sha256.slice(0, 12).toLowerCase()}.pdf`;
+  if (!resumeArtifact.path.endsWith(expectedResumeSuffix)) {
+    manifestErrors.push("artifact manifest resume-pdf path is not content-addressed");
+  }
+  if (resumeArtifact.url !== `${artifactManifest.site}/${resumeArtifact.path}`) {
+    manifestErrors.push("artifact manifest resume-pdf URL does not match its path");
+  }
 }
 if (artifactManifest.schemaVersion !== "meidie-security-portfolio.artifact-manifest.v1") {
   manifestErrors.push("artifact manifest schemaVersion mismatch");

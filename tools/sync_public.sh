@@ -35,6 +35,7 @@ cp "$ROOT/.well-known/security.txt" "$STAGE/.well-known/security.txt"
 for asset in \
   favicon.jpg \
   linkedin-featured-portfolio.png \
+  Meidie_Fei_Cyber_Security_Resume-db71f281ed7b.pdf \
   Meidie_Fei_Cyber_Security_Resume.pdf \
   site.css \
   site.js \
